@@ -1,3 +1,4 @@
+/* Base Styles */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -18,8 +19,13 @@ main {
     margin: auto;
 }
 
+h1, h2 {
+    color: #333;
+}
+
+/* Hero Section */
 .hero {
-    background-image: url('images/hero.jpg'); /* Make sure to replace with your own image */
+    background-image: url('images/hero.jpg'); /* Replace with your actual image path */
     background-size: cover;
     background-position: center;
     color: white;
@@ -36,17 +42,21 @@ main {
     font-size: 1.2em;
 }
 
-h1, h2 {
-    color: #333;
-}
-
+/* Image Hover Effect */
 img {
     max-width: 100%;
     height: auto;
     display: block;
     margin: 0 auto;
+    transition: transform 0.3s ease;
 }
 
+img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Footer */
 footer {
     background-color: #333;
     color: #fff;
