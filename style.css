@@ -42,6 +42,32 @@ h1, h2 {
     font-size: 1.2em;
 }
 
+
+/* Projects Section Styling */
+section h2 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    margin-bottom: 10px;
+}
+
+ul li a {
+    text-decoration: none;
+    color: #4CAF50;
+    font-weight: bold;
+}
+
+ul li a:hover {
+    color: #45a049;
+}
+
 /* Image Hover Effect */
 img {
     max-width: 100%;
