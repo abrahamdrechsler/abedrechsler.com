@@ -42,7 +42,6 @@ h1, h2 {
     font-size: 1.2em;
 }
 
-
 /* Projects Section Styling */
 section h2 {
     font-size: 1.8em;
@@ -50,45 +49,4 @@ section h2 {
 }
 
 ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-ul li {
-    margin-bottom: 10px;
-}
-
-ul li a {
-    text-decoration: none;
-    color: #4CAF50;
-    font-weight: bold;
-}
-
-ul li a:hover {
-    color: #45a049;
-}
-
-/* Image Hover Effect */
-img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-    margin: 0 auto;
-    transition: transform 0.3s ease;
-}
-
-img:hover {
-    transform: scale(1.05);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-}
-
-/* Footer */
-footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 10px;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-}
+    list-style-type: none

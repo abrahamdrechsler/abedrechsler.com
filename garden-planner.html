@@ -4,24 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Garden Planner</title>
-    <link rel="stylesheet" href="style.css"> <!-- Link to your CSS file -->
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1>Garden Planner</h1>
-    </header>
-    <main>
-        <section>
-            <h2>Welcome to the Garden Planner!</h2>
-            <p>Use this application to design your dream garden.</p>
-        </section>
-        <section>
-            <h3>Start Planning</h3>
-            <p>Application coming soon!</p>
-        </section>
+    <main style="display: flex; align-items: flex-start;">
+        <!-- Controls for boundary actions -->
+        <div id="controls" style="margin-right: 20px;">
+            <button id="defineBoundaryBtn">Define Garden Boundary</button>
+            <button id="redrawBoundaryBtn" style="display: none;">Redraw Garden Boundary</button>
+            <button id="clearBoundaryBtn" style="display: none;">Clear Garden Boundary</button>
+        </div>
+
+        <!-- Canvas and Instruction -->
+        <div>
+            <canvas id="gardenCanvas" width="800" height="600" style="border: 1px solid #000;"></canvas>
+            <!-- Instruction Box -->
+            <div id="instructionBox" style="display: none; margin-top: 10px; padding: 10px; border: 1px solid #333; background-color: #f9f9f9; font-size: 14px; color: #333;">
+                Click a point on the canvas to define the start of your plot. Hold the click, drag, and release to finish defining it.
+            </div>
+        </div>
     </main>
-    <footer>
-        <p><a href="index.html">Back to Home</a></p>
-    </footer>
+    <script src="garden-planner.js"></script>
 </body>
 </html>
