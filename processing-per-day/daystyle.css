@@ -134,6 +134,35 @@ h1 {
     text-decoration: underline;
 }
 
+/* Code Section Styling */
+.code-section {
+    margin-top: 80px;
+    padding: 0px;
+    background: none;
+}
+
+.code-section h2 {
+    font-size: 1.5em;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+pre[class*="language-"] {
+    background: none !important;
+    border: none !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+code[class*="language-"] {
+    font-size: 1em;
+    line-height: 1.5;
+    color: #333 !important;
+    background: none !important;
+    padding: 0;
+}
+
 /* Responsive Design for Smaller Screens */
 @media (max-width: 768px) {
     .container {

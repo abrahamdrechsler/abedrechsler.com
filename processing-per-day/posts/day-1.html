@@ -5,18 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Day 1 - Signal Flags</title>
     <link rel="stylesheet" href="../daystyle.css">
+    <!-- Prism.js CSS for syntax highlighting -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.css" rel="stylesheet">
 </head>
 <body>
 
     <header class="nav-header">
         <div class="container">
             <div class="logo">
-                <a href="../../index.html">Abe Drechsler</a>
+                <a href="/">Abe Drechsler</a>
             </div>
             <nav>
                 <ul>
-                    <li><a href="../index.html">Processing Per Day</a></li>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/processing-per-day/index.html">Processing Per Day</a></li>
                     <li><a href="/about.html">About</a></li>
+                    <li><a href="/projects.html">Projects</a></li>
                     <li><a href="/contact.html">Contact</a></li>
                 </ul>
             </nav>
@@ -32,19 +36,44 @@
 
         <!-- Image Section -->
         <div class="image-container">
-            <img src="../images/day-1.jpg" alt="Day 1 - Signal Flags">
+            <img src="../images/day-1.png" alt="Day 1 - Signal Flags">
         </div>
 
         <!-- Description Section -->
         <p class="description">
-            Today's sketch revisits one of my favorite pieces I've done during the challenge.
-            Gunta was inspired by the textile work of Bauhaus artist Gunta Stölzl and used shapes
-            within a grid to create random patterns. I really loved how it turned out but there were
-            a few baffling things with the code I couldn’t make sense of...
+            This is the first sketch of 20. I've spent most of the time organizing the various HTML, JS, and CSS files 
+            to make the flow between the main sites, overall project matrix, and individual post pages come together cleanly.
         </p>
 
+        <!-- Code Section -->
+        <div class="code-section">
+            <h2>Code:</h2>
+            <pre><code class="language-javascript">
+// Example Processing Sketch
+function setup() {
+    createCanvas(800, 800);
+    background(255);
+    noLoop();
+}
 
+function draw() {
+    for (let i = 0; i < 10; i++) {
+        for (let j = 0; j < 10; j++) {
+            fill(random(255), random(255), random(255));
+            ellipse(i * 80 + 40, j * 80 + 40, 60, 60);
+        }
+    }
+}
+            </code></pre>
+        </div>
+
+        <!-- Back to Gallery Link -->
+        <a href="../index.html" class="back-link">← Back to Gallery</a>
     </div>
+
+    <!-- Prism.js JavaScript for syntax highlighting -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-javascript.min.js"></script>
 
 </body>
 </html>
