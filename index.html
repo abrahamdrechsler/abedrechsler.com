@@ -3,37 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome to My Website</title>
-    <link rel="stylesheet" href="style.css"> <!-- CSS file -->
-    <script defer src="script.js"></script> <!-- JavaScript file -->    
+    <title>Abe Drechsler</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Password Prompt -->
-    <div id="passwordPrompt" style="display: flex; flex-direction: column; align-items: center;">
-        <h1>Enter Password</h1>
-        <input type="password" id="passwordInput" placeholder="Enter password" />
-        <button id="submitPassword">Submit</button>
+    <header class="nav-header">
+        <div class="container">
+            <div class="logo">
+                <a href="">Abe Drechsler</a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <header>
+            <h1>Welcome to My Website</h1>
+            <p>Discover my projects and creative explorations.</p>
+        </header>
+
+        <section>
+            <h2>About Me</h2>
+            <p>I'm a designer and developer passionate about creating interactive experiences.</p>
+        </section>
+
+        <section>
+            <h2>Projects</h2>
+            <ul>
+                <li><a href="processing-per-day/index.html">Processing Per Day</a> - 20 days of Processing art.</li>
+                <li><a href="garden-planner.html">Garden Planner</a> - A tool for planning your perfect garden.</li>
+                <li><a href="family-secret-santa-list-generator/" target="_blank">Secret Santa Generator</a> - Organize Secret Santa lists with ease.</li>
+            </ul>
+        </section>
     </div>
 
-    <!-- Main Content -->
-    <div id="mainContent" style="display: none;">
-        <header class="hero">
-            <h1>Abe Drechsler</h1>
-        </header>
-        <main>
-            <section>
-                <h2>About Me</h2>
-                <p>This is a paragraph about me. I’m excited to share my website with you - and you!</p>
-            </section>
-            <section>
-                <h2>Projects</h2>
-                <ul>
-                    <li><a href="processing-per-day/index.html">Processing Images Per Day</a> - 20 days of Processing art.</li>
-                    <li><a href="garden-planner.html">Garden Planner</a> - A tool for planning your perfect garden.</li>
-                    <li><a href="https://abrahamdrechsler.github.io/family-secret-santa-list-generator/" target="_blank">Secret Santa Generator</a>
-                        - Secret Santa List Generator.</li>
-                </ul>
-            </section>
-    </div>
 </body>
 </html>

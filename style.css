@@ -1,65 +1,158 @@
-/* Base Styles */
-
-/* Global font and color for the entire page */
+/* General Page Styling */
 body {
     font-family: 'Montserrat', 'Futura', sans-serif;
-    color: #555; 
-    background-color: #f5f5f5; 
-    margin: 60px;
-    padding: 20;
-    line-height: 1.6;
-    margin-bottom: 5px;
+    color: #333; 
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
 }
 
-/* Header title style */
-header h1 {
+/* Navigation Header Styling */
+.nav-header {
+    width: 100%;
+    padding: 20px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Navigation Container */
+.nav-header .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 40px;
+}
+
+/* Logo Styling */
+.nav-header .logo a {
+    font-family: 'Montserrat', 'Futura', sans-serif;
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #333;
+    text-decoration: none;
+    letter-spacing: 1px;
+}
+
+/* Navigation Links */
+.nav-header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 30px;
+}
+
+.nav-header nav ul li {
+    display: inline;
+}
+
+.nav-header nav ul li a {
+    font-family: 'Montserrat', 'Futura', sans-serif;
+    font-size: 1em;
+    font-weight: normal;
+    color: #555;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: color 0.3s ease;
+}
+
+.nav-header nav ul li a:hover {
+    color: #000;
+}
+
+/* Adjust spacing for content below fixed header */
+body {
+    padding-top: 100px;
+}
+
+/* Content Wrapper to Center Everything */
+.container {
+    max-width: 800px;
+    width: 90%;
+    margin: 80px auto;
+    text-align: left;
+}
+
+/* Header Styling */
+.container header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.container header h1 {
     font-size: 2.5em;
     font-weight: 700;
-    color: #555; /* Dark grey color */
-    margin-bottom: 20px;
-    margin-top: 0px;  /* Consistent spacing above headings */
-    padding: 0;
-    max-width: 800px;
+    color: #333;
+    margin-bottom: 10px;
 }
 
-/* Section Headings (e.g., About Me, Projects) */
-h2 {
-    font-size: 1.8em;
-    font-weight: 700;
+.container header p {
+    font-size: 1.2em;
     color: #555;
-    margin-bottom: 0px; /* Reduced space below headings */
-    margin-top: 0px;  /* Consistent spacing above headings */
 }
 
-/* Paragraph text */
-p {
-    margin-top: 0px;   /* Reduced space above paragraphs */
-    margin-bottom: 0px;
+/* Section Styling */
+section {
+    margin-bottom: 40px;
+}
+
+section h2 {
+    font-size: 2em;
+    color: #333;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+section p, section ul {
+    font-size: 1.1em;
+    color: #555;
     line-height: 1.6;
 }
 
-/* Project List Styles */
-ul {
-    list-style-type: disc;
-    padding-left: 20px;
-    margin-top: 0px;
+section ul {
+    list-style: none;
+    padding: 0;
 }
 
-li {
-    margin-bottom: 0px; /* Space between project items */
+section ul li {
+    margin-bottom: 10px;
 }
 
-/* Links */
-a {
-    color: #3498db;  /* Modern blue color for links */
+section ul li a {
+    color: #3498db;
     text-decoration: none;
+    font-weight: bold;
 }
 
-a:hover {
+section ul li a:hover {
     text-decoration: underline;
 }
 
-/* Optional: Reduce space around sections */
-section {
-    margin-bottom: 10px;
+/* Responsive Design for Smaller Screens */
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+    }
+
+    .nav-header .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .nav-header nav ul {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .container header h1 {
+        font-size: 2em;
+    }
 }
