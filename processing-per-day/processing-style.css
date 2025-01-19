@@ -1,0 +1,70 @@
+/* Base Styles */
+
+/* Global font and color for the entire page */
+body {
+    font-family: 'Montserrat', 'Futura', sans-serif;
+    color: #555; 
+    background-color: #f5f5f5; 
+    margin: 60px;
+    padding: 0;
+    line-height: 1.6;
+    margin-bottom: 5px;
+}
+
+/* Header title style */
+header h1 {
+    font-size: 2.5em;
+    font-weight: 700;
+    color: #555; /* Dark grey color */
+    margin-bottom: 20px;
+    margin-top: 0px;  /* Consistent spacing above headings */
+    padding: 0;
+    max-width: 800px;
+}
+
+
+/* Grid container for tiles */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 15px;
+    padding: 20px;
+}
+
+/* Style for image tiles */
+.grid-item {
+    width: 100%;
+    height: 200px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.grid-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.grid-item:hover img {
+    transform: scale(1.1);
+}
+
+/* Style for placeholder tiles */
+.placeholder {
+    width: 100%;
+    height: 100%;
+    background-color: #ddd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 48px;
+    font-weight: bold;
+    color: #777;
+}
+
+.placeholder:hover {
+    background-color: #ccc;
+}
