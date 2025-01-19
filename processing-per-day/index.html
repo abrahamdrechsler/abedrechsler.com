@@ -5,22 +5,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Processing Images Per Day</title>
     <link rel="stylesheet" href="processing-style.css">
-<!-- Load Montserrat Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-
-    <header>
-        <h1>Processing Images Per Day</h1>
-        <p>I'm taking on a project to create one processing project per day. I'll post a matrix of images here, and explain each a bit in the links below.</p>
+    <header class="nav-header">
+        <div class="container">
+            <div class="logo">
+                <a href="/">Abe Drechsler</a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="http://abedrechsler.com">Home</a></li>
+                    <li><a href="/processing-per-day/index.html">Processing Per Day</a></li>
+                    <li><a href="/about.html">About</a></li>
+                    <li><a href="/projects.html">Projects</a></li>
+                    <li><a href="/contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
-    <main>
-        <div id="image-grid" class="grid-container">
-            <!-- Image tiles will be loaded here by JavaScript -->
-        </div>
-    </main>
+    <div class="container">
+        <!-- Header Section -->
+        <header>
+            <h1>Processing Images Per Day</h1>
+            <p>A new image and story every day. Browse below:</p>
+        </header>
 
-    <script src="processing-script.js"></script> <!-- Corrected path to JS -->
+        <!-- Grid Section -->
+        <div id="image-grid" class="grid-container">
+            <!-- Images will be dynamically inserted here via script -->
+        </div>
+    </div>
+
+    <script src="processing-script.js"></script>
 </body>
 </html>

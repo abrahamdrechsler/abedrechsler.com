@@ -1,10 +1,12 @@
-/* Centering content within an 800px max-width container */
-.container {
-    max-width: 800px;
-    margin: 80px auto;
-    text-align: center; /* Center container text while content remains left-aligned */
+/* General Page Styling */
+body {
     font-family: 'Montserrat', 'Futura', sans-serif;
-    color: #333;
+    color: #333; 
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;  /* Center the content horizontally */
 }
 
 /* Navigation Header Styling */
@@ -72,98 +74,64 @@ body {
     padding-top: 100px;
 }
 
-/* Header Styling */
-header {
-    text-align: center;
-    margin-bottom: 40px;
+/* Content Wrapper to Center Everything */
+.container {
+    max-width: 800px;  /* Adjust width to match example */
+    width: 90%;
+    margin: 80px auto;  /* Centering with top and bottom margin */
+    text-align: left;   /* Left align text inside the container */
 }
 
-header h1 {
-    font-size: 2.5em;
-    font-weight: 700;
-    color: #333;
-    margin-bottom: 10px;
-}
-
-header p {
-    font-size: 1.2em;
-    color: #555;
-}
-
-/* Grid Layout */
-.grid-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    gap: 20px;
-    justify-content: center; /* Ensure grid stays centered */
-}
-
-/* Tile Styling */
-.grid-item {
-    width: 100%;
-    border-radius: 0;
-    overflow: hidden;
-    box-shadow: none;
-    background: #fff;
-}
-
-/* Image Styling */
-.image-container {
-    width: 100%;
-    aspect-ratio: 1/1; /* Ensures a perfect square shape */
-    overflow: hidden;
-}
-
-.grid-item img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-bottom: 1px solid #ddd;
-    border-radius: 0;
-}
-
-/* Placeholder Styling for Unposted Days */
-.placeholder {
-    width: 100%;
-    aspect-ratio: 1/1; /* Keep placeholder square */
-    background-color: #ddd;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 2.5em;
-    font-weight: bold;
-    color: #555;
-    border-bottom: 1px solid #ddd;
-}
-
-/* Text below each image tile */
-.tile-text {
-    text-align: left;
-    padding: 10px;
-    font-family: 'Montserrat', 'Futura', sans-serif;
-}
-
-/* Tile title */
-.tile-title {
-    font-size: 1.1em;
-    font-weight: bold;
-    color: #333;
-    margin-bottom: 3px;
-}
-
-/* Tile date */
-.tile-date {
-    font-size: 0.9em;
+/* Date Style */
+.date {
+    font-size: 0.9em;  /* Smaller font for date */
     color: #888;
+    font-weight: 400;
     text-transform: uppercase;
     letter-spacing: 1px;
     margin-bottom: 10px;
 }
 
-/* Hover effect */
-.grid-item:hover {
-    transform: scale(1.05);
-    transition: transform 0.3s ease-in-out;
+/* Day Title Style */
+h1 {
+    font-size: 2.5em;
+    font-weight: 700;
+    margin: 0 0 20px;
+    color: #333;
+}
+
+/* Image Styling */
+.image-container {
+    max-width: 100%;
+    margin: 0 auto; /* Center the image */
+}
+
+.image-container img {
+    width: 100%;
+    border-radius: 0;
+    box-shadow: none;
+}
+
+/* Paragraph Styling */
+.description {
+    font-size: 1.2em;
+    line-height: 1.8;
+    color: #555;
+    margin-top: 20px;
+}
+
+/* Back to Gallery Link */
+.back-link {
+    display: inline-block;
+    font-size: 1.1em;
+    color: #3498db;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 30px;
+}
+
+.back-link:hover {
+    text-decoration: underline;
 }
 
 /* Responsive Design for Smaller Screens */
@@ -182,7 +150,7 @@ header p {
         gap: 15px;
     }
 
-    header h1 {
+    h1 {
         font-size: 2em;
     }
 }
