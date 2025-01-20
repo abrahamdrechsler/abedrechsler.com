@@ -1,43 +1,37 @@
-/* General Page Styling */
-body {
+.container {
+    max-width: 1000px;
+    margin: 80px auto;
+    text-align: center; /* Center container text while content remains left-aligned */
     font-family: 'Montserrat', 'Futura', sans-serif;
-    color: #333; 
-    background-color: #f5f5f5;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;  /* Center the content horizontally */
+    color: #555;
+    margin-top: 80px;
 }
 
 /* Navigation Header Styling */
 .nav-header {
-    width: 100%;
-    padding: 20px 0;
-    position: fixed;
-    top: 0;
-    left: 0;
-    background-color: #fff;
-    z-index: 1000;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 0 auto;
+    padding-top: 80px;
+    position: relative; /* Allow scrolling */
 }
 
 /* Navigation Container */
 .nav-header .container {
-    max-width: 1200px;
+
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 40px;
+    padding: 0;
 }
 
 /* Logo Styling */
 .nav-header .logo a {
     font-family: 'Montserrat', 'Futura', sans-serif;
     font-size: 1.5em;
-    font-weight: bold;
-    color: #333;
+    font-weight: none;
+    color: #555;
     text-decoration: none;
+    text-transform: uppercase;
     letter-spacing: 1px;
 }
 
@@ -47,7 +41,7 @@ body {
     margin: 0;
     padding: 0;
     display: flex;
-    gap: 30px;
+    gap: 20px;
 }
 
 .nav-header nav ul li {
@@ -55,49 +49,43 @@ body {
 }
 
 .nav-header nav ul li a {
-    font-family: 'Montserrat', 'Futura', sans-serif;
-    font-size: 1em;
+    font-size: .8em;
     font-weight: normal;
     color: #555;
     text-decoration: none;
     text-transform: uppercase;
-    letter-spacing: 1px;
     transition: color 0.3s ease;
+}
+
+/* Prevent visited link color change */
+.nav-header nav ul li a:visited {
+    color: #555;
+    text-decoration: none;
 }
 
 .nav-header nav ul li a:hover {
     color: #000;
 }
 
-/* Adjust spacing for content below fixed header */
-body {
-    padding-top: 100px;
-}
-
-/* Content Wrapper to Center Everything */
-.container {
-    max-width: 800px;  /* Adjust width to match example */
-    width: 90%;
-    margin: 80px auto;  /* Centering with top and bottom margin */
-    text-align: left;   /* Left align text inside the container */
-}
 
 /* Date Style */
 .date {
     font-size: 0.9em;  /* Smaller font for date */
     color: #888;
-    font-weight: 400;
+    font-weight: 300;
     text-transform: uppercase;
     letter-spacing: 1px;
-    margin-bottom: 10px;
+    text-align: left;
+
 }
 
 /* Day Title Style */
 h1 {
     font-size: 2.5em;
-    font-weight: 700;
-    margin: 0 0 20px;
-    color: #333;
+    font-weight: 300;
+    margin-bottom: 200;
+    color: #555;
+    text-align: left;
 }
 
 /* Image Styling */
@@ -109,7 +97,6 @@ h1 {
 .image-container img {
     width: 100%;
     border-radius: 0;
-    box-shadow: none;
 }
 
 /* Paragraph Styling */
@@ -118,14 +105,16 @@ h1 {
     line-height: 1.8;
     color: #555;
     margin-top: 20px;
+    text-align: left;
 }
 
 /* Back to Gallery Link */
 .back-link {
-    display: inline-block;
+
     font-size: 1.1em;
     color: #3498db;
     text-decoration: none;
+    text-align: left;
     font-weight: bold;
     margin-top: 30px;
 }
@@ -142,10 +131,11 @@ h1 {
 }
 
 .code-section h2 {
-    font-size: 1.5em;
-    color: #333;
+    font-size: 1em;
+    color: #555;
     margin-bottom: 15px;
-}
+    text-align: left;
+    text-transform: uppercase;}
 
 pre[class*="language-"] {
     background: none !important;
