@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../daystyle.css">
+    <!-- Prism.js CSS for syntax highlighting -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.css" rel="stylesheet">
+</head>
+<body>
+
+    <header class="nav-header">
+        <div class="container">
+            <div class="logo">
+                <a href="../../index.html">Abe Drechsler</a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="../index.html">Processing Per Day</a></li>
+                    <li><a href="/about.html">About</a></li>
+                    <li><a href="/contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <!-- Date Section -->
+        <p class="date">October 30, 2020</p>
+
+        <!-- Title Section -->
+        <h1>Day 4: Squiggle</h1>
+
+        <!-- Image Section -->
+        <div class="image-container">
+            <img src="../images/day-4.png">
+        </div>
+
+        <!-- Description Section -->
+        <p class="description">
+        This sketch is a fairly simple. I've created a line/shape and offset it progressively from left to right. 
+        It gets progresively more squiggley as it moves from left to right. Each line pulls from a matrix of colors, 
+        which I've adjusted so there are a few more red lines than the other 3 colors.
+        </p>
+
+        <!-- Code Section -->
+        <div class="code-section">
+            <h2>Code:</h2>
+            <pre><code class="language-javascript">
+// Day 4 - Squiggle
+function setup() {
+    createCanvas(800, 800);
+    noLoop();
+}
+
+function draw() {
+    background(255);
+    let colors = ['#FF5C4D', '#FF9636', '#FF5C4D', '#FFCD58', '#DAD870'];
+    let bandWidth = 40;  // Increased band width
+    let numBands = Math.ceil(width / bandWidth) - 12;
+
+    strokeCap(SQUARE);
+
+    for (let i = 0; i < numBands; i++) {
+        let xOffset = i * bandWidth * 1.7;
+        let colorIndex = i % colors.length;
+        stroke(colors[colorIndex]);
+
+        // Increase stroke weight with noise variation
+        let dynamicWeight = bandWidth * (0.8 + noise(i * 0.1) * 0.8);
+        strokeWeight(dynamicWeight); 
+
+        noFill();
+        beginShape();
+        let x = xOffset;
+
+        // Make squiggles increase progressively from left to right
+        let squiggleFactor = map(i, 0, numBands - 1, 0.1, 2.0);
+        
+        for (let y = i * 2 * i * 2; y <= height; y += 90) {
+            let xNoise = noise(y * 0.01, i * 0.05) * 50 * squiggleFactor;
+            curveVertex(x + xNoise, y);
+        }
+        endShape();
+    }
+}
+
+   
+
+            </code></pre>
+        </div>
+
+        <!-- Back to Gallery Link -->
+        <a href="../index.html" class="back-link">← Back to Gallery</a>
+    </div>
+
+    <!-- Prism.js JavaScript for syntax highlighting -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-javascript.min.js"></script>
+
+</body>
+</html>
