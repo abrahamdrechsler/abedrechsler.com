@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../daystyle.css">
+    <!-- Prism.js CSS for syntax highlighting -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.css" rel="stylesheet">
+</head>
+<body>
+
+    <header class="nav-header">
+        <div class="container">
+            <div class="logo">
+                <a href="../../index.html">Abe Drechsler</a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="../index.html">Processing Per Day</a></li>
+                    <li><a href="/about.html">About</a></li>
+                    <li><a href="/contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <!-- Date Section -->
+        <p class="date">February 02, 2025</p>
+
+        <!-- Title Section -->
+        <h1>Day 5: SF Visit</h1>
+
+        <!-- Image Section -->
+        <div class="image-container">
+            <img src="../images/day-5.png">
+        </div>
+
+        <!-- Description Section -->
+        <p class="description">
+        Inspired by SF visit.
+        </p>
+
+        <!-- Code Section -->
+        <div class="code-section">
+            <h2>Code:</h2>
+            <pre><code class="language-javascript">
+// Day 5 - SF Visit
+function setup() {
+    createCanvas(800, 800);
+    noLoop();
+}
+function draw() {
+    background(255);
+    let colors = ['#F3753C', '#F04A00', '#00A6F0','#00A6F0'];
+    let colors2 = ['#F04A00', '#F3753C', '#00A6F0'];
+    let numBuildings = 10; // Number of buildings on each side
+    let streetWidth = 200;
+    let hillHeight = 150;
+    let offsetdistance = 100 * random(-1,1.5);
+    // Draw buildings on the left side
+    for (let i = 0; i < numBuildings; i++) {
+        let x = map(i, 0, numBuildings - 1, 100, width / 2 - streetWidth / 2 - offsetdistance);
+        let heightVariation = random(180, 400);
+        let buildingHeight = map(i, 0, numBuildings - 1, 300, 50) + heightVariation;
+        let colorIndex = i % colors.length;
+        fill(colors[colorIndex]);
+        rect(x, height - buildingHeight, 70, buildingHeight);
+    }
+    // Draw buildings on the right side
+    for (let i = 0; i < numBuildings; i++) {
+        let x = map(i, 0, numBuildings - 1, width - 100, width / 2 + streetWidth / 2 - offsetdistance * 2);
+        let heightVariation = random(50, 420);
+        let buildingHeight = map(i, 0, numBuildings - 1, 300, 50) + heightVariation;
+        let colorIndex2 = i % colors2.length;
+        fill(colors2[colorIndex2]);
+        rect(x - 50, height - buildingHeight, 70, buildingHeight);
+    }
+}
+
+   
+
+            </code></pre>
+        </div>
+
+        <!-- Back to Gallery Link -->
+        <a href="../index.html" class="back-link">← Back to Gallery</a>
+    </div>
+
+    <!-- Prism.js JavaScript for syntax highlighting -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-javascript.min.js"></script>
+
+</body>
+</html>

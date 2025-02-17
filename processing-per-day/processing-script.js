@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
     const grid = document.getElementById("image-grid");
-    const availableDays = 4;  // Number of posted days with images
+    const availableDays = 5;  // Number of posted days with images
     const totalDays = 20;     // Total number of days
 
     // Example data for posted days (titles and dates)
@@ -8,7 +8,9 @@ document.addEventListener("DOMContentLoaded", () => {
         1: { title: "Day 1 - Test", date: "January 19, 2025" },
         2: { title: "Day 2 - Fractals", date: "January 20, 2025" },
         3: { title: "Day 3 - Tracker", date: "January 21, 2025" },
-        4: { title: "Day 4 - Squiggles", date: "January 24, 2025" }
+        4: { title: "Day 4 - Squiggles", date: "January 24, 2025" },
+        5: { title: "Day 4 - SF", date: "February 2, 2025" }
+
     };
 
     for (let day = 1; day <= totalDays; day++) {

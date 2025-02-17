@@ -5,7 +5,7 @@ function setup() {
 
 function draw() {
     background(255);
-    let colors = ['#FF5C4D', '#FF9636', '#FF5C4D', '#FFCD58', '#DAD870'];
+    let colors = ['#FF5C4D', '#FF9636', '#FF5C4D', '#FF9636', '#FF5C4D'];
     let bandWidth = 40;  // Increased band width
     let numBands = Math.ceil(width / bandWidth) - 12;
 
