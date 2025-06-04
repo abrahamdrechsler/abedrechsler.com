@@ -1,41 +1,41 @@
 /* General Page Styling */
 body {
     font-family: 'Montserrat', 'Futura', sans-serif;
-    color: #333; 
-    background-color: #f5f5f5;
+    color: #333;
+    background-color: #fff;
     margin: 0;
     padding: 0;
+    padding-top: 60px;
 }
 
 /* Navigation Header Styling */
 .nav-header {
+    margin: 0 auto;
+    padding-top: 80px;
+    position: relative;
+    background: none;
+    box-shadow: none;
     width: 100%;
-    padding: 20px 0;
-    position: fixed;
-    top: 0;
-    left: 0;
-    background-color: #fff;
-    z-index: 1000;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 /* Navigation Container */
 .nav-header .container {
-    max-width: 1200px;
+    max-width: 1000px;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 40px;
+    padding: 0;
 }
 
 /* Logo Styling */
 .nav-header .logo a {
     font-family: 'Montserrat', 'Futura', sans-serif;
     font-size: 1.5em;
-    font-weight: bold;
-    color: #333;
+    font-weight: none;
+    color: #555;
     text-decoration: none;
+    text-transform: uppercase;
     letter-spacing: 1px;
 }
 
@@ -45,7 +45,7 @@ body {
     margin: 0;
     padding: 0;
     display: flex;
-    gap: 30px;
+    gap: 20px;
 }
 
 .nav-header nav ul li {
@@ -53,31 +53,31 @@ body {
 }
 
 .nav-header nav ul li a {
-    font-family: 'Montserrat', 'Futura', sans-serif;
-    font-size: 1em;
+    font-size: .8em;
     font-weight: normal;
     color: #555;
     text-decoration: none;
     text-transform: uppercase;
-    letter-spacing: 1px;
     transition: color 0.3s ease;
+}
+
+.nav-header nav ul li a:visited {
+    color: #555;
+    text-decoration: none;
 }
 
 .nav-header nav ul li a:hover {
     color: #000;
 }
 
-/* Adjust spacing for content below fixed header */
-body {
-    padding-top: 100px;
-}
-
 /* Content Wrapper to Center Everything */
 .container {
-    max-width: 800px;
-    width: 90%;
+    max-width: 1000px;
     margin: 80px auto;
-    text-align: left;
+    text-align: center;
+    font-family: 'Montserrat', 'Futura', sans-serif;
+    color: #555;
+    margin-top: 80px;
 }
 
 /* Header Styling */
@@ -89,7 +89,7 @@ body {
 .container header h1 {
     font-size: 2.5em;
     font-weight: 700;
-    color: #333;
+    color: #555;
     margin-bottom: 10px;
 }
 
@@ -134,6 +134,78 @@ section ul li a {
 
 section ul li a:hover {
     text-decoration: underline;
+}
+
+/* Grid Layout */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    justify-content: center;
+}
+
+/* Tile Styling */
+.grid-item {
+    width: 100%;
+    border-radius: 0;
+    overflow: hidden;
+    box-shadow: none;
+    background: #fff;
+    transition: transform 0.3s ease;
+}
+
+.grid-item:hover {
+    transform: translateY(-5px);
+}
+
+/* Image Styling */
+.image-container {
+    width: 100%;
+    aspect-ratio: 1/1;
+    overflow: hidden;
+}
+
+.grid-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-bottom: 1px solid #ddd;
+    border-radius: 0;
+    transition: transform 0.3s ease;
+}
+
+.grid-item:hover img {
+    transform: scale(1.05);
+}
+
+/* Text below each image tile */
+.tile-text {
+    text-align: left;
+    padding: 10px;
+    font-family: 'Montserrat', 'Futura', sans-serif;
+}
+
+/* Tile title */
+.tile-title {
+    font-size: 1.1em;
+    font-weight: bold;
+    margin-bottom: 3px;
+    color: #555;
+}
+
+/* Tile date */
+.tile-date {
+    font-size: 0.9em;
+    color: #888;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+
+/* Link styling */
+.grid-item a {
+    text-decoration: none;
+    color: inherit;
 }
 
 /* Responsive Design for Smaller Screens */
