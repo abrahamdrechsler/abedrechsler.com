@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Abe Drechsler</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <style>
         #password-overlay {
             position: fixed;
@@ -68,76 +69,75 @@
             </div>
             <nav>
                 <ul>
+                    <li><a href="https://x.com/abedrechsler" target="_blank" class="social-icon"><i class="fa-brands fa-twitter"></i></a></li>
+                    <li><a href="https://linkedin.com/in/abedrechsler" target="_blank" class="social-icon"><i class="fa-brands fa-linkedin"></i></a></li>
                     <li><a href="about.html">About</a></li>
-                    <li><a href="contact.html">Contact</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
     <div class="container">
+        <div class="tag-filter-container">
+            <div class="tag-filters">
+                <span class="tag-pill" data-tag="art">Art</span>
+                <span class="tag-pill" data-tag="cad">CAD</span>
+                <span class="tag-pill" data-tag="utility">Utility</span>
+                <span class="tag-pill" data-tag="game">Game</span>
+                <span class="tag-pill" data-tag="architecture">Architecture</span>
+            </div>
+        </div>
+        
         <div id="project-grid" class="grid-container">
-            <div class="grid-item">
-                <a href="processing-per-day/index.html">
+            <div class="grid-item" data-tags="art">
+                <a href="projects/processing-per-day/index.html">
                     <div class="image-container">
                         <img src="images/processing-preview.jpg" alt="Processing Per Day">
                     </div>
                     <div class="tile-text">
                         <div class="tile-title">Processing Per Day</div>
-                        <div class="tile-date">20 days of Processing art</div>
+                        <div class="tile-date">P5JS/Processing inspired paramteric art doodles</div>
                     </div>
                 </a>
             </div>
 
-            <div class="grid-item">
-                <a href="garden-planner.html">
-                    <div class="image-container">
-                        <img src="images/garden-preview.jpg" alt="Garden Planner">
-                    </div>
-                    <div class="tile-text">
-                        <div class="tile-title">Garden Planner</div>
-                        <div class="tile-date">Plan your perfect garden</div>
-                    </div>
-                </a>
-            </div>
-
-            <div class="grid-item">
+            <div class="grid-item" data-tags="game">
                 <a href="https://cat-balloon.replit.app/" target="_blank">
                     <div class="image-container">
                         <img src="images/cat-balloon-preview.jpg" alt="Cat Balloon Game">
                     </div>
                     <div class="tile-text">
                         <div class="tile-title">Cat Balloon Game</div>
-                        <div class="tile-date">A silly balloon game</div>
+                        <div class="tile-date">A silly balloon game inspired by a conversation with my kids</div>
                     </div>
                 </a>
             </div>
 
-            <div class="grid-item">
+            <div class="grid-item" data-tags="utility">
                 <a href="https://wav-recorder.replit.app/" target="_blank">
                     <div class="image-container">
                         <img src="images/wav-recorder-preview.jpg" alt="WAV Audio Recorder">
                     </div>
                     <div class="tile-text">
                         <div class="tile-title">WAV Audio Recorder</div>
-                        <div class="tile-date">Record and download WAV files</div>
+                        <div class="tile-date">Record, edit, download WAV or MP3 files</div>
                     </div>
                 </a>
             </div>
 
-            <div class="grid-item">
+            <div class="grid-item" data-tags="cad architecture">
                 <a href="https://dimension-catalog.replit.app/" target="_blank">
                     <div class="image-container">
                         <img src="images/dimension-catalog-preview.jpg" alt="Dimension Catalog Prototype">
                     </div>
                     <div class="tile-text">
                         <div class="tile-title">Dimension Catalog Prototype</div>
-                        <div class="tile-date">Explore the Dimension Catalog prototype</div>
+                        <div class="tile-date">Explore a concept for deployable dimension style and behavior catalogs</div>
                     </div>
                 </a>
             </div>
 
-            <div class="grid-item">
+            <div class="grid-item" data-tags="cad architecture">
                 <a href="https://unit-configuration.replit.app/" target="_blank">
                     <div class="image-container">
                         <img src="images/unit-configuration-preview.jpg" alt="Unit Configuration Prototype">
@@ -149,19 +149,19 @@
                 </a>
             </div>
 
-            <div class="grid-item">
+            <div class="grid-item" data-tags="game">
                 <a href="https://crab-beach-adventure.replit.app/" target="_blank">
                     <div class="image-container">
                         <img src="images/crab-beach-preview.jpg" alt="Crab Beach Game">
                     </div>
                     <div class="tile-text">
                         <div class="tile-title">Crab Beach Game</div>
-                        <div class="tile-date">A playful crab beach adventure</div>
+                        <div class="tile-date">Sidescroller created with my daughter at the beach</div>
                     </div>
                 </a>
             </div>
 
-            <div class="grid-item">
+            <div class="grid-item" data-tags="cad architecture">
                 <a href="https://offset-prototype.replit.app/" target="_blank">
                     <div class="image-container">
                         <img src="images/offset-prototype-preview.jpg" alt="Combined Shape and Offset Prototype">
@@ -169,6 +169,18 @@
                     <div class="tile-text">
                         <div class="tile-title">Combined Shape and Offset Prototype</div>
                         <div class="tile-date">Explore the Combined Shape and Offset Prototype</div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="grid-item" data-tags="architecture">
+                <a href="projects/uw-north-campus-housing/index.html">
+                    <div class="image-container">
+                        <img src="images/uw-housing-preview.jpg" alt="UW North Campus Housing">
+                    </div>
+                    <div class="tile-text">
+                        <div class="tile-title">UW North Campus Housing</div>
+                        <div class="tile-date">600,000 Square Foot campus extension</div>
                     </div>
                 </a>
             </div>
@@ -197,6 +209,66 @@
         document.getElementById('password-input').addEventListener('keypress', function(e) {
             if (e.key === 'Enter') {
                 document.getElementById('submit-password').click();
+            }
+        });
+
+        // Tag filtering functionality
+        let selectedTags = new Set();
+
+        function initTagFiltering() {
+            const tagPills = document.querySelectorAll('.tag-pill');
+            const gridItems = document.querySelectorAll('.grid-item');
+
+            // Add click listeners to tag pills
+            tagPills.forEach(pill => {
+                pill.addEventListener('click', function() {
+                    const tag = this.getAttribute('data-tag');
+                    
+                    // Toggle selection
+                    if (selectedTags.has(tag)) {
+                        selectedTags.delete(tag);
+                        this.classList.remove('selected');
+                    } else {
+                        selectedTags.add(tag);
+                        this.classList.add('selected');
+                    }
+                    
+                    // Apply filtering
+                    filterItems();
+                });
+            });
+
+            function filterItems() {
+                gridItems.forEach(item => {
+                    const itemTags = item.getAttribute('data-tags').split(' ');
+                    
+                    // If no tags selected, show all items
+                    if (selectedTags.size === 0) {
+                        item.classList.remove('filtered-out');
+                    } else {
+                        // Check if item has at least one of the selected tags
+                        const hasMatchingTag = itemTags.some(tag => selectedTags.has(tag));
+                        
+                        if (hasMatchingTag) {
+                            item.classList.remove('filtered-out');
+                        } else {
+                            item.classList.add('filtered-out');
+                        }
+                    }
+                });
+            }
+        }
+
+        // Initialize tag filtering after password check
+        if (localStorage.getItem('authenticated') === 'true') {
+            initTagFiltering();
+        }
+
+        // Also initialize after successful password entry
+        document.getElementById('submit-password').addEventListener('click', function() {
+            const password = document.getElementById('password-input').value;
+            if (password === 'AbeDrechsler') {
+                setTimeout(initTagFiltering, 100); // Small delay to ensure DOM is ready
             }
         });
     </script>

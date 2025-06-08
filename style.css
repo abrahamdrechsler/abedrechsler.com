@@ -45,7 +45,8 @@ body {
     margin: 0;
     padding: 0;
     display: flex;
-    gap: 20px;
+    align-items: center;
+    gap: 0.5rem;
 }
 
 .nav-header nav ul li {
@@ -53,12 +54,15 @@ body {
 }
 
 .nav-header nav ul li a {
-    font-size: .8em;
-    font-weight: normal;
-    color: #555;
+    color: #333;
     text-decoration: none;
-    text-transform: uppercase;
+    padding: 0.5rem;
     transition: color 0.3s ease;
+}
+
+.nav-header nav ul li a.social-icon {
+    padding: 0.5rem;
+    font-size: 1.2rem;
 }
 
 .nav-header nav ul li a:visited {
@@ -67,7 +71,7 @@ body {
 }
 
 .nav-header nav ul li a:hover {
-    color: #000;
+    color: #666;
 }
 
 /* Content Wrapper to Center Everything */
@@ -197,7 +201,6 @@ section ul li a:hover {
 .tile-date {
     font-size: 0.9em;
     color: #888;
-    text-transform: uppercase;
     letter-spacing: 1px;
     margin-bottom: 10px;
 }
@@ -206,6 +209,58 @@ section ul li a:hover {
 .grid-item a {
     text-decoration: none;
     color: inherit;
+}
+
+/* Tag Filter Styling */
+.tag-filter-container {
+    margin-bottom: 30px;
+}
+
+.tag-filters {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 8px;
+    margin-bottom: 20px;
+}
+
+.tag-pill {
+    background: #f0f0f0;
+    color: #666;
+    padding: 4px 12px;
+    border-radius: 16px;
+    cursor: pointer;
+    user-select: none;
+    font-size: 0.8em;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.tag-pill:hover {
+    background: #e0e0e0;
+    transform: translateY(-1px);
+}
+
+.tag-pill.selected {
+    background: #007bff;
+    color: white;
+    border: 2px solid #0056b3;
+    transform: scale(1.05);
+}
+
+/* Grid animations */
+.grid-item {
+    transition: all 0.4s cubic-bezier(0.4, 0.0, 0.2, 1);
+    opacity: 1;
+}
+
+.grid-item.filtered-out {
+    display: none;
+}
+
+.grid-container {
+    transition: all 0.3s ease;
 }
 
 /* Responsive Design for Smaller Screens */
@@ -226,5 +281,14 @@ section ul li a:hover {
 
     .container header h1 {
         font-size: 2em;
+    }
+
+    .tag-filters {
+        gap: 6px;
+    }
+
+    .tag-pill {
+        font-size: 0.75em;
+        padding: 3px 10px;
     }
 }

@@ -1,0 +1,2179 @@
+{
+  "schemaVersion": "0.0.447",
+  "name": "Rotate and Scale Test",
+  "levels": {
+    "rfpm4aTwuGesOitL": {
+      "entityType": "LEVEL",
+      "id": "rfpm4aTwuGesOitL",
+      "name": "Level 1",
+      "sortIndex": 0,
+      "topOfWall": 108,
+      "levelDatums": {}
+    }
+  },
+  "rooms": {
+    "bhOn98fNq1Ao9z6a": {
+      "name": "Living",
+      "type": "LIVING",
+      "edgeIds": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "blockId": "fuiiWuBtc20HG9Mc",
+      "useBuiltinLayout": true,
+      "removeBuiltInOpenings": false,
+      "entityType": "ROOM",
+      "id": "bhOn98fNq1Ao9z6a",
+      "sortIndex": 1,
+      "outline": {
+        "$$TA_TYPE$$": "F64",
+        "values": [
+          -60,
+          -114,
+          144,
+          -114,
+          144,
+          36,
+          -60,
+          36,
+          -60,
+          -114
+        ]
+      },
+      "parentId": "fuiiWuBtc20HG9Mc"
+    },
+    "iVUwy7I3PWwSezPa": {
+      "name": "Kitchen 3",
+      "type": "KITCHEN",
+      "edgeIds": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "blockId": "fuiiWuBtc20HG9Mc",
+      "useBuiltinLayout": false,
+      "removeBuiltInOpenings": true,
+      "entityType": "ROOM",
+      "id": "iVUwy7I3PWwSezPa",
+      "sortIndex": 3,
+      "outline": {
+        "$$TA_TYPE$$": "F64",
+        "values": [
+          -96,
+          36,
+          144,
+          36,
+          144,
+          138,
+          -96,
+          138,
+          -96,
+          36
+        ]
+      },
+      "parentId": "fuiiWuBtc20HG9Mc"
+    },
+    "tA1tg8RWuKHweCwG": {
+      "name": "Hall 4",
+      "type": "HALL",
+      "edgeIds": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "blockId": "fuiiWuBtc20HG9Mc",
+      "useBuiltinLayout": true,
+      "removeBuiltInOpenings": false,
+      "entityType": "ROOM",
+      "id": "tA1tg8RWuKHweCwG",
+      "sortIndex": 4,
+      "outline": {
+        "$$TA_TYPE$$": "F64",
+        "values": [
+          -96,
+          -18,
+          -60,
+          -18,
+          -60,
+          36,
+          -96,
+          36,
+          -96,
+          -18
+        ]
+      },
+      "parentId": "fuiiWuBtc20HG9Mc"
+    },
+    "khVtoVwddEerhfAi": {
+      "name": "Room 5",
+      "type": "GENERAL",
+      "edgeIds": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6"
+      ],
+      "blockId": "fuiiWuBtc20HG9Mc",
+      "useBuiltinLayout": true,
+      "removeBuiltInOpenings": false,
+      "entityType": "ROOM",
+      "id": "khVtoVwddEerhfAi",
+      "sortIndex": 7,
+      "outline": {
+        "$$TA_TYPE$$": "F64",
+        "values": [
+          -60,
+          -18,
+          -96,
+          -18,
+          -96,
+          -39,
+          -126,
+          -39,
+          -126,
+          -114,
+          -60,
+          -114,
+          -60,
+          -18
+        ]
+      },
+      "parentId": "fuiiWuBtc20HG9Mc"
+    },
+    "S0WRKH6hdQ5qLUVL": {
+      "name": "Hall 2",
+      "type": "HALL",
+      "edgeIds": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "blockId": "fuiiWuBtc20HG9Mc",
+      "useBuiltinLayout": true,
+      "removeBuiltInOpenings": false,
+      "entityType": "ROOM",
+      "id": "S0WRKH6hdQ5qLUVL",
+      "sortIndex": 8,
+      "outline": {
+        "$$TA_TYPE$$": "F64",
+        "values": [
+          -193.75,
+          -39,
+          -96,
+          -39,
+          -96,
+          36,
+          -193.75,
+          36,
+          -193.75,
+          -39
+        ]
+      },
+      "parentId": "fuiiWuBtc20HG9Mc"
+    },
+    "PDJ70oDmPXumnWCV": {
+      "name": "Foyer 2",
+      "type": "FOYER",
+      "edgeIds": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "blockId": "fuiiWuBtc20HG9Mc",
+      "useBuiltinLayout": true,
+      "removeBuiltInOpenings": false,
+      "entityType": "ROOM",
+      "id": "PDJ70oDmPXumnWCV",
+      "sortIndex": 9,
+      "outline": {
+        "$$TA_TYPE$$": "F64",
+        "values": [
+          -126,
+          -174,
+          0,
+          -174,
+          0,
+          -114,
+          -126,
+          -114,
+          -126,
+          -174
+        ]
+      },
+      "parentId": "fuiiWuBtc20HG9Mc"
+    },
+    "CElUdWQOvVXsy2oT": {
+      "name": "Front porch 2",
+      "type": "FRONT_PORCH",
+      "edgeIds": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "blockId": "fuiiWuBtc20HG9Mc",
+      "useBuiltinLayout": true,
+      "removeBuiltInOpenings": false,
+      "entityType": "ROOM",
+      "id": "CElUdWQOvVXsy2oT",
+      "sortIndex": 10,
+      "outline": {
+        "$$TA_TYPE$$": "F64",
+        "values": [
+          0,
+          -228,
+          144,
+          -228,
+          144,
+          -114,
+          0,
+          -114,
+          0,
+          -228
+        ]
+      },
+      "parentId": "fuiiWuBtc20HG9Mc"
+    },
+    "ULZAoUt4apWjOpu8": {
+      "name": "Bathfull 2",
+      "type": "BATHFULL",
+      "edgeIds": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "blockId": "fuiiWuBtc20HG9Mc",
+      "useBuiltinLayout": true,
+      "removeBuiltInOpenings": false,
+      "entityType": "ROOM",
+      "id": "ULZAoUt4apWjOpu8",
+      "sortIndex": 11,
+      "outline": {
+        "$$TA_TYPE$$": "F64",
+        "values": [
+          -225.5,
+          -144,
+          -126,
+          -144,
+          -126,
+          -39,
+          -225.5,
+          -39,
+          -225.5,
+          -144
+        ]
+      },
+      "parentId": "fuiiWuBtc20HG9Mc"
+    },
+    "ytQNh54kU4PwPi2G": {
+      "name": "Bedroom 2",
+      "type": "BEDROOM",
+      "edgeIds": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "blockId": "fuiiWuBtc20HG9Mc",
+      "useBuiltinLayout": true,
+      "removeBuiltInOpenings": false,
+      "entityType": "ROOM",
+      "id": "ytQNh54kU4PwPi2G",
+      "sortIndex": 12,
+      "outline": {
+        "$$TA_TYPE$$": "F64",
+        "values": [
+          -219.5,
+          114,
+          -96,
+          114,
+          -96,
+          267,
+          -219.5,
+          267,
+          -219.5,
+          114
+        ]
+      },
+      "parentId": "fuiiWuBtc20HG9Mc"
+    },
+    "8VEB0WvNHOHecKBc": {
+      "name": "Closet 2",
+      "type": "CLOSET",
+      "edgeIds": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "blockId": "fuiiWuBtc20HG9Mc",
+      "useBuiltinLayout": true,
+      "removeBuiltInOpenings": false,
+      "entityType": "ROOM",
+      "id": "8VEB0WvNHOHecKBc",
+      "outline": {
+        "$$TA_TYPE$$": "F64",
+        "values": [
+          -193.75,
+          36,
+          -144.875,
+          36,
+          -144.875,
+          114,
+          -193.75,
+          114,
+          -193.75,
+          36
+        ]
+      },
+      "parentId": "fuiiWuBtc20HG9Mc"
+    },
+    "aSoR7Yv4y8XKzGma": {
+      "name": "Closet 2",
+      "type": "CLOSET",
+      "edgeIds": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "blockId": "fuiiWuBtc20HG9Mc",
+      "useBuiltinLayout": true,
+      "removeBuiltInOpenings": false,
+      "entityType": "ROOM",
+      "id": "aSoR7Yv4y8XKzGma",
+      "outline": {
+        "$$TA_TYPE$$": "F64",
+        "values": [
+          -144.875,
+          36,
+          -96,
+          36,
+          -96,
+          87,
+          -144.875,
+          87,
+          -144.875,
+          36
+        ]
+      },
+      "parentId": "fuiiWuBtc20HG9Mc"
+    },
+    "BDhXgcZqb7OOw0LO": {
+      "name": "Closet 2",
+      "type": "CLOSET",
+      "edgeIds": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "blockId": "fuiiWuBtc20HG9Mc",
+      "useBuiltinLayout": true,
+      "removeBuiltInOpenings": false,
+      "entityType": "ROOM",
+      "id": "BDhXgcZqb7OOw0LO",
+      "outline": {
+        "$$TA_TYPE$$": "F64",
+        "values": [
+          -96,
+          87,
+          -96,
+          114,
+          -144.875,
+          114,
+          -144.875,
+          87,
+          -96,
+          87
+        ]
+      },
+      "parentId": "fuiiWuBtc20HG9Mc"
+    },
+    "AaTVGLkHslDyDdZS": {
+      "name": "Garage 2",
+      "type": "GARAGE",
+      "edgeIds": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "blockId": "fuiiWuBtc20HG9Mc",
+      "useBuiltinLayout": true,
+      "removeBuiltInOpenings": false,
+      "entityType": "ROOM",
+      "id": "AaTVGLkHslDyDdZS",
+      "sortIndex": 13,
+      "outline": {
+        "$$TA_TYPE$$": "F64",
+        "values": [
+          -96,
+          138,
+          99.5,
+          138,
+          99.5,
+          294,
+          -96,
+          294,
+          -96,
+          138
+        ]
+      },
+      "parentId": "fuiiWuBtc20HG9Mc"
+    },
+    "ASBYGcWYPJakoSiW": {
+      "name": "Closet 2",
+      "type": "CLOSET",
+      "edgeIds": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "blockId": "fuiiWuBtc20HG9Mc",
+      "useBuiltinLayout": true,
+      "removeBuiltInOpenings": false,
+      "entityType": "ROOM",
+      "id": "ASBYGcWYPJakoSiW",
+      "outline": {
+        "$$TA_TYPE$$": "F64",
+        "values": [
+          144,
+          64.5,
+          210,
+          64.5,
+          210,
+          138,
+          144,
+          138,
+          144,
+          64.5
+        ]
+      },
+      "parentId": "fuiiWuBtc20HG9Mc"
+    },
+    "lwmaRobiMdSxcMCN": {
+      "name": "Rear porch 2",
+      "type": "REAR_PORCH",
+      "edgeIds": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "blockId": "fuiiWuBtc20HG9Mc",
+      "useBuiltinLayout": true,
+      "removeBuiltInOpenings": false,
+      "entityType": "ROOM",
+      "id": "lwmaRobiMdSxcMCN",
+      "sortIndex": 14,
+      "outline": {
+        "$$TA_TYPE$$": "F64",
+        "values": [
+          -96,
+          294,
+          210,
+          294,
+          210,
+          402,
+          -96,
+          402,
+          -96,
+          294
+        ]
+      },
+      "parentId": "fuiiWuBtc20HG9Mc"
+    },
+    "7vZZ46yCWue4bBJg": {
+      "name": "Room 2",
+      "type": "GENERAL",
+      "edgeIds": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "blockId": "fuiiWuBtc20HG9Mc",
+      "useBuiltinLayout": true,
+      "removeBuiltInOpenings": false,
+      "entityType": "ROOM",
+      "id": "7vZZ46yCWue4bBJg",
+      "sortIndex": 15,
+      "outline": {
+        "$$TA_TYPE$$": "F64",
+        "values": [
+          99.5,
+          138,
+          210,
+          138,
+          210,
+          294,
+          99.5,
+          294,
+          99.5,
+          138
+        ]
+      },
+      "parentId": "fuiiWuBtc20HG9Mc"
+    },
+    "O1NLi7lEMhl9uLUk": {
+      "name": "Room 3",
+      "type": "GENERAL",
+      "edgeIds": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "blockId": "fuiiWuBtc20HG9Mc",
+      "useBuiltinLayout": true,
+      "removeBuiltInOpenings": false,
+      "entityType": "ROOM",
+      "id": "O1NLi7lEMhl9uLUk",
+      "sortIndex": 16,
+      "outline": {
+        "$$TA_TYPE$$": "F64",
+        "values": [
+          -193.75,
+          267,
+          -96,
+          267,
+          -96,
+          366,
+          -193.75,
+          366,
+          -193.75,
+          267
+        ]
+      },
+      "parentId": "fuiiWuBtc20HG9Mc"
+    }
+  },
+  "roomLayouts": {},
+  "roomLayoutInstances": {},
+  "roofVolumes": {},
+  "entityRoomLayouts": {},
+  "modifiers": {},
+  "edgeModifiers": {},
+  "floors": {},
+  "floorFinishes": {
+    "guEyMILDcTMiXYIi": {
+      "name": "Default Floor Finish",
+      "entityType": "FLOOR_FINISH",
+      "id": "guEyMILDcTMiXYIi",
+      "sortIndex": 1,
+      "finishType": "DYNAMIC",
+      "operationType": "ADD",
+      "parentId": "bhOn98fNq1Ao9z6a"
+    },
+    "b1lcXmJWIvtVZk6o": {
+      "name": "Default Floor Finish",
+      "entityType": "FLOOR_FINISH",
+      "id": "b1lcXmJWIvtVZk6o",
+      "sortIndex": 3,
+      "finishType": "DYNAMIC",
+      "operationType": "ADD",
+      "parentId": "iVUwy7I3PWwSezPa"
+    },
+    "SwOCeYQXE6tBCXA6": {
+      "name": "Default Floor Finish",
+      "entityType": "FLOOR_FINISH",
+      "id": "SwOCeYQXE6tBCXA6",
+      "sortIndex": 4,
+      "finishType": "DYNAMIC",
+      "operationType": "ADD",
+      "parentId": "tA1tg8RWuKHweCwG"
+    },
+    "WYECs2WR6ioRWAew": {
+      "name": "Default Floor Finish",
+      "entityType": "FLOOR_FINISH",
+      "id": "WYECs2WR6ioRWAew",
+      "sortIndex": 7,
+      "finishType": "DYNAMIC",
+      "operationType": "ADD",
+      "parentId": "khVtoVwddEerhfAi"
+    },
+    "Ci4woMGYZ75P1d3H": {
+      "name": "Default Floor Finish",
+      "entityType": "FLOOR_FINISH",
+      "id": "Ci4woMGYZ75P1d3H",
+      "sortIndex": 8,
+      "finishType": "DYNAMIC",
+      "operationType": "ADD",
+      "parentId": "S0WRKH6hdQ5qLUVL"
+    },
+    "gzBbhRqhNjMYobiz": {
+      "name": "Default Floor Finish",
+      "entityType": "FLOOR_FINISH",
+      "id": "gzBbhRqhNjMYobiz",
+      "sortIndex": 9,
+      "finishType": "DYNAMIC",
+      "operationType": "ADD",
+      "parentId": "PDJ70oDmPXumnWCV"
+    },
+    "KsTBXQqJQZttYVWs": {
+      "name": "Default Floor Finish",
+      "entityType": "FLOOR_FINISH",
+      "id": "KsTBXQqJQZttYVWs",
+      "sortIndex": 10,
+      "finishType": "DYNAMIC",
+      "operationType": "ADD",
+      "parentId": "CElUdWQOvVXsy2oT"
+    },
+    "BEdgrGAvA3pQJ491": {
+      "name": "Default Floor Finish",
+      "entityType": "FLOOR_FINISH",
+      "id": "BEdgrGAvA3pQJ491",
+      "sortIndex": 11,
+      "finishType": "DYNAMIC",
+      "operationType": "ADD",
+      "parentId": "ULZAoUt4apWjOpu8"
+    },
+    "C5GT1WJ7B5PEZoQd": {
+      "name": "Default Floor Finish",
+      "entityType": "FLOOR_FINISH",
+      "id": "C5GT1WJ7B5PEZoQd",
+      "sortIndex": 12,
+      "finishType": "DYNAMIC",
+      "operationType": "ADD",
+      "parentId": "ytQNh54kU4PwPi2G"
+    },
+    "yFEYA3bF9AXWthaL": {
+      "name": "Default Floor Finish",
+      "entityType": "FLOOR_FINISH",
+      "id": "yFEYA3bF9AXWthaL",
+      "sortIndex": 14,
+      "finishType": "DYNAMIC",
+      "operationType": "ADD",
+      "parentId": "8VEB0WvNHOHecKBc"
+    },
+    "Pv0xssHeIZotQKBj": {
+      "name": "Default Floor Finish",
+      "entityType": "FLOOR_FINISH",
+      "id": "Pv0xssHeIZotQKBj",
+      "sortIndex": 16,
+      "finishType": "DYNAMIC",
+      "operationType": "ADD",
+      "parentId": "aSoR7Yv4y8XKzGma"
+    },
+    "C7uWquRJVHw5BxWO": {
+      "name": "Default Floor Finish",
+      "entityType": "FLOOR_FINISH",
+      "id": "C7uWquRJVHw5BxWO",
+      "sortIndex": 17,
+      "finishType": "DYNAMIC",
+      "operationType": "ADD",
+      "parentId": "BDhXgcZqb7OOw0LO"
+    },
+    "Xk4C4h8ybZvhenke": {
+      "name": "Default Floor Finish",
+      "entityType": "FLOOR_FINISH",
+      "id": "Xk4C4h8ybZvhenke",
+      "sortIndex": 18,
+      "finishType": "DYNAMIC",
+      "operationType": "ADD",
+      "parentId": "AaTVGLkHslDyDdZS"
+    },
+    "WNKOrbwhsBb6I7mD": {
+      "name": "Default Floor Finish",
+      "entityType": "FLOOR_FINISH",
+      "id": "WNKOrbwhsBb6I7mD",
+      "sortIndex": 20,
+      "finishType": "DYNAMIC",
+      "operationType": "ADD",
+      "parentId": "ASBYGcWYPJakoSiW"
+    },
+    "58q6tNJUq3lOS7wf": {
+      "name": "Default Floor Finish",
+      "entityType": "FLOOR_FINISH",
+      "id": "58q6tNJUq3lOS7wf",
+      "sortIndex": 22,
+      "finishType": "DYNAMIC",
+      "operationType": "ADD",
+      "parentId": "lwmaRobiMdSxcMCN"
+    },
+    "Vcjy11edj2fmq6JZ": {
+      "name": "Default Floor Finish",
+      "entityType": "FLOOR_FINISH",
+      "id": "Vcjy11edj2fmq6JZ",
+      "sortIndex": 23,
+      "finishType": "DYNAMIC",
+      "operationType": "ADD",
+      "parentId": "7vZZ46yCWue4bBJg"
+    },
+    "GhsWBBFtqw0o1WGT": {
+      "name": "Default Floor Finish",
+      "entityType": "FLOOR_FINISH",
+      "id": "GhsWBBFtqw0o1WGT",
+      "sortIndex": 24,
+      "finishType": "DYNAMIC",
+      "operationType": "ADD",
+      "parentId": "O1NLi7lEMhl9uLUk"
+    }
+  },
+  "optionSets": {
+    "mirror": {
+      "id": "mirror",
+      "sortIndex": 0,
+      "defaultValue": "false",
+      "name": "Mirror",
+      "entityType": "OPTION_SET",
+      "salesCategory": "UNCATEGORIZED",
+      "optionSetType": "SYSTEM",
+      "options": {
+        "true": {
+          "id": "true",
+          "parentId": "mirror",
+          "name": "Mirror home",
+          "sortIndex": 0
+        },
+        "false": {
+          "id": "false",
+          "parentId": "mirror",
+          "name": "Don't mirror home",
+          "sortIndex": 1
+        }
+      }
+    },
+    "elevationStyle": {
+      "defaultValue": "FDDsuY6Jq9YmOWK5",
+      "options": {
+        "FDDsuY6Jq9YmOWK5": {
+          "id": "FDDsuY6Jq9YmOWK5",
+          "parentId": "elevationStyle",
+          "name": "Default elevation",
+          "sortIndex": 0
+        }
+      },
+      "baseSettings": {
+        "FDDsuY6Jq9YmOWK5": "Default_01"
+      },
+      "cameraPositions": {
+        "FDDsuY6Jq9YmOWK5": {
+          "defaultExteriorCamera": {
+            "x": 185,
+            "y": -940,
+            "z": 65,
+            "eyeLevel": 68,
+            "maxPolarAngle": 1.57
+          }
+        }
+      },
+      "images": {
+        "FDDsuY6Jq9YmOWK5": {}
+      },
+      "category": "Elevations",
+      "id": "elevationStyle",
+      "entityType": "OPTION_SET",
+      "optionSetType": "ELEVATION",
+      "sortIndex": 0,
+      "name": "Elevation",
+      "tags": [
+        "ELEVATION"
+      ],
+      "salesCategory": "DESIGN_ELEVATIONS"
+    },
+    "optionSet_HPCuX085nIaHfeHh_palettes_settingsParam": {
+      "id": "optionSet_HPCuX085nIaHfeHh_palettes_settingsParam",
+      "entityType": "OPTION_SET",
+      "sortIndex": 1,
+      "defaultValue": "Default_01",
+      "name": "Exterior Palette",
+      "options": {
+        "Default_01": {
+          "id": "Default_01",
+          "parentId": "optionSet_HPCuX085nIaHfeHh_palettes_settingsParam",
+          "sortIndex": 0,
+          "name": "Default 01 Palette"
+        }
+      },
+      "salesCategory": "DESIGN_PALETTES",
+      "tags": [
+        "ExteriorPalette",
+        "SettingsParam",
+        "palettes"
+      ],
+      "optionSetType": "SYSTEM"
+    },
+    "optionSet_flr8AWNUXexnda5y_palettes_settingsParam": {
+      "id": "optionSet_flr8AWNUXexnda5y_palettes_settingsParam",
+      "entityType": "OPTION_SET",
+      "sortIndex": 0,
+      "defaultValue": "INTERIOR_B01",
+      "name": "Interior Palette",
+      "options": {
+        "INTERIOR_B01": {
+          "id": "INTERIOR_B01",
+          "parentId": "optionSet_flr8AWNUXexnda5y_palettes_settingsParam",
+          "sortIndex": 0,
+          "name": "Morning Mist"
+        }
+      },
+      "salesCategory": "OPERATIONS",
+      "tags": [
+        "InteriorPalette",
+        "SettingsParam",
+        "palettes"
+      ],
+      "optionSetType": "SYSTEM"
+    }
+  },
+  "optionRules": {},
+  "optionEffects": {},
+  "optionSetOverrides": {},
+  "optionLocks": {},
+  "auxOptionSets": {},
+  "docRefs": {},
+  "edgeBehaviors": {},
+  "builderRefs": {},
+  "optionSetRefs": {},
+  "entityRefs": {},
+  "annotation": {
+    "7Sp9aEnUyEVeEnTW": {
+      "name": "1/4\" = 1'-0\" Scale",
+      "entityType": "ANNOTATION",
+      "id": "7Sp9aEnUyEVeEnTW",
+      "sortIndex": 0,
+      "type": "NOTE",
+      "text": "1/8\" = 1'-0\" Scale\n1.0 Scale Text\n-90D Rotation",
+      "textBoxWidth": 7.773181062129716,
+      "textBoxHeight": 1.2022510231923755,
+      "x": 4.341870760699358,
+      "y": 4.721838029283465,
+      "fontSize": 0.25,
+      "placementXAnchor": "LEFT",
+      "placementYAnchor": "TOP",
+      "textAlignment": "LEFT",
+      "verticalAlignment": "CENTER",
+      "rotation": 0,
+      "tags": {},
+      "positioningMethod": "GLOBAL",
+      "edgeId": "1",
+      "parentId": "4uOFjzRUpnyt4i1r"
+    },
+    "zrcW4NRDp8pZDhn8": {
+      "name": "1/4\" = 1'-0\" Scale (copy 1)",
+      "entityType": "ANNOTATION",
+      "id": "zrcW4NRDp8pZDhn8",
+      "sortIndex": 0,
+      "type": "NOTE",
+      "text": "1/4\" = 1'-0\" Scale\n1.0 Scale Text\n-90 Degree Rotation",
+      "textBoxWidth": 7.773181062129716,
+      "textBoxHeight": 1.2022510231923746,
+      "x": 16.53893258072237,
+      "y": 4.642344551063086,
+      "fontSize": 0.25,
+      "placementXAnchor": "LEFT",
+      "placementYAnchor": "TOP",
+      "textAlignment": "LEFT",
+      "verticalAlignment": "CENTER",
+      "rotation": 0,
+      "tags": {},
+      "positioningMethod": "GLOBAL",
+      "edgeId": "1",
+      "parentId": "4uOFjzRUpnyt4i1r"
+    },
+    "wnbqyrN3XXqutFRc": {
+      "name": "1/4\" = 1'-0\" Scale (copy 2)",
+      "entityType": "ANNOTATION",
+      "id": "wnbqyrN3XXqutFRc",
+      "sortIndex": 0,
+      "type": "NOTE",
+      "text": "1/8\" = 1'-0\" Scale\n1.0 Scale Text\n+90 Degree Rotation",
+      "textBoxWidth": 7.773181062129716,
+      "textBoxHeight": 1.2022510231923746,
+      "x": 4.341870760699358,
+      "y": 19.35996424947893,
+      "fontSize": 0.25,
+      "placementXAnchor": "LEFT",
+      "placementYAnchor": "TOP",
+      "textAlignment": "LEFT",
+      "verticalAlignment": "CENTER",
+      "rotation": 0,
+      "tags": {},
+      "positioningMethod": "GLOBAL",
+      "edgeId": "1",
+      "parentId": "4uOFjzRUpnyt4i1r"
+    },
+    "NRGyCTlioJP23K5U": {
+      "name": "1/4\" = 1'-0\" Scale (copy 3)",
+      "entityType": "ANNOTATION",
+      "id": "NRGyCTlioJP23K5U",
+      "sortIndex": 0,
+      "type": "NOTE",
+      "text": "1/4\" = 1'-0\" Scale\n1.0 Scale Text\n+90 Degree Rotation",
+      "textBoxWidth": 7.773181062129716,
+      "textBoxHeight": 1.2022510231923746,
+      "x": 16.53893258072237,
+      "y": 19.280470771258553,
+      "fontSize": 0.25,
+      "placementXAnchor": "LEFT",
+      "placementYAnchor": "TOP",
+      "textAlignment": "LEFT",
+      "verticalAlignment": "CENTER",
+      "rotation": 0,
+      "tags": {},
+      "positioningMethod": "GLOBAL",
+      "edgeId": "1",
+      "parentId": "4uOFjzRUpnyt4i1r"
+    },
+    "5oROlsKDKZIDAaRz": {
+      "name": "1/4\" = 1'-0\" Scale (copy 4)",
+      "entityType": "ANNOTATION",
+      "id": "5oROlsKDKZIDAaRz",
+      "sortIndex": 0,
+      "type": "NOTE",
+      "text": "1/8\" = 1'-0\" Scale\n0.5 Scale Text\n+90 Degree Rotation",
+      "textBoxWidth": 7.773181062129716,
+      "textBoxHeight": 1.2022510231923746,
+      "x": 4.341870760699358,
+      "y": 35.13590964317587,
+      "fontSize": 0.25,
+      "placementXAnchor": "LEFT",
+      "placementYAnchor": "TOP",
+      "textAlignment": "LEFT",
+      "verticalAlignment": "CENTER",
+      "rotation": 0,
+      "tags": {},
+      "positioningMethod": "GLOBAL",
+      "edgeId": "1",
+      "parentId": "4uOFjzRUpnyt4i1r"
+    },
+    "EgkYJ3gbiV6EJhWp": {
+      "name": "1/4\" = 1'-0\" Scale (copy 5)",
+      "entityType": "ANNOTATION",
+      "id": "EgkYJ3gbiV6EJhWp",
+      "sortIndex": 0,
+      "type": "NOTE",
+      "text": "1/4\" = 1'-0\" Scale\n0.5 Scale Text\n+90 Degree Rotation\n",
+      "textBoxWidth": 7.773181062129716,
+      "textBoxHeight": 1.6030013642564995,
+      "x": 16.53893258072237,
+      "y": 35.05641616495549,
+      "fontSize": 0.25,
+      "placementXAnchor": "LEFT",
+      "placementYAnchor": "TOP",
+      "textAlignment": "LEFT",
+      "verticalAlignment": "CENTER",
+      "rotation": 0,
+      "tags": {},
+      "positioningMethod": "GLOBAL",
+      "edgeId": "1",
+      "parentId": "4uOFjzRUpnyt4i1r"
+    },
+    "17gMum0O8dXogyjT": {
+      "name": "1/4\" = 1'-0\" Scale (copy 6)",
+      "entityType": "ANNOTATION",
+      "id": "17gMum0O8dXogyjT",
+      "sortIndex": 0,
+      "type": "NOTE",
+      "text": "1/4\" = 1'-0\" Scale\n1.0 Scale Text\n180 Degree Rotation",
+      "textBoxWidth": 7.773181062129716,
+      "textBoxHeight": 1.2022510231923746,
+      "x": 37.516555713604845,
+      "y": 4.642344551063086,
+      "fontSize": 0.25,
+      "placementXAnchor": "LEFT",
+      "placementYAnchor": "TOP",
+      "textAlignment": "LEFT",
+      "verticalAlignment": "CENTER",
+      "rotation": 0,
+      "tags": {},
+      "positioningMethod": "GLOBAL",
+      "edgeId": "1",
+      "parentId": "4uOFjzRUpnyt4i1r"
+    },
+    "nL4LjRdsvf7nbFFG": {
+      "name": "1/4\" = 1'-0\" Scale (copy 7)",
+      "entityType": "ANNOTATION",
+      "id": "nL4LjRdsvf7nbFFG",
+      "sortIndex": 0,
+      "type": "NOTE",
+      "text": "1/4\" = 1'-0\" Scale\n1.0 Scale Text\n0 Degree Rotation",
+      "textBoxWidth": 7.773181062129716,
+      "textBoxHeight": 1.2022510231923746,
+      "x": 37.516555713604845,
+      "y": 19.280470771258553,
+      "fontSize": 0.25,
+      "placementXAnchor": "LEFT",
+      "placementYAnchor": "TOP",
+      "textAlignment": "LEFT",
+      "verticalAlignment": "CENTER",
+      "rotation": 0,
+      "tags": {},
+      "positioningMethod": "GLOBAL",
+      "edgeId": "1",
+      "parentId": "4uOFjzRUpnyt4i1r"
+    }
+  },
+  "view3Ds": {
+    "UVUTKIsiPHEN411q": {
+      "name": "Level 1",
+      "id": "UVUTKIsiPHEN411q",
+      "entityType": "VIEW_3D",
+      "sortIndex": 1,
+      "levelId": "rfpm4aTwuGesOitL",
+      "viewFilter": {}
+    },
+    "by3NuowZ5RfyiSKS": {
+      "name": "3D View",
+      "id": "by3NuowZ5RfyiSKS",
+      "entityType": "VIEW_3D",
+      "sortIndex": 2,
+      "levelId": null,
+      "viewFilter": {}
+    }
+  },
+  "planViews": {
+    "4Twr0vCHDlYfuUB5": {
+      "name": "Level 1 - Floor",
+      "id": "4Twr0vCHDlYfuUB5",
+      "entityType": "PLAN_VIEW",
+      "sortIndex": 1,
+      "levelIds": [
+        "rfpm4aTwuGesOitL"
+      ],
+      "referenceType": "FLOOR",
+      "viewFilter": {
+        "propFurniture": false
+      }
+    },
+    "qbER8SEhShx56bnO": {
+      "name": "Level 1 - Electrical",
+      "id": "qbER8SEhShx56bnO",
+      "entityType": "PLAN_VIEW",
+      "sortIndex": 2,
+      "levelIds": [
+        "rfpm4aTwuGesOitL"
+      ],
+      "referenceType": "ELECTRICAL",
+      "viewFilter": {}
+    },
+    "J2at0LciFJnuNAQT": {
+      "name": "Foundation",
+      "id": "J2at0LciFJnuNAQT",
+      "entityType": "PLAN_VIEW",
+      "sortIndex": 3,
+      "levelIds": [
+        "rfpm4aTwuGesOitL"
+      ],
+      "referenceType": "FOUNDATION",
+      "viewFilter": {}
+    },
+    "ZFwp4hJtHS655Ppo": {
+      "name": "Roof",
+      "id": "ZFwp4hJtHS655Ppo",
+      "entityType": "PLAN_VIEW",
+      "sortIndex": 4,
+      "levelIds": [
+        "rfpm4aTwuGesOitL"
+      ],
+      "referenceType": "ROOF",
+      "viewFilter": {}
+    }
+  },
+  "dataTables": {},
+  "dataSequences": {},
+  "elevationViews": {
+    "sRTjVwaiMtrylOFr": {
+      "name": "Front Elevation",
+      "id": "sRTjVwaiMtrylOFr",
+      "entityType": "ELEVATION_VIEW",
+      "sortIndex": 1,
+      "referenceFrame": "FRONT"
+    },
+    "Eg7gO1yrp2DyvEJH": {
+      "name": "Back Elevation",
+      "id": "Eg7gO1yrp2DyvEJH",
+      "entityType": "ELEVATION_VIEW",
+      "sortIndex": 2,
+      "referenceFrame": "BACK"
+    },
+    "uWJVJhMy4kMROO2o": {
+      "name": "Left Elevation",
+      "id": "uWJVJhMy4kMROO2o",
+      "entityType": "ELEVATION_VIEW",
+      "sortIndex": 3,
+      "referenceFrame": "LEFT"
+    },
+    "4DD3rUxInmmmXQC9": {
+      "name": "Right Elevation",
+      "id": "4DD3rUxInmmmXQC9",
+      "entityType": "ELEVATION_VIEW",
+      "sortIndex": 4,
+      "referenceFrame": "RIGHT"
+    }
+  },
+  "electricalDevices": {},
+  "electricalLayouts": {},
+  "roofSystems": {
+    "CKYVmpKTjNKNe0vI": {
+      "entityType": "ROOF_SYSTEM",
+      "id": "CKYVmpKTjNKNe0vI",
+      "name": "Roof System",
+      "sortIndex": 0
+    }
+  },
+  "roofs": {
+    "GZaKhnGSF2FPBt0U": {
+      "id": "GZaKhnGSF2FPBt0U",
+      "entityType": "ROOF",
+      "roofSystemId": "CKYVmpKTjNKNe0vI",
+      "roofVersion": 5,
+      "name": "Roof",
+      "roofSettings": {},
+      "sortIndex": 0,
+      "blocks": [
+        "fuiiWuBtc20HG9Mc"
+      ],
+      "gableEndLabels": [],
+      "roofSideOverrides": {
+        "LEFT": {},
+        "RIGHT": {},
+        "START": {},
+        "END": {}
+      },
+      "roofEdgeOverrides": {}
+    }
+  },
+  "foundationSystems": {
+    "TyMtxtFeVrZ1Lf15": {
+      "id": "TyMtxtFeVrZ1Lf15",
+      "entityType": "FOUNDATION_SYSTEM",
+      "sortIndex": 0,
+      "name": "Default foundation system"
+    }
+  },
+  "foundations": {
+    "MN5Kq8J283A2Nyu6": {
+      "id": "MN5Kq8J283A2Nyu6",
+      "entityType": "FOUNDATION",
+      "foundationSystemId": "TyMtxtFeVrZ1Lf15",
+      "sortIndex": 0,
+      "name": "Default foundation"
+    }
+  },
+  "stairSystems": {},
+  "stairBlocks": {},
+  "railings": {},
+  "railingPosts": {},
+  "blocks": {
+    "fuiiWuBtc20HG9Mc": {
+      "entityType": "BLOCK",
+      "id": "fuiiWuBtc20HG9Mc",
+      "name": "Block",
+      "sortIndex": 0,
+      "levelId": "rfpm4aTwuGesOitL",
+      "isHalfStory": false,
+      "suppressShutters": false
+    }
+  },
+  "openings": {
+    "MPh98YHdWEq3biD2": {
+      "name": "Void Wall",
+      "entityType": "OPENING",
+      "id": "MPh98YHdWEq3biD2",
+      "sortIndex": 1,
+      "type": "DOOR_V2",
+      "doorType": "OPEN_FULL",
+      "param": 0.5,
+      "paramNormalized": true,
+      "edgeId": "3",
+      "parentId": "bhOn98fNq1Ao9z6a"
+    },
+    "EXlXQi1UYonWRruv": {
+      "name": "Exterior Door",
+      "entityType": "OPENING",
+      "id": "EXlXQi1UYonWRruv",
+      "sortIndex": 2,
+      "type": "DOOR_V2",
+      "doorType": "EXT_SGL",
+      "horizontalAlignment": "CENTER",
+      "horizontalDatum": "STRUCTURE",
+      "param": 0.5,
+      "paramNormalized": true,
+      "paramAnchor": "START",
+      "awning": {
+        "startOffset": 0,
+        "endOffset": 0,
+        "offsetsNormalized": false
+      },
+      "edgeId": "3",
+      "parentId": "ASBYGcWYPJakoSiW"
+    },
+    "pUmrVSu3xOY6ahi5": {
+      "name": "Interior Door",
+      "entityType": "OPENING",
+      "id": "pUmrVSu3xOY6ahi5",
+      "sortIndex": 3,
+      "type": "DOOR_V2",
+      "doorType": "INT_26XX",
+      "horizontalAlignment": "CENTER",
+      "horizontalDatum": "STRUCTURE",
+      "param": 0.5,
+      "paramNormalized": true,
+      "paramAnchor": "START",
+      "awning": {
+        "startOffset": 0,
+        "endOffset": 0,
+        "offsetsNormalized": false
+      },
+      "edgeId": "4",
+      "parentId": "ASBYGcWYPJakoSiW"
+    }
+  },
+  "elevations": {
+    "FDDsuY6Jq9YmOWK5": {
+      "id": "FDDsuY6Jq9YmOWK5",
+      "parentId": "elevationStyle",
+      "entityType": "ELEVATION",
+      "sortIndex": 0,
+      "isDefault": true,
+      "name": "Default elevation",
+      "baseSettings": "Default_01",
+      "defaultExteriorCamera": {
+        "x": 185,
+        "y": -940,
+        "z": 65,
+        "eyeLevel": 68,
+        "maxPolarAngle": 1.57
+      }
+    }
+  },
+  "facades": {},
+  "facadeSpanStrata": {},
+  "facadeSweepStrata": {},
+  "locked": {},
+  "hidden": {},
+  "underlays": {},
+  "settingsSets": {
+    "oHw3sKZacEAfAXPO": {
+      "entityType": "SETTINGS_SET",
+      "id": "oHw3sKZacEAfAXPO",
+      "name": "Base Settings Set",
+      "sortIndex": 0,
+      "type": "GLOBAL"
+    }
+  },
+  "entitySettings": {},
+  "optionTemplates": {},
+  "referenceGeom": {},
+  "palettes": {},
+  "settings": {
+    "HPCuX085nIaHfeHh": {
+      "id": "HPCuX085nIaHfeHh",
+      "entityType": "SETTINGS",
+      "sortIndex": 0,
+      "name": "Exterior Material Settings",
+      "parentId": "oHw3sKZacEAfAXPO",
+      "type": "EXTERIOR_MATERIAL_SETTINGS",
+      "palettes": [
+        "Default_01"
+      ],
+      "paletteSlotsUserDefinedNames": {
+        "Default_01": {}
+      }
+    },
+    "flr8AWNUXexnda5y": {
+      "id": "flr8AWNUXexnda5y",
+      "entityType": "SETTINGS",
+      "sortIndex": 1,
+      "name": "Interior Material Settings",
+      "parentId": "oHw3sKZacEAfAXPO",
+      "type": "INTERIOR_MATERIAL_SETTINGS",
+      "palettes": [
+        "INTERIOR_B01"
+      ],
+      "paletteSlotsUserDefinedNames": {
+        "INTERIOR_B01": {}
+      }
+    },
+    "ZVIa4FCBsqPyKlOB": {
+      "id": "ZVIa4FCBsqPyKlOB",
+      "type": "DATUM_CATALOG_SETTINGS",
+      "entityType": "SETTINGS",
+      "name": "Datum Catalog Settings",
+      "sortIndex": 2,
+      "parentId": "oHw3sKZacEAfAXPO",
+      "datums": {
+        "base_wall_bottom": {
+          "catalogItemType": "DATUM",
+          "name": "Base wall bottom",
+          "datumType": "VERTICAL",
+          "anchor": "BASE_WALL",
+          "justification": "BOTTOM_UP",
+          "offset": 0,
+          "offsetNormalized": false,
+          "editable": false
+        },
+        "base_wall_top": {
+          "catalogItemType": "DATUM",
+          "name": "Base wall top",
+          "datumType": "VERTICAL",
+          "anchor": "BASE_WALL",
+          "justification": "TOP_DOWN",
+          "offset": 0,
+          "offsetNormalized": false,
+          "editable": false
+        },
+        "gable_end_bottom": {
+          "catalogItemType": "DATUM",
+          "name": "Gable end bottom",
+          "datumType": "VERTICAL",
+          "anchor": "GABLE_END",
+          "justification": "BOTTOM_UP",
+          "offset": 0,
+          "offsetNormalized": false,
+          "editable": false
+        },
+        "gable_end_top": {
+          "catalogItemType": "DATUM",
+          "name": "Gable end top",
+          "datumType": "VERTICAL",
+          "anchor": "GABLE_END",
+          "justification": "TOP_DOWN",
+          "offset": 0,
+          "offsetNormalized": false,
+          "editable": false
+        },
+        "wall_start": {
+          "catalogItemType": "DATUM",
+          "name": "Wall start",
+          "datumType": "HORIZONTAL",
+          "justification": "START_TO_END",
+          "offset": 0,
+          "offsetNormalized": false,
+          "editable": false
+        },
+        "wall_end": {
+          "catalogItemType": "DATUM",
+          "name": "Wall end",
+          "datumType": "HORIZONTAL",
+          "justification": "END_TO_START",
+          "offset": 0,
+          "offsetNormalized": false,
+          "editable": false
+        }
+      }
+    },
+    "36NHOGEEsYEFWvd9": {
+      "id": "36NHOGEEsYEFWvd9",
+      "type": "ROOF_SETTINGS",
+      "entityType": "SETTINGS",
+      "name": "Roof Settings",
+      "sortIndex": 3,
+      "parentId": "oHw3sKZacEAfAXPO",
+      "useNewRoofTrimGeneration": true
+    },
+    "OCMhTdaEltkMfJ40": {
+      "name": "Built-In Plan Settings",
+      "type": "PLAN_SETTINGS",
+      "id": "OCMhTdaEltkMfJ40",
+      "parentId": "oHw3sKZacEAfAXPO",
+      "entityType": "SETTINGS",
+      "sortIndex": 4,
+      "paperSize": "SHEET_11X17",
+      "orientation": "ROTATE_90_DEGREES",
+      "annotationScale": 2,
+      "interiorDimensionType": "BY_ROOM_GROUP"
+    }
+  },
+  "sheets": {},
+  "drawingRefs": {},
+  "optionChoices": {},
+  "snapKinds": [
+    "GRID",
+    "VERTICAL",
+    "HORIZONTAL",
+    "VERTEX",
+    "MID"
+  ],
+  "snapEntities": [
+    "UNDERLAY",
+    "ROOM",
+    "REFERENCE_GEOM",
+    "CMD",
+    "ANNOTATION",
+    "STAIR",
+    "RAILING",
+    "PORCH_COLUMN",
+    "CEILING",
+    "SHAPE_EDIT_MODE",
+    "SITE_SHAPE",
+    "VIEWPORT",
+    "CONTENT_TEMPLATE_INSTANCE",
+    "DATA_TABLE",
+    "SECTION_VIEW"
+  ],
+  "gridSnapDistance": 6,
+  "presets": {
+    "Base Options": {
+      "id": "Base Options",
+      "entityType": "PRESET",
+      "name": "Base Options",
+      "sortIndex": 0,
+      "type": "PRESETS",
+      "optionChoices": {}
+    }
+  },
+  "casework": {},
+  "ceilings": {},
+  "columns": {},
+  "propInstances": {},
+  "propDefs": {},
+  "gableOpenings": {},
+  "sites": {},
+  "siteShapes": {},
+  "sectionViews": {},
+  "dormers": {},
+  "skylights": {},
+  "groups": {
+    "legacyFoundationDatumsGroup": {
+      "entityType": "GROUP",
+      "name": "Foundation",
+      "id": "legacyFoundationDatumsGroup",
+      "sortIndex": 0,
+      "isBuiltIn": true
+    },
+    "legacyFacadeDatumsGroup": {
+      "entityType": "GROUP",
+      "name": "Facade",
+      "id": "legacyFacadeDatumsGroup",
+      "sortIndex": 1,
+      "isBuiltIn": true
+    },
+    "legacyLevelDatumsGroup": {
+      "entityType": "GROUP",
+      "name": "Level",
+      "id": "legacyLevelDatumsGroup",
+      "sortIndex": 2,
+      "isBuiltIn": true
+    },
+    "builtInPropsGroup": {
+      "entityType": "GROUP",
+      "name": "Built-in Props",
+      "id": "builtInPropsGroup",
+      "sortIndex": 0,
+      "isBuiltIn": true,
+      "isDeletable": true
+    }
+  },
+  "entityGroups": {},
+  "attributes": {
+    "garageHandingDirection": "left"
+  },
+  "measurements": {},
+  "viewOverrides": {},
+  "selectors": {},
+  "viewSelectors": {},
+  "planSetTemplates": {
+    "9OBjHPTcEA8XKc5D": {
+      "name": "Plan Set Template",
+      "exportPermissions": {},
+      "id": "9OBjHPTcEA8XKc5D",
+      "entityType": "PLAN_SET_TEMPLATE",
+      "sortIndex": 1
+    }
+  },
+  "planSetTemplateConfigs": {
+    "CePCllXVt1RSY0N0": {
+      "name": "Default",
+      "entityType": "PLAN_SET_TEMPLATE_CONFIG",
+      "id": "CePCllXVt1RSY0N0",
+      "sortIndex": 1,
+      "parentId": "9OBjHPTcEA8XKc5D"
+    }
+  },
+  "contentTemplates": {
+    "4uOFjzRUpnyt4i1r": {
+      "name": "Sheet Template",
+      "templateType": "SHEET",
+      "width": 56,
+      "height": 50,
+      "id": "4uOFjzRUpnyt4i1r",
+      "entityType": "CONTENT_TEMPLATE",
+      "sortIndex": 1
+    }
+  },
+  "contentReplicators": {},
+  "contentTemplateInstances": {
+    "yjjlJo331nDeUCoh": {
+      "name": "Sheet Template Instance",
+      "sheetNumberPrefix": "",
+      "sheetNumber": "",
+      "templateType": "SHEET",
+      "parameterValues": {},
+      "sortIndex": 1,
+      "entityType": "CONTENT_TEMPLATE_INSTANCE",
+      "id": "yjjlJo331nDeUCoh",
+      "contentTemplateId": "4uOFjzRUpnyt4i1r",
+      "parentId": "9OBjHPTcEA8XKc5D"
+    }
+  },
+  "localParameters": {},
+  "globalParameters": {},
+  "viewports": {
+    "2O7Vcj1yUEWLWumt": {
+      "name": "Floor Plan Viewport",
+      "id": "2O7Vcj1yUEWLWumt",
+      "entityType": "VIEWPORT",
+      "sortIndex": 0,
+      "outline": {
+        "$$TA_TYPE$$": "F64",
+        "values": [
+          1.0964660479832595,
+          4.734791629614817,
+          15.008133982346347,
+          4.734791629614817,
+          15.008133982346347,
+          14.962627029345267,
+          1.0964660479832595,
+          14.962627029345267,
+          1.0964660479832595,
+          4.734791629614817
+        ]
+      },
+      "worldOriginInPageSpaceX": 8.052300015164803,
+      "worldOriginInPageSpaceY": 9.848709329480041,
+      "viewType": "PLAN_VIEW",
+      "viewTemplateId": "Wq6MkcY7LDvEQVV5",
+      "contentSourceId": "rfpm4aTwuGesOitL",
+      "scalingMethod": "EXPLICIT",
+      "positioningMethod": "ALIGNED",
+      "horizontalAlignment": "CENTER",
+      "verticalAlignment": "CENTER",
+      "viewTemplateOverrideIds": [],
+      "presetId": "Base Options",
+      "parentId": "4uOFjzRUpnyt4i1r",
+      "contentRotationDegrees": -90,
+      "scale": 0.010416666666666666
+    },
+    "NKxApDfRY6dNSDtg": {
+      "name": "Floor Plan Viewport (copy 1)",
+      "id": "NKxApDfRY6dNSDtg",
+      "entityType": "VIEWPORT",
+      "sortIndex": 0,
+      "outline": {
+        "$$TA_TYPE$$": "F64",
+        "values": [
+          16.451778866284382,
+          4.7347916296148185,
+          34.451778866284386,
+          4.7347916296148185,
+          34.451778866284386,
+          16.73479162961482,
+          16.451778866284382,
+          16.73479162961482,
+          16.451778866284382,
+          4.7347916296148185
+        ]
+      },
+      "worldOriginInPageSpaceX": 23.407612833465926,
+      "worldOriginInPageSpaceY": 9.848709329480041,
+      "viewType": "PLAN_VIEW",
+      "viewTemplateId": "Wq6MkcY7LDvEQVV5",
+      "contentSourceId": "rfpm4aTwuGesOitL",
+      "scalingMethod": "EXPLICIT",
+      "positioningMethod": "ALIGNED",
+      "horizontalAlignment": "CENTER",
+      "verticalAlignment": "CENTER",
+      "scale": 0.020833333333333332,
+      "viewTemplateOverrideIds": [],
+      "presetId": "Base Options",
+      "parentId": "4uOFjzRUpnyt4i1r",
+      "contentRotationDegrees": -90
+    },
+    "OzlGYiPR67xLtpFs": {
+      "name": "Floor Plan Viewport (copy 2)",
+      "id": "OzlGYiPR67xLtpFs",
+      "entityType": "VIEWPORT",
+      "sortIndex": 0,
+      "outline": {
+        "$$TA_TYPE$$": "F64",
+        "values": [
+          1.0964660479832595,
+          19.372917849810285,
+          15.008133982346347,
+          19.372917849810285,
+          15.008133982346347,
+          29.60075324954073,
+          1.0964660479832595,
+          29.60075324954073,
+          1.0964660479832595,
+          19.372917849810285
+        ]
+      },
+      "worldOriginInPageSpaceX": 8.052300015164803,
+      "worldOriginInPageSpaceY": 24.486835549675508,
+      "viewType": "PLAN_VIEW",
+      "viewTemplateId": "Wq6MkcY7LDvEQVV5",
+      "contentSourceId": "rfpm4aTwuGesOitL",
+      "scalingMethod": "EXPLICIT",
+      "positioningMethod": "ALIGNED",
+      "horizontalAlignment": "CENTER",
+      "verticalAlignment": "CENTER",
+      "scale": 0.010416666666666666,
+      "viewTemplateOverrideIds": [],
+      "presetId": "Base Options",
+      "parentId": "4uOFjzRUpnyt4i1r",
+      "contentRotationDegrees": 90
+    },
+    "dEbQku9rxSZl3YtP": {
+      "name": "Floor Plan Viewport (copy 3)",
+      "id": "dEbQku9rxSZl3YtP",
+      "entityType": "VIEWPORT",
+      "sortIndex": 0,
+      "outline": {
+        "$$TA_TYPE$$": "F64",
+        "values": [
+          16.451778866284382,
+          19.372917849810285,
+          34.451778866284386,
+          19.372917849810285,
+          34.451778866284386,
+          31.372917849810285,
+          16.451778866284382,
+          31.372917849810285,
+          16.451778866284382,
+          19.372917849810285
+        ]
+      },
+      "worldOriginInPageSpaceX": 23.407612833465926,
+      "worldOriginInPageSpaceY": 24.486835549675508,
+      "viewType": "PLAN_VIEW",
+      "viewTemplateId": "Wq6MkcY7LDvEQVV5",
+      "contentSourceId": "rfpm4aTwuGesOitL",
+      "scalingMethod": "EXPLICIT",
+      "positioningMethod": "ALIGNED",
+      "horizontalAlignment": "CENTER",
+      "verticalAlignment": "CENTER",
+      "scale": 0.020833333333333332,
+      "viewTemplateOverrideIds": [],
+      "presetId": "Base Options",
+      "parentId": "4uOFjzRUpnyt4i1r",
+      "contentRotationDegrees": 90
+    },
+    "dZFA2HkR6IsHfItR": {
+      "name": "Floor Plan Viewport (copy 4)",
+      "id": "dZFA2HkR6IsHfItR",
+      "entityType": "VIEWPORT",
+      "sortIndex": 0,
+      "outline": {
+        "$$TA_TYPE$$": "F64",
+        "values": [
+          1.0964660479832595,
+          35.14886324350722,
+          15.008133982346347,
+          35.14886324350722,
+          15.008133982346347,
+          45.376698643237674,
+          1.0964660479832595,
+          45.376698643237674,
+          1.0964660479832595,
+          35.14886324350722
+        ]
+      },
+      "worldOriginInPageSpaceX": 8.052300015164803,
+      "worldOriginInPageSpaceY": 40.26278094337245,
+      "viewType": "PLAN_VIEW",
+      "viewTemplateId": "Wq6MkcY7LDvEQVV5",
+      "contentSourceId": "rfpm4aTwuGesOitL",
+      "scalingMethod": "EXPLICIT",
+      "positioningMethod": "ALIGNED",
+      "horizontalAlignment": "CENTER",
+      "verticalAlignment": "CENTER",
+      "scale": 0.010416666666666666,
+      "viewTemplateOverrideIds": [],
+      "presetId": "Base Options",
+      "parentId": "4uOFjzRUpnyt4i1r",
+      "contentRotationDegrees": 90,
+      "contentTextScale": 0.5
+    },
+    "J7vKdd9PLqNCV1o7": {
+      "name": "Floor Plan Viewport (copy 5)",
+      "id": "J7vKdd9PLqNCV1o7",
+      "entityType": "VIEWPORT",
+      "sortIndex": 0,
+      "outline": {
+        "$$TA_TYPE$$": "F64",
+        "values": [
+          16.451778866284382,
+          35.14886324350722,
+          34.451778866284386,
+          35.14886324350722,
+          34.451778866284386,
+          47.14886324350722,
+          16.451778866284382,
+          47.14886324350722,
+          16.451778866284382,
+          35.14886324350722
+        ]
+      },
+      "worldOriginInPageSpaceX": 23.407612833465926,
+      "worldOriginInPageSpaceY": 40.26278094337245,
+      "viewType": "PLAN_VIEW",
+      "viewTemplateId": "Wq6MkcY7LDvEQVV5",
+      "contentSourceId": "rfpm4aTwuGesOitL",
+      "scalingMethod": "EXPLICIT",
+      "positioningMethod": "ALIGNED",
+      "horizontalAlignment": "CENTER",
+      "verticalAlignment": "CENTER",
+      "scale": 0.020833333333333332,
+      "viewTemplateOverrideIds": [],
+      "presetId": "Base Options",
+      "parentId": "4uOFjzRUpnyt4i1r",
+      "contentRotationDegrees": 90,
+      "contentTextScale": 0.5
+    },
+    "AooIWa71TqnQVe24": {
+      "name": "Floor Plan Viewport (copy 6)",
+      "id": "AooIWa71TqnQVe24",
+      "entityType": "VIEWPORT",
+      "sortIndex": 0,
+      "outline": {
+        "$$TA_TYPE$$": "F64",
+        "values": [
+          37.429401999166856,
+          19.372917849810285,
+          55.429401999166856,
+          19.372917849810285,
+          55.429401999166856,
+          31.372917849810285,
+          37.429401999166856,
+          31.372917849810285,
+          37.429401999166856,
+          19.372917849810285
+        ]
+      },
+      "worldOriginInPageSpaceX": 44.3852359663484,
+      "worldOriginInPageSpaceY": 24.486835549675508,
+      "viewType": "PLAN_VIEW",
+      "viewTemplateId": "Wq6MkcY7LDvEQVV5",
+      "contentSourceId": "rfpm4aTwuGesOitL",
+      "scalingMethod": "EXPLICIT",
+      "positioningMethod": "ALIGNED",
+      "horizontalAlignment": "CENTER",
+      "verticalAlignment": "CENTER",
+      "scale": 0.020833333333333332,
+      "viewTemplateOverrideIds": [],
+      "presetId": "Base Options",
+      "parentId": "4uOFjzRUpnyt4i1r",
+      "contentRotationDegrees": 0
+    },
+    "kNB8kWC2fBmCWFks": {
+      "name": "Floor Plan Viewport (copy 7)",
+      "id": "kNB8kWC2fBmCWFks",
+      "entityType": "VIEWPORT",
+      "sortIndex": 0,
+      "outline": {
+        "$$TA_TYPE$$": "F64",
+        "values": [
+          37.429401999166856,
+          4.7347916296148185,
+          55.429401999166856,
+          4.7347916296148185,
+          55.429401999166856,
+          16.73479162961482,
+          37.429401999166856,
+          16.73479162961482,
+          37.429401999166856,
+          4.7347916296148185
+        ]
+      },
+      "worldOriginInPageSpaceX": 44.3852359663484,
+      "worldOriginInPageSpaceY": 9.848709329480041,
+      "viewType": "PLAN_VIEW",
+      "viewTemplateId": "Wq6MkcY7LDvEQVV5",
+      "contentSourceId": "rfpm4aTwuGesOitL",
+      "scalingMethod": "EXPLICIT",
+      "positioningMethod": "ALIGNED",
+      "horizontalAlignment": "CENTER",
+      "verticalAlignment": "CENTER",
+      "scale": 0.020833333333333332,
+      "viewTemplateOverrideIds": [],
+      "presetId": "Base Options",
+      "parentId": "4uOFjzRUpnyt4i1r",
+      "contentRotationDegrees": 180
+    }
+  },
+  "viewTemplates": {
+    "Wq6MkcY7LDvEQVV5": {
+      "id": "Wq6MkcY7LDvEQVV5",
+      "name": "Floor Plan",
+      "entityType": "VIEW_TEMPLATE",
+      "sortIndex": 0,
+      "viewType": "PLAN_VIEW",
+      "categories": [
+        "SLAB_PATIO",
+        "RAILING",
+        "RAILING_POST",
+        "PROP_APPLIANCES",
+        "PROP_FIXTURES",
+        "PROP_OTHER",
+        "PROP_TAG",
+        "PORCH_COLUMNS",
+        "PORCH_BEAMS",
+        "PORCH",
+        "DECK",
+        "PERIMS_WALL",
+        "WALL_CORE",
+        "WALL_SUBSTRATE",
+        "WALL_EXTERIOR_FINISH",
+        "CHASE_ROOMS",
+        "STEM_WALL_UNIONED_EDGES",
+        "PIER_HIDDEN",
+        "PIER",
+        "STAIR",
+        "RAILING_STAIR_ONLY",
+        "RAILING_POST_STAIR_ONLY",
+        "CASEWORK",
+        "CEILING",
+        "WAINSCOTING",
+        "DOOR_OPERATION_LINEWORK",
+        "DOORS",
+        "WINDOWS",
+        "COLUMN",
+        "WALL_EXTERIOR_DIM_LINEWORK",
+        "WALL_EXTERIOR_DIM_TICK",
+        "WALL_EXTERIOR_DIM_LABEL",
+        "WALL_EXTERIOR_DIM_WITNESS",
+        "WALL_INTERIOR_DIM_LINEWORK",
+        "WALL_INTERIOR_DIM_TICK",
+        "WALL_INTERIOR_DIM_LABEL",
+        "WALL_INTERIOR_DIM_WITNESS",
+        "ROOM_LABELS",
+        "CASEWORK_TAG",
+        "WINDOW_TAGS",
+        "DOOR_TAGS",
+        "ANNOT_DETAIL",
+        "ANNOT_LINEWORK",
+        "ANNOT_NOTE",
+        "ANNOT_DIM_LABEL",
+        "ANNOT_DIM_LINEWORK",
+        "ANNOT_DIM_TICK",
+        "ANNOT_DIM_WITNESS"
+      ],
+      "referenceType": "FLOOR",
+      "viewTemplateOverrideIds": [],
+      "styleOverrides": {}
+    },
+    "7taYPZOEzdP6o4Rr": {
+      "id": "7taYPZOEzdP6o4Rr",
+      "name": "Elevation",
+      "entityType": "VIEW_TEMPLATE",
+      "sortIndex": 1,
+      "viewType": "ELEVATION_VIEW",
+      "categories": [
+        "SLAB",
+        "FOUNDATION_CURB",
+        "STAIR",
+        "STEM_WALL",
+        "ANNOT_DETAIL",
+        "ANNOT_LINEWORK",
+        "ANNOT_NOTE",
+        "ANNOT_DIM_LABEL",
+        "ANNOT_DIM_LINE",
+        "ANNOT_DIM_LINEWORK",
+        "ANNOT_DIM_TICK",
+        "ANNOT_DIM_WITNESS",
+        "TOP_OF_PLATE_ANNOTATION",
+        "DORMER_WINDOW_VERTICAL_DIMENSIONS",
+        "DORMER_WINDOW_TAGS",
+        "ROOF_TRUNCATION_HEIGHT_DIMENSIONS",
+        "ROOF_HORIZONTAL_PLACEMENT_DIMENSIONS",
+        "ROOF_GABLE_WINDOW_VERTICAL_DIMENSIONS",
+        "ROOF_WIDTH_DIMENSIONS",
+        "ROOF_GABLE_WINDOW_TAGS",
+        "ROOF_DIM_ANNOTATION",
+        "ROOF_SLOPE_SYMBOL",
+        "WINDOW_HEADER_ANNOTATION",
+        "ELEVATION_MARKERS",
+        "MATERIAL_TAGS",
+        "GRADE_LINE",
+        "PROP_APPLIANCES",
+        "PROP_FIXTURES",
+        "PROP_FURNITURE",
+        "PROP_OTHER",
+        "COLUMN",
+        "CEILING",
+        "RAILING",
+        "PORCH",
+        "FLOOR_FRAMING",
+        "WALLS",
+        "CASEWORK",
+        "DOORS",
+        "WINDOWS",
+        "WAINSCOTING",
+        "ROOF",
+        "ROOF_RIDGE_VENT",
+        "FOUNDATION_FOOTING",
+        "FOUNDATION_PIER",
+        "TRIM",
+        "ROOF_FRIEZE_BOARD",
+        "ROOF_FASCIA_BOARD",
+        "ROOF_SOFFIT",
+        "ROOF_FASCIA_TOP_TRIM",
+        "ROOF_BELLY_BAND_BOARD",
+        "ROOF_WALL_BASE_BOARD",
+        "ROOF_EXPOSED_RAFTER",
+        "ROOF_GABLE_VENT",
+        "CORNER_BOARD",
+        "SKYLIGHTS",
+        "DEBUG_ELEVATION_COLLIDERS"
+      ],
+      "belowGradeRenderStyle": "NONE",
+      "viewTemplateOverrideIds": [],
+      "styleOverrides": {}
+    },
+    "WGXTe6xsUWrF4iPi": {
+      "id": "WGXTe6xsUWrF4iPi",
+      "name": "Section",
+      "entityType": "VIEW_TEMPLATE",
+      "sortIndex": 2,
+      "viewType": "SECTION_VIEW",
+      "categories": [
+        "SLAB",
+        "FOUNDATION_CURB",
+        "STAIR",
+        "STEM_WALL",
+        "ANNOT_DETAIL",
+        "ANNOT_LINEWORK",
+        "ANNOT_NOTE",
+        "ANNOT_DIM_LABEL",
+        "ANNOT_DIM_LINE",
+        "ANNOT_DIM_LINEWORK",
+        "ANNOT_DIM_TICK",
+        "ANNOT_DIM_WITNESS",
+        "PROP_APPLIANCES",
+        "PROP_FIXTURES",
+        "PROP_FURNITURE",
+        "PROP_OTHER",
+        "COLUMN",
+        "CEILING",
+        "RAILING",
+        "PORCH",
+        "FLOOR_FRAMING",
+        "WALLS",
+        "CASEWORK",
+        "DOORS",
+        "WINDOWS",
+        "WAINSCOTING",
+        "ROOF",
+        "ROOF_RIDGE_VENT",
+        "FOUNDATION_FOOTING",
+        "FOUNDATION_PIER",
+        "TRIM",
+        "ROOF_FRIEZE_BOARD",
+        "ROOF_FASCIA_BOARD",
+        "ROOF_SOFFIT",
+        "ROOF_FASCIA_TOP_TRIM",
+        "ROOF_BELLY_BAND_BOARD",
+        "ROOF_WALL_BASE_BOARD",
+        "ROOF_EXPOSED_RAFTER",
+        "ROOF_GABLE_VENT",
+        "CORNER_BOARD",
+        "SKYLIGHTS"
+      ],
+      "viewTemplateOverrideIds": [],
+      "styleOverrides": {}
+    },
+    "IclYv9A7Ro8TbIiH": {
+      "id": "IclYv9A7Ro8TbIiH",
+      "name": "Perspective",
+      "entityType": "VIEW_TEMPLATE",
+      "sortIndex": 3,
+      "viewType": "VIEW_3D",
+      "categories": [
+        "SLAB",
+        "FOUNDATION_CURB",
+        "STAIR",
+        "STEM_WALL",
+        "PROP_APPLIANCES",
+        "PROP_FIXTURES",
+        "PROP_FURNITURE",
+        "PROP_OTHER",
+        "COLUMN",
+        "CEILING",
+        "RAILING",
+        "PORCH",
+        "FLOOR_FRAMING",
+        "WALLS",
+        "CASEWORK",
+        "DOORS",
+        "WINDOWS",
+        "WAINSCOTING",
+        "ROOF",
+        "ROOF_RIDGE_VENT",
+        "FOUNDATION_FOOTING",
+        "FOUNDATION_PIER",
+        "TRIM",
+        "ROOF_FRIEZE_BOARD",
+        "ROOF_FASCIA_BOARD",
+        "ROOF_SOFFIT",
+        "ROOF_FASCIA_TOP_TRIM",
+        "ROOF_BELLY_BAND_BOARD",
+        "ROOF_WALL_BASE_BOARD",
+        "ROOF_EXPOSED_RAFTER",
+        "ROOF_GABLE_VENT",
+        "CORNER_BOARD",
+        "SKYLIGHTS"
+      ],
+      "viewTemplateOverrideIds": [],
+      "styleOverrides": {}
+    },
+    "FI1SoYEtrOdNoPxo": {
+      "id": "FI1SoYEtrOdNoPxo",
+      "name": "Drawing",
+      "entityType": "VIEW_TEMPLATE",
+      "sortIndex": 4,
+      "viewType": "DRAWING",
+      "categories": [
+        "ANNOT_DETAIL",
+        "ANNOT_LINEWORK",
+        "ANNOT_NOTE",
+        "ANNOT_DIM_LABEL",
+        "ANNOT_DIM_LINE",
+        "ANNOT_DIM_LINEWORK",
+        "ANNOT_DIM_TICK",
+        "ANNOT_DIM_WITNESS"
+      ],
+      "viewTemplateOverrideIds": [],
+      "styleOverrides": {}
+    }
+  },
+  "viewTemplateOverrides": {},
+  "entityTags": {
+    "addToElectricalPlan": {
+      "id": "addToElectricalPlan",
+      "name": "Add To Electrical Plan",
+      "entityType": "ENTITY_TAG",
+      "sortIndex": 0
+    },
+    "addToFloorPlan": {
+      "id": "addToFloorPlan",
+      "name": "Add To Floor Plan",
+      "entityType": "ENTITY_TAG",
+      "sortIndex": 0
+    },
+    "addToFoundationPlan": {
+      "id": "addToFoundationPlan",
+      "name": "Add To Foundation Plan",
+      "entityType": "ENTITY_TAG",
+      "sortIndex": 0
+    },
+    "addToStructuralPlan": {
+      "id": "addToStructuralPlan",
+      "name": "Add To Structural Plan",
+      "entityType": "ENTITY_TAG",
+      "sortIndex": 0
+    },
+    "addToShowroomPlan": {
+      "id": "addToShowroomPlan",
+      "name": "Add To Showroom Plan",
+      "entityType": "ENTITY_TAG",
+      "sortIndex": 0
+    },
+    "addToBrochurePlan": {
+      "id": "addToBrochurePlan",
+      "name": "Add To Brochure Plan",
+      "entityType": "ENTITY_TAG",
+      "sortIndex": 0
+    },
+    "addToFloorMaterialsPlan": {
+      "id": "addToFloorMaterialsPlan",
+      "name": "Add To Floor Materials Plan",
+      "entityType": "ENTITY_TAG",
+      "sortIndex": 0
+    },
+    "addToFloorSummaryPlan": {
+      "id": "addToFloorSummaryPlan",
+      "name": "Add To Floor Summary Plan",
+      "entityType": "ENTITY_TAG",
+      "sortIndex": 0
+    },
+    "addToRoofPlan": {
+      "id": "addToRoofPlan",
+      "name": "Add To Roof Plan",
+      "entityType": "ENTITY_TAG",
+      "sortIndex": 0
+    },
+    "addToUtilityPlan": {
+      "id": "addToUtilityPlan",
+      "name": "Add To Utility Plan",
+      "entityType": "ENTITY_TAG",
+      "sortIndex": 0
+    }
+  },
+  "effects": {},
+  "datums": {},
+  "ruleBasedSelectors": {},
+  "ruleBasedSelectorInstances": {},
+  "assets": {},
+  "propAttributes": {},
+  "facadeSpanStratumAssociations": {},
+  "facadeSweepStratumAssociations": {},
+  "datumSpanAssociations": {},
+  "lastSessionInfo": {
+    "activeViewHandle": {
+      "type": "CONTENT_TEMPLATE_VIEW",
+      "contentTemplateId": "4uOFjzRUpnyt4i1r"
+    },
+    "viewTabGroups": {
+      "PLAN_VIEW": {
+        "type": "PLAN_VIEW",
+        "openViewHandle": {
+          "type": "PLAN_VIEW",
+          "id": "4Twr0vCHDlYfuUB5"
+        },
+        "viewHandles": [
+          {
+            "type": "PLAN_VIEW",
+            "id": "4Twr0vCHDlYfuUB5"
+          }
+        ],
+        "viewTypesAllowed": [
+          "PLAN_VIEW"
+        ],
+        "previewTabHandle": {
+          "type": "PLAN_VIEW",
+          "id": "4Twr0vCHDlYfuUB5"
+        }
+      },
+      "VIEW_3D_ELEVATION_PAGE": {
+        "type": "VIEW_3D_ELEVATION_PAGE",
+        "viewHandles": [
+          {
+            "type": "CONTENT_TEMPLATE_VIEW",
+            "contentTemplateId": "4uOFjzRUpnyt4i1r"
+          },
+          {
+            "type": "GENERATED_PAGE_VIEW",
+            "pageHash": "floorPlan.rfpm4aTwuGesOitL"
+          }
+        ],
+        "viewTypesAllowed": [
+          "VIEW_3D",
+          "ELEVATION_VIEW",
+          "GENERATED_PAGE_VIEW"
+        ],
+        "openViewHandle": {
+          "type": "CONTENT_TEMPLATE_VIEW",
+          "contentTemplateId": "4uOFjzRUpnyt4i1r"
+        }
+      }
+    },
+    "builderRefs": {},
+    "optionSetRefs": {}
+  },
+  "props": {}
+}

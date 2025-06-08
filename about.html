@@ -3,37 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About me</title>
-    <link rel="stylesheet" href="../style.css">
+    <title>About - Abe Drechsler</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        .about-content {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+            line-height: 1.6;
+        }
+        .about-content h1 {
+            margin-bottom: 1.5rem;
+            font-size: 2.5rem;
+            color: #333;
+        }
+        .about-content p {
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+            color: #444;
+        }
+    </style>
 </head>
 <body>
     <header class="nav-header">
         <div class="container">
             <div class="logo">
-                <a href="../index.html">Abe Drechsler</a>
+                <a href="index.html">Abe Drechsler</a>
             </div>
             <nav>
                 <ul>
-                    <li><a href="/about.html">About</a></li>
-                    <li><a href="/contact.html">Contact</a></li>
+                    <li><a href="https://x.com/abedrechsler" target="_blank" class="social-icon"><i class="fa-brands fa-twitter"></i></a></li>
+                    <li><a href="https://linkedin.com/in/abedrechsler" target="_blank" class="social-icon"><i class="fa-brands fa-linkedin"></i></a></li>
+                    <li><a href="about.html">About</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
     <div class="container">
-        <!-- Header Section -->
-        <header>
-            <h1>Lorum/h1>
-            <p>Lorum Lipsum:</p>
-        </header>
+        <div class="about-content">
+            <h1>About Me</h1>
+            
+            <div class="bio-text">
+                I'm a licensed architect and product manager who bridges the worlds of design, technology, and storytelling. Currently at Higharc, I lead product development focused on systematizing and automating residential design and documentation processes—bringing computational thinking to one of our most fundamental human needs: shelter. My architectural journey has taken me from intimate affordable housing projects to massive 1-million-square-foot hospital complexes during my time at renowned firms like KieranTimberlake and Ballinger, where I learned that great design scales from the deeply personal to the monumentally complex.<br><br>
 
-        <!-- Grid Section -->
-        <div id="image-grid" class="grid-container">
-            <!-- Images will be dynamically inserted here via script -->
+                Beyond traditional practice, I'm drawn to understanding how people create spaces and communities in challenging circumstances. This curiosity led me to South America, where I directed and filmed a 45-minute documentary exploring informal settlements—a project that was screened internationally and deepened my appreciation for resourcefulness and human resilience. Originally from North Carolina, I bring together my technical expertise in digital design tools, hands-on project leadership experience, and a filmmaker's eye for narrative to help shape the future of how we design and build our built environment.<br><br>
+
+            </div>
         </div>
     </div>
-
-    <script src="processing-script.js"></script>
 </body>
 </html>
