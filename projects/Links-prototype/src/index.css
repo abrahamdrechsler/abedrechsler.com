@@ -1,0 +1,301 @@
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+/* Drag and Drop Stability Styles */
+.local-panel-container {
+  width: 400px;
+  max-width: 400px;
+  min-width: 400px;
+  box-sizing: border-box;
+}
+
+/* Root level droppable area */
+.root-droppable {
+  min-height: 200px;
+}
+
+.root-droppable[data-is-dragging-over="true"] {
+  background: rgba(100, 108, 255, 0.02);
+  border: 1px dashed rgba(100, 108, 255, 0.3);
+  border-radius: 8px;
+  padding: 4px;
+}
+
+/* Enhanced placeholder for root level */
+.root-droppable .react-beautiful-dnd-placeholder {
+  background: rgba(100, 108, 255, 0.15) !important;
+  border: 2px dashed #646cff !important;
+  border-radius: 6px !important;
+  margin: 4px 0 !important;
+  min-height: 48px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  color: #646cff !important;
+  font-weight: 600 !important;
+  font-size: 0.9rem !important;
+  position: relative !important;
+}
+
+.root-droppable .react-beautiful-dnd-placeholder::before {
+  content: "Drop item here";
+  opacity: 0.9;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  white-space: nowrap;
+}
+
+.group {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.group-header {
+  display: flex;
+  align-items: center;
+  padding: 12px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px solid transparent;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.group-header.selected {
+  border-color: #646cff;
+  background: rgba(100, 108, 255, 0.2);
+}
+
+.group-header:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.expand-button {
+  background: none;
+  border: none;
+  color: inherit;
+  padding: 0;
+  margin-right: 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 20px;
+  max-width: 20px;
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+}
+
+.group-name {
+  flex: 1;
+  font-weight: 600;
+  font-size: 1rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  min-width: 0;
+}
+
+.group-children {
+  margin-left: 20px;
+  margin-top: 8px;
+  width: calc(100% - 20px);
+  max-width: calc(100% - 20px);
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.group-child {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Enhanced drag feedback */
+.group-child.is-dragging {
+  opacity: 0.5;
+  transform: rotate(5deg);
+}
+
+.group-children[data-is-dragging-over="true"] {
+  background: rgba(100, 108, 255, 0.05);
+  border: 2px dashed rgba(100, 108, 255, 0.3);
+  border-radius: 6px;
+  padding: 4px;
+  margin: 2px 0;
+}
+
+/* Placeholder styling for better visual feedback */
+.group-children .react-beautiful-dnd-placeholder {
+  background: rgba(100, 108, 255, 0.2) !important;
+  border: 2px dashed #646cff !important;
+  border-radius: 6px !important;
+  margin: 4px 0 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  color: #646cff !important;
+  font-weight: 600 !important;
+  font-size: 0.9rem !important;
+  min-height: 48px !important;
+  position: relative !important;
+}
+
+.group-children .react-beautiful-dnd-placeholder::before {
+  content: "Drop here";
+  opacity: 0.8;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Settings Set Styles */
+.settings-set {
+  display: flex;
+  align-items: center;
+  padding: 12px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 2px solid transparent;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 4px;
+  overflow: hidden;
+  min-height: 48px;
+}
+
+.settings-set.selected {
+  border-color: #646cff;
+  background: rgba(100, 108, 255, 0.2);
+}
+
+.settings-set:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.settings-set.is-dragging {
+  opacity: 0.8;
+  transform: scale(1.02);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+}
+
+.sortable-group-child {
+  position: relative;
+}
+
+.sortable-group-child.is-dragging {
+  opacity: 0.5;
+  transform: rotate(2deg);
+  z-index: 1000;
+}
+
+.settings-set-name {
+  flex: 1;
+  font-weight: 500;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  min-width: 0;
+}
+
+.tag {
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  margin-left: 8px;
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+
+.tag.ref {
+  background: rgba(34, 197, 94, 0.2);
+  color: #22c55e;
+}
+
+.tag.ref-mod {
+  background: rgba(251, 191, 36, 0.2);
+  color: #fbbf24;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}

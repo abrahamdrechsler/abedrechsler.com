@@ -1,0 +1,220 @@
+/* CSS Variables for consistent theming */
+:root {
+  --sidebar-left-width: 200px;
+  --sidebar-right-width: 250px;
+  --panel-width: 1fr;
+  --header-height: 60px;
+  --bg-main: #181a20;
+  --bg-panel: #23262f;
+  --bg-header: #23262f;
+  --text-main: #fff;
+  --border: #333;
+}
+
+.app-root {
+  min-height: 100vh;
+  background: var(--bg-main);
+  color: var(--text-main);
+}
+
+.app-header {
+  height: var(--header-height);
+  background: var(--bg-header);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  font-weight: bold;
+  border-bottom: 1px solid var(--border);
+  letter-spacing: 1px;
+}
+
+.app-grid {
+  display: grid;
+  grid-template-columns: var(--sidebar-left-width) 2fr 2fr var(--sidebar-right-width);
+  grid-template-rows: 1fr;
+  height: calc(100vh - var(--header-height));
+}
+
+.sidebar-left {
+  background: var(--bg-panel);
+  border-right: 1px solid var(--border);
+  padding: 1rem;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.panel-cdm {
+  background: var(--bg-main);
+  border-right: 1px solid var(--border);
+  padding: 1rem;
+}
+
+.panel-local {
+  background: var(--bg-main);
+  border-right: 1px solid var(--border);
+  padding: 1rem;
+}
+
+.sidebar-right {
+  background: var(--bg-panel);
+  padding: 1rem;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+/* Group and Settings Set Styles */
+.group {
+  width: 100%;
+  margin-bottom: 0.5rem;
+}
+
+.group-header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 0.75rem;
+  border-radius: 6px;
+  cursor: pointer;
+  border: 1px solid var(--border);
+  background: transparent;
+  transition: background 0.2s, border 0.2s;
+  user-select: none;
+  justify-content: flex-start;
+}
+
+.group-header:hover {
+  background: rgba(100, 108, 255, 0.1);
+}
+
+.group-header.selected {
+  border: 2px solid #646cff;
+  background: #23262f;
+}
+
+.expand-button {
+  background: none;
+  border: none;
+  color: var(--text-main);
+  cursor: pointer;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+}
+
+.expand-button:hover {
+  color: #646cff;
+}
+
+.group-name {
+  font-weight: 500;
+  flex: 1;
+  text-align: left;
+}
+
+.group-children {
+  margin-left: 1.5rem;
+  margin-top: 0.25rem;
+  border-left: 2px solid rgba(100, 108, 255, 0.3);
+  padding-left: 0.75rem;
+}
+
+.group-child {
+  margin-bottom: 0.25rem;
+}
+
+.settings-set {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.5rem 0.75rem;
+  border-radius: 6px;
+  cursor: pointer;
+  border: 1px solid var(--border);
+  background: transparent;
+  transition: background 0.2s, border 0.2s;
+  user-select: none;
+  justify-content: flex-start;
+  margin-bottom: 0.5rem;
+}
+
+.settings-set:hover {
+  background: rgba(100, 108, 255, 0.1);
+}
+
+.settings-set.selected {
+  border: 2px solid #646cff;
+  background: #23262f;
+}
+
+.settings-set-name {
+  font-weight: 500;
+  flex: 1;
+  text-align: left;
+}
+
+.tag {
+  border-radius: 4px;
+  padding: 0.1rem 0.5rem;
+  fontSize: 0.8rem;
+  font-weight: 600;
+  margin-left: auto;
+}
+
+.tag.ref {
+  background: #646cff;
+  color: #fff;
+}
+
+.tag.ref-mod {
+  background: #ffb347;
+  color: #fff;
+}
