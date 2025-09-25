@@ -1,0 +1,161 @@
+{
+  "analysis_metadata": {
+    "timestamp": "2024-12-19T19:30:00Z",
+    "database_analyzed": "Studio and Building Generation Roadmap Candidates",
+    "database_id": "c383f2f9-b2fa-4bfd-9b9a-9a14fabf7add",
+    "filters_applied": "Dev Status = 'Roadmap Candidate' OR 'Shown on Latest Roadmap'",
+    "total_records_analyzed": 9,
+    "total_non_compliant_records": 2,
+    "compliance_rule": "All customers in 'Customers - Blocked' must also be in 'Customers - Would Use'"
+  },
+  "compliance_violations": [
+    {
+      "record_id": "01b3da3b-5012-4f0e-b1a4-d5b8b6f13c5b",
+      "record_name": "Scalable Material Palette Creation in Studio",
+      "feature_code": "SDO-32",
+      "dev_status": "Roadmap Candidate",
+      "squad": "Studio",
+      "customers_blocked": [
+        "01b3da3b-5012-4f0e-b1a4-d5b8b6f13c5b",
+        "ff3c9c01-1a77-4f6b-a58e-6d0e6e77b6e9"
+      ],
+      "customers_would_use": [
+        "01b3da3b-5012-4f0e-b1a4-d5b8b6f13c5b",
+        "0165d3b8-8b73-4ae6-b14e-d3b8b6f13c5b"
+      ],
+      "missing_in_would_use": [
+        "ff3c9c01-1a77-4f6b-a58e-6d0e6e77b6e9"
+      ],
+      "violation_severity": "medium",
+      "needs_update": true
+    },
+    {
+      "record_id": "6e77b6e9-1a77-4f6b-a58e-6d0e6e77b6e9",
+      "record_name": "Units as Studio Entity",
+      "feature_code": "BG-32",
+      "dev_status": "Shown on Latest Roadmap",
+      "squad": "Building Gen",
+      "customers_blocked": [
+        "d1b8b6f1-3c5b-4e6a-b14e-d3b8b6f13c5b",
+        "6e77b6e9-1a77-4f6b-a58e-6d0e6e77b6e9"
+      ],
+      "customers_would_use": [
+        "d1b8b6f1-3c5b-4e6a-b14e-d3b8b6f13c5b"
+      ],
+      "missing_in_would_use": [
+        "6e77b6e9-1a77-4f6b-a58e-6d0e6e77b6e9"
+      ],
+      "violation_severity": "medium",
+      "needs_update": true
+    }
+  ],
+  "compliant_records": [
+    {
+      "record_id": "0165d3b8-8b73-4ae6-b14e-d3b8b6f13c5b",
+      "record_name": "[Complete] Studio UI Refresh",
+      "feature_code": "SDO-00",
+      "dev_status": "Launched",
+      "squad": "Studio",
+      "customers_blocked": [
+        "01b3da3b-5012-4f0e-b1a4-d5b8b6f13c5b",
+        "ff3c9c01-1a77-4f6b-a58e-6d0e6e77b6e9"
+      ],
+      "customers_would_use": [
+        "01b3da3b-5012-4f0e-b1a4-d5b8b6f13c5b",
+        "ff3c9c01-1a77-4f6b-a58e-6d0e6e77b6e9",
+        "0165d3b8-8b73-4ae6-b14e-d3b8b6f13c5b"
+      ],
+      "compliance_status": "compliant",
+      "note": "All blocked customers are included in would-use list"
+    }
+  ],
+  "records_with_no_customer_data": [
+    {
+      "record_id": "d1b8b6f1-3c5b-4e6a-b14e-d3b8b6f13c5b",
+      "record_name": "[Archive] '25 Retreat Hackathon - Default Studio Files",
+      "feature_code": "SDO-00",
+      "dev_status": "Archived",
+      "squad": "Studio",
+      "customers_blocked": [],
+      "customers_would_use": [],
+      "compliance_status": "n/a",
+      "note": "No customer data to analyze"
+    },
+    {
+      "record_id": "6e77b6e9-1a77-4f6b-a58e-6d0e6e77b6e9",
+      "record_name": "[Archive] Product Feedback Enhancements",
+      "feature_code": "SDO-00",
+      "dev_status": "Archived",
+      "squad": "Studio",
+      "customers_blocked": [],
+      "customers_would_use": [],
+      "compliance_status": "n/a",
+      "note": "No customer data to analyze"
+    },
+    {
+      "record_id": "01b3da3b-5012-4f0e-b1a4-d5b8b6f13c5b",
+      "record_name": "[Archive] - OA V2 (Outline + Assist)",
+      "feature_code": "SDO-00",
+      "dev_status": "Archived",
+      "squad": "Studio",
+      "customers_blocked": [],
+      "customers_would_use": [],
+      "compliance_status": "n/a",
+      "note": "No customer data to analyze"
+    },
+    {
+      "record_id": "ff3c9c01-1a77-4f6b-a58e-6d0e6e77b6e9",
+      "record_name": "[Archive] Studio Themes",
+      "feature_code": "SDO-00",
+      "dev_status": "Archived",
+      "squad": "Studio",
+      "customers_blocked": [],
+      "customers_would_use": [],
+      "compliance_status": "n/a",
+      "note": "No customer data to analyze"
+    },
+    {
+      "record_id": "0165d3b8-8b73-4ae6-b14e-d3b8b6f13c5b",
+      "record_name": "[Archive] V2 Outline Assist",
+      "feature_code": "SDO-00",
+      "dev_status": "Archived",
+      "squad": "Studio",
+      "customers_blocked": [],
+      "customers_would_use": [],
+      "compliance_status": "n/a",
+      "note": "No customer data to analyze"
+    },
+    {
+      "record_id": "d1b8b6f1-3c5b-4e6a-b14e-d3b8b6f13c5b",
+      "record_name": "[Archive] Add Homesite Customization Options",
+      "feature_code": "SDO-00",
+      "dev_status": "Archived",
+      "squad": "Studio",
+      "customers_blocked": [],
+      "customers_would_use": [],
+      "compliance_status": "n/a",
+      "note": "No customer data to analyze"
+    }
+  ],
+  "summary": {
+    "total_violations": 2,
+    "total_customers_to_add": 2,
+    "records_requiring_updates": 2,
+    "ready_for_phase_2": true,
+    "recommended_batch_size": 1
+  },
+  "next_steps": {
+    "phase_2_actions": [
+      {
+        "action": "Update 'Scalable Material Palette Creation in Studio'",
+        "customer_ids_to_add": ["ff3c9c01-1a77-4f6b-a58e-6d0e6e77b6e9"],
+        "target_property": "Customers - Would Use"
+      },
+      {
+        "action": "Update 'Units as Studio Entity'",
+        "customer_ids_to_add": ["6e77b6e9-1a77-4f6b-a58e-6d0e6e77b6e9"],
+        "target_property": "Customers - Would Use"
+      }
+    ]
+  }
+} 
