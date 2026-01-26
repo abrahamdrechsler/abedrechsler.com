@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Townhomes at Higharc - Case Study</title>
+    <link rel="stylesheet" href="presentation.css">
+</head>
+<body>
+    <div class="stage" id="stage">
+        
+        <!-- Slide 1: Cover -->
+        <section class="slide cover dark" id="cover" data-slide="1">
+            <h1 class="hero-title">Townhomes at Higharc</h1>
+            <p class="subtitle">Platform expansion from single-family → multi-unit</p>
+            <div class="meta">
+                <p>Abe Drechsler · Product Manager</p>
+                <p>Case Study Presentation</p>
+            </div>
+        </section>
+
+        <!-- Slide 2: Agenda -->
+        <section class="slide" id="agenda" data-slide="2">
+            <div class="slide-header">
+                <span class="eyebrow">Townhome Initiative Case Study</span>
+                <h2 class="slide-title">What I'll cover</h2>
+            </div>
+            <div class="slide-content agenda-content">
+                <div class="agenda-grid">
+                    <div class="agenda-section">
+                        <h4 class="agenda-heading">Context</h4>
+                        <ul class="agenda-items">
+                            <li>Introduction</li>
+                            <li>How Higharc works today</li>
+                        </ul>
+                    </div>
+                    <div class="agenda-section">
+                        <h4 class="agenda-heading">The Townhomes Initiative</h4>
+                        <ul class="agenda-items">
+                            <li>Why Townhomes</li>
+                            <li>Identifying the most critical problems</li>
+                            <li>Team and Role</li>
+                            <li>Our Process</li>
+                            <li>Mockups and "drawing to think"</li>
+                            <li>Delivery Processes</li>
+                            <li>Defining Success</li>
+                        </ul>
+                    </div>
+                    <div class="agenda-section">
+                        <h4 class="agenda-heading">The Product Solution</h4>
+                        <ul class="agenda-items">
+                            <li>High level product solutions</li>
+                            <li>Feature Deep Dives (3)</li>
+                        </ul>
+                    </div>
+                    <div class="agenda-section">
+                        <h4 class="agenda-heading">Retrospective</h4>
+                        <ul class="agenda-items">
+                            <li>Next steps for initiative</li>
+                            <li>Reflections</li>
+                        </ul>
+                    </div>
+                    <div class="agenda-section">
+                        <h4 class="agenda-heading">Q+A</h4>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 3: Introduction -->
+        <section class="slide" id="introduction" data-slide="3">
+            <div class="slide-header">
+                <span class="eyebrow">Townhome Initiative Case Study</span>
+                <h2 class="slide-title">Introduction</h2>
+            </div>
+            <div class="slide-content">
+                <div class="text-column">
+                    <div class="solution-group">
+                        <h4 class="solution-heading">My Experience</h4>
+                        <ul class="solution-items">
+                            <li>I'm a Product leader with 5 years of product experience working at the intersection of AEC and technology where I'm reimagining how homes are designed, documented, and built. I'm also a licensed architect with 7+ years of experience leading design teams and delivering complex projects.</li>
+                            <li>As a technologist, I love exploring and testing new technologies. I'm excited about this moment in generative AI and want to continue leveraging it both as a tool I can use and a product I can build with.</li>
+                            <li>Fun Fact: I've produced a documentary on informal settlements in South America (<a href="https://withinformalcities.org" target="_blank">withinformalcities.org</a>)</li>
+                        </ul>
+                    </div>
+                    <div class="solution-group">
+                        <h4 class="solution-heading">What Drives Me</h4>
+                        <ul class="solution-items">
+                            <li>I'm excited by the opportunity to improve the built environment. >80% of all new SFH construction is production housing. If we could improve that product by just 2% the net impact at scale would be transformative.</li>
+                            <li>As a product leader and architect, I love envisioning the unseen, pulling from and aligning multiple stakeholders, and executing on a product vision to deliver value.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="visual-column">
+                    <div class="profile-image-frame">
+                        <img src="images/introduction-headshot.jpeg" alt="Abe Drechsler">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 4: How Higharc Works Today -->
+        <section class="slide" id="higharc-overview" data-slide="4">
+            <div class="slide-header">
+                <span class="eyebrow">Townhome Initiative Case Study</span>
+                <h2 class="slide-title">How Higharc works today</h2>
+            </div>
+            <div class="slide-content">
+                <div class="text-column">
+                    <ul class="bullets">
+                        <li>Platform for builders to design homes and produce: drawings, takeoffs, and visualizations</li>
+                        <li>Changes ripple across multiple products and downstream outputs</li>
+                    </ul>
+                </div>
+                <div class="visual-column">
+                    <img src="images/context-Higharc-solution-slide2.gif" alt="Higharc platform workflow" class="flat-image">
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 5: Why Townhomes? -->
+        <section class="slide" id="why-townhomes" data-slide="7">
+            <div class="slide-header">
+                <span class="eyebrow">Townhome Initiative Case Study</span>
+                <h2 class="slide-title">Why Townhomes?</h2>
+            </div>
+            <div class="slide-content">
+                <div class="text-column">
+                    <ul class="bullets">
+                        <li>Multiple active customers pursuing townhomes in Higharc today—hitting significant limitations</li>
+                        <li>Unlocks ~$20M ARR in existing sales pipeline</li>
+                        <li>Opens the door to builders currently blocked without townhome support—massive TAM and gateway to larger builders</li>
+                        <li>Platform leverage: capabilities built for townhomes strengthen the foundation for all building types</li>
+                    </ul>
+                </div>
+                <div class="visual-column">
+                    <img src="images/Buffington_Townhomes_Side1.jpg" alt="Townhome building example" class="flat-image">
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 7: Identifying the Most Critical Problems -->
+        <section class="slide" id="critical-problems" data-slide="7">
+            <div class="slide-header">
+                <span class="eyebrow">Townhome Initiative Case Study</span>
+                <h2 class="slide-title">Identifying the most critical problems</h2>
+            </div>
+            <div class="slide-content">
+                <div class="text-column">
+                    <ul class="bullets">
+                        <li>Interviewed current and prospective customers on townhome needs</li>
+                        <li>Conducted internal reviews with SMEs, Sales, and CSMs</li>
+                        <li>Stack ranked limitations strategically to build out functionality over time</li>
+                        <li>Aligned across org and leadership on the most severe problems to address first</li>
+                    </ul>
+                </div>
+                <div class="visual-column">
+                    <img src="images/townhome-limitations.png" alt="Townhome limitations analysis" class="flat-image">
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 7: Team and Role -->
+        <section class="slide" id="team-role" data-slide="9">
+            <div class="slide-header">
+                <span class="eyebrow">Townhome Initiative Case Study</span>
+                <h2 class="slide-title">Team and Role</h2>
+            </div>
+            <div class="slide-content">
+                <div class="text-column">
+                    <ul class="bullets">
+                        <li>The Townhome Initiative originated via product research and presentation to leadership team Jan '25</li>
+                        <li>I was assigned to lead the initiative and be DRI for its development and delivery</li>
+                        <li>Since January, I've worked extensively with 20+ different individuals across the org. I have no direct reports, and have led with influence and a sense for camaraderie as we work towards this collective goal.</li>
+                        <li>While I frequently engage with Sales, Marketing, Ops, and leadership, I spend most of my day-to-day engaging directly with the PDE team. Across 6 different projects I work with as many engineers, 2 product designers, and collaborate with fellow PMs.</li>
+                    </ul>
+                    <img src="images/Townhome-initiative-team.jpg" alt="Townhome Initiative Team" style="width: 100%; margin-top: 1.5em;">
+                </div>
+                <div class="visual-column">
+                    <img src="images/orgchart.png" alt="Team org chart" class="flat-image" style="max-height: 85%; max-width: 88%;">
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 8: Our Process -->
+        <section class="slide" id="operated-delivered" data-slide="10">
+            <div class="slide-header">
+                <span class="eyebrow">Townhome Initiative Case Study</span>
+                <h2 class="slide-title">Our Process</h2>
+            </div>
+            <div class="slide-content">
+                <div class="text-column">
+                    <div class="solution-group">
+                        <h4 class="solution-heading">Some Frameworks I Like</h4>
+                        <ul class="solution-items">
+                            <li>Double Diamond framework / IDEO</li>
+                            <li>Continuous Discovery (Teresa Torres)</li>
+                            <li>Shape Up (Basecamp)</li>
+                        </ul>
+                    </div>
+                    <div class="solution-group">
+                        <h4 class="solution-heading">Principles</h4>
+                        <ul class="solution-items">
+                            <li>Incremental Delivery</li>
+                            <li>Mockups are very high value</li>
+                            <li>Estimating over 6 weeks worth of work is silly</li>
+                            <li>(Rough) Documentation is critical — especially working remote</li>
+                            <li>Milestone oriented deliverables and goals</li>
+                            <li>Strategic focused collaboration</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="visual-column">
+                    <span class="image-label">User Journey Mapping</span>
+                    <img src="images/process/Userjourney.png" alt="User journey" class="flat-image">
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 9: Mockups and Drawing to Think -->
+        <section class="slide" id="mockups" data-slide="9">
+            <div class="slide-header">
+                <span class="eyebrow">Townhome Initiative Case Study</span>
+                <h2 class="slide-title">Mockups, and "drawing to think"</h2>
+            </div>
+            <div class="slide-content">
+                <div class="text-column">
+                    <ul class="bullets">
+                        <li>It's important to test our ideas by sketching out concepts</li>
+                        <li>Sketches can be physical, FigJam diagrams, or interactive AI prototypes</li>
+                        <li>All of PDE can sketch and diagram out ideas to better align and test ideas</li>
+                        <li>These visuals can be reviewed directly with clients for more thoughtful feedback</li>
+                        <li>"Stop explaining it and draw!"</li>
+                    </ul>
+                </div>
+                <div class="visual-column">
+                    <div class="pinboard-collage">
+                        <img src="images/process/wall-type-sketch.jpg" alt="Wall type sketch" class="pinboard-img" style="top: 0%; left: 0%; transform: rotate(3deg); width: 38%;">
+                        <img src="images/process/Level-replacement-diagram.png" alt="Level replacement diagram" class="pinboard-img" style="top: 2%; left: 32%; transform: rotate(-2deg); width: 35%;">
+                        <img src="images/process/permutations.png" alt="Permutations" class="pinboard-img" style="top: 0%; left: 60%; transform: rotate(4deg); width: 38%;">
+                        <img src="images/process/ShowroomView.png" alt="Showroom view" class="pinboard-img" style="top: 28%; left: 5%; transform: rotate(-3deg); width: 40%;">
+                        <img src="images/process/unit-replit.gif" alt="Unit replit" class="pinboard-img" style="top: 30%; left: 38%; transform: rotate(2deg); width: 36%;">
+                        <img src="images/process/wall-conditions.png" alt="Wall conditions" class="pinboard-img" style="top: 32%; left: 68%; transform: rotate(-4deg); width: 30%;">
+                        <img src="images/process/steppedunits-diagram.png" alt="Stepped units diagram" class="pinboard-img" style="top: 58%; left: 0%; transform: rotate(2deg); width: 35%;">
+                        <img src="images/process/ChangingLevelDatums-Studio.gif" alt="Changing level datums" class="pinboard-img" style="top: 60%; left: 28%; transform: rotate(-1deg); width: 40%;">
+                        <img src="images/process/wall-inheritance.png" alt="Wall inheritance" class="pinboard-img" style="top: 62%; left: 62%; transform: rotate(3deg); width: 36%;">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 10: Milestones and Engineering Scoping -->
+        <section class="slide" id="milestones-scoping" data-slide="10">
+            <div class="slide-header">
+                <span class="eyebrow">Townhome Initiative Case Study</span>
+                <h2 class="slide-title">Delivery Processes</h2>
+            </div>
+            <div class="slide-content">
+                <div class="text-column">
+                    <ul class="bullets">
+                        <li>We use multiple techniques to help us estimate, track, and deliver as predictably as possible</li>
+                        <li><span class="highlight">Work Plans</span>: These docs break projects into 6-week chunks we can describe in a few bullet points. Any chunk that takes 6+ weeks needs to be broken down further. This also helps us limit unintentional scope creep.</li>
+                        <li><span class="highlight">Milestones</span>: We established key demo milestones that have helped rally the PDE team and give us opportunity for transparent feedback and WIP demos.</li>
+                        <li><span class="highlight">Gantt-style prioritization</span> and roadmapping: Reviewed multiple scenarios and paths that give us flexibility to take on unexpected priorities or fires.</li>
+                    </ul>
+                </div>
+                <div class="visual-column">
+                    <img src="images/Initiative-roadmap.png" alt="Initiative roadmap" class="flat-image" style="max-height: 65vh;">
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 11: Defining Success -->
+        <section class="slide" id="defining-success" data-slide="9">
+            <div class="slide-header">
+                <span class="eyebrow">Townhome Initiative Case Study</span>
+                <h2 class="slide-title">Defining Success</h2>
+            </div>
+            <div class="slide-content">
+                <div class="text-column">
+                    <ul class="bullets">
+                        <li>Defined success for standalone projects and broader townhome workflow</li>
+                        <li>Target incremental delivery and investment to ensure we're not over investing</li>
+                        <li>Specific targets to support Interest, Adoption, Production, Performance, and Revenue</li>
+                    </ul>
+                </div>
+                <div class="visual-column">
+                    <div class="success-criteria-panel">
+                        <h3 class="criteria-title">Success Criteria:</h3>
+                        
+                        <div class="criteria-section">
+                            <h4 class="milestone-heading">2/17 - IBS Conference</h4>
+                            <div class="criteria-item"><span class="indicator interest"></span>20+ Qualified booth Conversations</div>
+                            <div class="criteria-item"><span class="indicator interest"></span>10+ High intent follow-ups booked</div>
+                            <div class="criteria-item"><span class="indicator interest"></span>6+ Inbound Beta Interest / Sign ups</div>
+                        </div>
+
+                        <div class="criteria-section">
+                            <h4 class="milestone-heading">April - Beta Launch</h4>
+                            <div class="criteria-item"><span class="indicator adoption"></span>10+ customer accounts enabled with Feature Flagged Townhomes by 4/30</div>
+                            <div class="criteria-item"><span class="indicator adoption"></span>50%+ beta customers participate in training sessions</div>
+                            <div class="criteria-item"><span class="indicator adoption"></span>>50% of enabled accounts complete Beta Feature Activity within 14 days</div>
+                            <div class="criteria-item"><span class="indicator adoption"></span>Collect >20 actionable feedback items from 4+ beta customers by 5/15</div>
+                        </div>
+
+                        <div class="criteria-section">
+                            <h4 class="milestone-heading">July 1st - GA Milestone</h4>
+                            <div class="criteria-item"><span class="indicator adoption"></span>Feature Flags removed, content broadly accessible</div>
+                            <div class="criteria-item"><span class="indicator production"></span>10+ Customers with activation, 5+ actively using for production</div>
+                            <div class="criteria-item"><span class="indicator production"></span>Within 30 days of GA, >60% of townhome builders have >1 Project</div>
+                            <div class="criteria-item"><span class="indicator performance"></span>Quality bar: Blocker bug or FR count ≤3 in first 30 days</div>
+                        </div>
+
+                        <div class="criteria-section">
+                            <h4 class="milestone-heading">Q2 Sales Goals</h4>
+                            <div class="criteria-item"><span class="indicator revenue"></span>$5M net new ARR from Townhomes specific Builders</div>
+                            <div class="criteria-item"><span class="indicator revenue"></span>$XXM pipeline growth in Q2</div>
+                        </div>
+
+                        <div class="criteria-legend">
+                            <span class="legend-item"><span class="indicator interest"></span>Interest</span>
+                            <span class="legend-item"><span class="indicator adoption"></span>Adoption</span>
+                            <span class="legend-item"><span class="indicator production"></span>Production</span>
+                            <span class="legend-item"><span class="indicator performance"></span>Performance</span>
+                            <span class="legend-item"><span class="indicator revenue"></span>Revenue</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 10: The Product Solution -->
+        <section class="slide" id="product-solution" data-slide="10">
+            <div class="slide-header">
+                <span class="eyebrow">Townhome Initiative Case Study</span>
+                <h2 class="slide-title">The product solution</h2>
+            </div>
+            <div class="slide-content">
+                <div class="text-column">
+                    <div class="solution-group">
+                        <h4 class="solution-heading">1. Core Building Model Improvements</h4>
+                        <ul class="solution-items">
+                            <li><span class="highlight">Datums + Levels</span></li>
+                            <li>Walls</li>
+                            <li>Foundations</li>
+                        </ul>
+                    </div>
+                    <div class="solution-group">
+                        <h4 class="solution-heading">2. Modeling Components / Units</h4>
+                        <ul class="solution-items">
+                            <li><span class="highlight">Modeling Components</span></li>
+                            <li>Reporting Units</li>
+                            <li>Unit Options</li>
+                        </ul>
+                    </div>
+                    <div class="solution-group">
+                        <h4 class="solution-heading">3. Dedicated Builder and Sales Experience</h4>
+                        <ul class="solution-items">
+                            <li>Dedicated Townhome Workflow</li>
+                            <li><span class="highlight">Specialized Sales Views</span></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="visual-column">
+                    <img src="images/townhome-workflow.gif" alt="Townhome workflow animation" class="flat-image" style="max-height: 55vh; object-fit: contain;">
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 9: Deep Dive - Levels and Datums -->
+        <section class="slide" id="levels-datums" data-slide="9">
+            <div class="slide-header">
+                <span class="eyebrow">Townhome Initiative Case Study</span>
+                <h2 class="slide-title">Levels and Datums</h2>
+            </div>
+            <div class="slide-content">
+                <div class="text-column">
+                    <ul class="bullets">
+                        <li><strong>Problem:</strong> inconsistent references; townhomes require split levels and mixed elevations</li>
+                        <li><strong>Before:</strong> each system had its own "truth"; single-stack level assumptions blocked overlapping contexts</li>
+                        <li><strong>After:</strong> origin-relative datums align geometry; levels can overlap/split without breaking systems</li>
+                    </ul>
+                </div>
+                <div class="visual-column">
+                    <div class="screenshot-frame">
+                        <div class="placeholder-icon">📐</div>
+                        <span class="placeholder-label">Split-level section diagram + datum reference overlay</span>
+                    </div>
+                    <p class="caption">"Shared references reduce hacks and stabilize downstream automation."</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 10: Deep Dive - Modeling Components, Reporting Units, and Options -->
+        <section class="slide" id="modeling-components" data-slide="10">
+            <div class="slide-header">
+                <span class="eyebrow">Townhome Initiative Case Study</span>
+                <h2 class="slide-title">Modeling Components, Reporting Units, and Options</h2>
+            </div>
+            <div class="slide-content">
+                <div class="text-column">
+                    <ul class="bullets">
+                        <li><strong>Problem:</strong> rooms aren't the right driver for slabs/walls; stepped conditions need explicit control</li>
+                        <li><strong>Before:</strong> room-hosted foundations; no hierarchy for multi-unit; wall heights hard to represent</li>
+                        <li><strong>After:</strong> user-authored boundaries; per-edge wall controls; building-level constraints with unit options</li>
+                    </ul>
+                </div>
+                <div class="visual-column">
+                    <img src="images/townhome-workflow.gif" alt="Townhome workflow animation" class="flat-image">
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 11: Deep Dive - Showroom and Config for Townhomes -->
+        <section class="slide" id="showroom-config" data-slide="11">
+            <div class="slide-header">
+                <span class="eyebrow">Townhome Initiative Case Study</span>
+                <h2 class="slide-title">Showroom and Config for Townhomes</h2>
+            </div>
+            <div class="slide-content">
+                <div class="text-column">
+                    <ul class="bullets">
+                        <li>Need to present one unit clearly while showing adjacency/shared walls</li>
+                        <li>Filtering modes: highlight current unit, dim others, isolate systems</li>
+                        <li>Critical for demo clarity and customer comprehension</li>
+                    </ul>
+                </div>
+                <div class="visual-column">
+                    <div class="screenshot-frame">
+                        <div class="placeholder-icon">🏠</div>
+                        <span class="placeholder-label">Showroom screenshot + overlay callouts</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 12: Current Status -->
+        <section class="slide" id="status" data-slide="14">
+            <div class="slide-header">
+                <span class="eyebrow">Townhome Initiative Case Study</span>
+                <h2 class="slide-title">Next steps for initiative</h2>
+            </div>
+            <div class="slide-content full-width">
+                <div class="text-column" style="max-width: 100%; text-align: left;">
+                    <div class="three-columns" style="margin-top: 20px;">
+                        <div class="column-card working">
+                            <h4>Working Now</h4>
+                            <ul>
+                                <li>Demo-proven capabilities</li>
+                                <li>Core workflows functional</li>
+                                <li>IBS validation complete</li>
+                            </ul>
+                        </div>
+                        <div class="column-card in-progress">
+                            <h4>In Progress</h4>
+                            <ul>
+                                <li>Beta hardening</li>
+                                <li>Edge cases</li>
+                                <li>UX polish</li>
+                            </ul>
+                        </div>
+                        <div class="column-card risks">
+                            <h4>Risks + Mitigations</h4>
+                            <ul>
+                                <li>Migration complexity</li>
+                                <li>Regression monitoring</li>
+                                <li>Performance at scale</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 15: Reflections -->
+        <section class="slide" id="reflections" data-slide="15">
+            <div class="slide-header">
+                <span class="eyebrow">Townhome Initiative Case Study</span>
+                <h2 class="slide-title">Reflections</h2>
+            </div>
+            <div class="slide-content full-width">
+                <div class="text-column" style="max-width: 100%; text-align: left;">
+                    <div class="three-columns" style="margin-top: 20px;">
+                        <div class="column-card" style="border-top: 4px solid #4caf50;">
+                            <h4 style="color: #2e7d32;">Keep</h4>
+                            <ul>
+                                <li>Decomposition approach</li>
+                                <li>Cross-team alignment</li>
+                                <li>Risk burn-down via demos</li>
+                            </ul>
+                        </div>
+                        <div class="column-card" style="border-top: 4px solid var(--accent);">
+                            <h4 style="color: #e65100;">Improve</h4>
+                            <ul>
+                                <li>Earlier migration strategy</li>
+                                <li>Shared visual language</li>
+                            </ul>
+                        </div>
+                        <div class="column-card" style="border-top: 4px solid var(--link);">
+                            <h4 style="color: #1565c0;">Change</h4>
+                            <ul>
+                                <li>Earlier "demo-stable" definition</li>
+                                <li>Clearer sequencing docs</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 16: Q&A -->
+        <section class="slide cover dark" id="qa" data-slide="18">
+            <h1 class="hero-title">Q&A</h1>
+            <p class="subtitle">Happy to go deeper on tradeoffs, sequencing, or architecture choices.</p>
+        </section>
+
+    </div>
+
+    <!-- Navigation Dots -->
+    <nav class="nav-indicator" id="navIndicator"></nav>
+
+    <!-- Slide Counter -->
+    <div class="slide-counter" id="slideCounter">1 / 17</div>
+
+    <!-- Keyboard Hint -->
+    <div class="keyboard-hint">← → or click sides to navigate</div>
+
+    <!-- Click Zones for Navigation -->
+    <div class="click-zone click-zone-left" id="clickLeft"></div>
+    <div class="click-zone click-zone-right" id="clickRight"></div>
+
+    <script>
+        // Presentation Navigation
+        const stage = document.getElementById('stage');
+        const slides = document.querySelectorAll('.slide');
+        const navIndicator = document.getElementById('navIndicator');
+        const slideCounter = document.getElementById('slideCounter');
+        const totalSlides = slides.length;
+        let currentSlide = 0;
+
+        // Hide all slides except first
+        function initSlides() {
+            slides.forEach((slide, index) => {
+                slide.style.display = index === 0 ? 'flex' : 'none';
+            });
+        }
+
+        // Create navigation dots
+        slides.forEach((slide, index) => {
+            const dot = document.createElement('div');
+            dot.className = 'nav-dot' + (index === 0 ? ' active' : '');
+            dot.addEventListener('click', (e) => {
+                e.stopPropagation();
+                goToSlide(index);
+            });
+            navIndicator.appendChild(dot);
+        });
+
+        // Go to specific slide
+        function goToSlide(index) {
+            if (index < 0) index = 0;
+            if (index >= totalSlides) index = totalSlides - 1;
+            
+            // Hide current slide
+            slides[currentSlide].style.display = 'none';
+            
+            // Show new slide
+            currentSlide = index;
+            slides[currentSlide].style.display = 'flex';
+            
+            updateUI();
+            updateHash();
+        }
+
+        // Update UI elements
+        function updateUI() {
+            // Update nav dots
+            document.querySelectorAll('.nav-dot').forEach((dot, i) => {
+                dot.classList.toggle('active', i === currentSlide);
+            });
+            
+            // Update counter
+            slideCounter.textContent = `${currentSlide + 1} / ${totalSlides}`;
+        }
+
+        // Update URL hash
+        function updateHash() {
+            const slideId = slides[currentSlide].id;
+            if (slideId) {
+                history.replaceState(null, null, `#${slideId}`);
+            }
+        }
+
+        // Handle keyboard navigation
+        document.addEventListener('keydown', (e) => {
+            switch(e.key) {
+                case 'ArrowRight':
+                case 'ArrowDown':
+                case ' ':
+                case 'PageDown':
+                    e.preventDefault();
+                    goToSlide(currentSlide + 1);
+                    break;
+                case 'ArrowLeft':
+                case 'ArrowUp':
+                case 'PageUp':
+                    e.preventDefault();
+                    goToSlide(currentSlide - 1);
+                    break;
+                case 'Home':
+                    e.preventDefault();
+                    goToSlide(0);
+                    break;
+                case 'End':
+                    e.preventDefault();
+                    goToSlide(totalSlides - 1);
+                    break;
+            }
+        });
+
+        // Handle initial hash
+        function handleHash() {
+            const hash = window.location.hash.slice(1);
+            if (hash) {
+                const targetSlide = document.getElementById(hash);
+                if (targetSlide) {
+                    const index = Array.from(slides).indexOf(targetSlide);
+                    if (index !== -1) {
+                        // Hide all, show target
+                        slides.forEach(s => s.style.display = 'none');
+                        currentSlide = index;
+                        slides[currentSlide].style.display = 'flex';
+                        updateUI();
+                    }
+                }
+            }
+        }
+
+        // Initialize
+        initSlides();
+        handleHash();
+        window.addEventListener('hashchange', handleHash);
+
+        // Click zone navigation
+        document.getElementById('clickLeft').addEventListener('click', (e) => {
+            e.stopPropagation();
+            goToSlide(currentSlide - 1);
+        });
+
+        document.getElementById('clickRight').addEventListener('click', (e) => {
+            e.stopPropagation();
+            goToSlide(currentSlide + 1);
+        });
+
+        // DEV MODE: Toggle grid overlay with 'G' key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'g' || e.key === 'G') {
+                document.body.classList.toggle('show-grid');
+            }
+        });
+    </script>
+</body>
+</html>

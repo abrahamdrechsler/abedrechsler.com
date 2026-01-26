@@ -89,6 +89,18 @@
         </div>
         
         <div id="project-grid" class="grid-container">
+            <div class="grid-item" data-tags="architecture cad">
+                <a href="projects/townhome-initiative/index.html">
+                    <div class="image-container">
+                        <img src="projects/townhome-initiative/images/Buffington_Townhomes_Side1.jpg" alt="Townhome Initiative">
+                    </div>
+                    <div class="tile-text">
+                        <div class="tile-title">Townhome Initiative</div>
+                        <div class="tile-date">Initiative to support new architectural typologies across Higharc's platform</div>
+                    </div>
+                </a>
+            </div>
+
             <div class="grid-item" data-tags="art">
                 <a href="projects/processing-per-day/index.html">
                     <div class="image-container">
@@ -208,7 +220,7 @@
         // Password check
         document.getElementById('submit-password').addEventListener('click', function() {
             const password = document.getElementById('password-input').value;
-            if (password === 'AbeDrechsler') {
+            if (password === 'abe') {
                 localStorage.setItem('authenticated', 'true');
                 document.getElementById('password-overlay').classList.add('hidden');
             } else {
@@ -279,7 +291,7 @@
         // Also initialize after successful password entry
         document.getElementById('submit-password').addEventListener('click', function() {
             const password = document.getElementById('password-input').value;
-            if (password === 'AbeDrechsler') {
+            if (password === 'abe') {
                 setTimeout(initTagFiltering, 100); // Small delay to ensure DOM is ready
             }
         });
