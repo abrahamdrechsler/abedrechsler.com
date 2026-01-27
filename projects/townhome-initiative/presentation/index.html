@@ -42,7 +42,7 @@
                             <li>Team and Role</li>
                             <li>Our Process</li>
                             <li>Mockups and "drawing to think"</li>
-                            <li>Delivery Processes</li>
+                            <li>Delivery Process</li>
                             <li>Defining Success</li>
                         </ul>
                     </div>
@@ -50,14 +50,15 @@
                         <h4 class="agenda-heading">The Product Solution</h4>
                         <ul class="agenda-items">
                             <li>High level product solutions</li>
-                            <li>Feature Deep Dives (3)</li>
+                            <li>Feature Deep Dives (4)</li>
                         </ul>
                     </div>
                     <div class="agenda-section">
                         <h4 class="agenda-heading">Retrospective</h4>
                         <ul class="agenda-items">
-                            <li>Next steps for initiative</li>
+                            <li>Next Steps for Townhome Initiative</li>
                             <li>Reflections</li>
+                            <li>Why Me</li>
                         </ul>
                     </div>
                     <div class="agenda-section">
@@ -250,10 +251,10 @@
         </section>
 
         <!-- Slide 10: Milestones and Engineering Scoping -->
-        <section class="slide" id="milestones-scoping" data-slide="10">
+        <section class="slide has-carousel" id="milestones-scoping" data-slide="10">
             <div class="slide-header">
                 <span class="eyebrow">Townhome Initiative Case Study</span>
-                <h2 class="slide-title">Delivery Processes</h2>
+                <h2 class="slide-title">Delivery Process</h2>
             </div>
             <div class="slide-content">
                 <div class="text-column">
@@ -265,7 +266,21 @@
                     </ul>
                 </div>
                 <div class="visual-column">
-                    <img src="images/Initiative-roadmap.png" alt="Initiative roadmap" class="flat-image" style="max-height: 65vh;">
+                    <div class="image-carousel" id="delivery-carousel">
+                        <div class="carousel-img active" data-index="0">
+                            <img src="images/Initiative-roadmap.png" alt="Initiative roadmap" class="flat-image" style="max-height: 65vh;">
+                        </div>
+                        <div class="carousel-img" data-index="1">
+                            <img src="images/linear-workplan.png" alt="Linear workplan" class="flat-image" style="max-height: 65vh;">
+                        </div>
+                        <div class="carousel-img" data-index="2">
+                            <img src="images/milestones.png" alt="Milestones" class="flat-image" style="max-height: 65vh;">
+                        </div>
+                        <div class="carousel-img" data-index="3">
+                            <img src="images/Eng-Gantt.png" alt="Engineering Gantt" class="flat-image" style="max-height: 65vh;">
+                        </div>
+                        <div class="carousel-counter"><span id="delivery-carousel-current">1</span> / 4</div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -281,8 +296,9 @@
                     <ul class="bullets">
                         <li>Defined success for standalone projects and broader townhome workflow</li>
                         <li>Target incremental delivery and investment to ensure we're not over investing</li>
-                        <li>Specific targets to support Interest, Adoption, Production, Performance, and Revenue</li>
+                        <li>Specific targets to support <span class="highlight">Interest</span>, <span class="highlight">Adoption</span>, <span class="highlight">Production</span>, <span class="highlight">Performance</span>, and <span class="highlight">Revenue</span></li>
                     </ul>
+                    <img src="images/demo-screenshare.jpg" alt="Demo screenshare" class="flat-image" style="width: 100%; margin-top: 1.5em;">
                 </div>
                 <div class="visual-column">
                     <div class="success-criteria-panel">
@@ -333,7 +349,7 @@
         <section class="slide" id="product-solution" data-slide="10">
             <div class="slide-header">
                 <span class="eyebrow">Townhome Initiative Case Study</span>
-                <h2 class="slide-title">The product solution</h2>
+                <h2 class="slide-title">The Product Solution</h2>
             </div>
             <div class="slide-content">
                 <div class="text-column">
@@ -371,147 +387,323 @@
         <section class="slide" id="levels-datums" data-slide="9">
             <div class="slide-header">
                 <span class="eyebrow">Townhome Initiative Case Study</span>
-                <h2 class="slide-title">Levels and Datums</h2>
+                <h2 class="slide-title">Feature Highlight: Levels and Datums</h2>
             </div>
             <div class="slide-content">
                 <div class="text-column">
-                    <ul class="bullets">
-                        <li><strong>Problem:</strong> inconsistent references; townhomes require split levels and mixed elevations</li>
-                        <li><strong>Before:</strong> each system had its own "truth"; single-stack level assumptions blocked overlapping contexts</li>
-                        <li><strong>After:</strong> origin-relative datums align geometry; levels can overlap/split without breaking systems</li>
-                    </ul>
+                    <div class="solution-group">
+                        <h4 class="solution-heading">Context</h4>
+                        <ul class="solution-items">
+                            <li>[Levels and Datums context - placeholder]</li>
+                        </ul>
+                    </div>
+                    <div class="solution-group">
+                        <h4 class="solution-heading">Problem</h4>
+                        <ul class="solution-items">
+                            <li><span class="highlight">Higharc lacks user-defined, absolute datums.</span> All datums were relative to one another or hosted to parent levels.</li>
+                            <li><span class="highlight">Levels stack automatically</span> on top of one another. Users can't associate a level with a specific datum, and can't separate the top of one floor from the bottom of the next.</li>
+                        </ul>
+                    </div>
+                    <div class="solution-group">
+                        <h4 class="solution-heading">Solution</h4>
+                        <ul class="solution-items">
+                            <li>We introduced <span class="highlight">Origin-relative datums</span>. These are horizontal reference planes that users can lock other geometric objects to, including levels, floors, and walls. This gives users much more control.</li>
+                            <li>We also introduced <span class="highlight">new level behavior</span> such that levels could be set to specific datums instead of always "stacking" on top of one another. This has unlocked future support for Split-level typologies, Stepped townhome units, and buildings that have complex relationships with grade including multiple foundation or basement levels.</li>
+                        </ul>
+                    </div>
+                    <p class="demo-link"><a href="https://app.sandbox10.higharc.com/studio?builderId=mAP35WXZ979x2QoK&id=WMxvOb8yJ7lka2JB#engine" target="_blank">Demo File</a></p>
                 </div>
                 <div class="visual-column">
-                    <div class="screenshot-frame">
-                        <div class="placeholder-icon">📐</div>
-                        <span class="placeholder-label">Split-level section diagram + datum reference overlay</span>
-                    </div>
-                    <p class="caption">"Shared references reduce hacks and stabilize downstream automation."</p>
+                    <img src="images/levels-demo.gif" alt="Levels demo" class="flat-image">
                 </div>
             </div>
         </section>
 
         <!-- Slide 10: Deep Dive - Modeling Components, Reporting Units, and Options -->
-        <section class="slide" id="modeling-components" data-slide="10">
+        <section class="slide has-carousel" id="modeling-components" data-slide="10">
             <div class="slide-header">
                 <span class="eyebrow">Townhome Initiative Case Study</span>
-                <h2 class="slide-title">Modeling Components, Reporting Units, and Options</h2>
+                <h2 class="slide-title">Feature Highlight: Modeling Components</h2>
             </div>
             <div class="slide-content">
                 <div class="text-column">
-                    <ul class="bullets">
-                        <li><strong>Problem:</strong> rooms aren't the right driver for slabs/walls; stepped conditions need explicit control</li>
-                        <li><strong>Before:</strong> room-hosted foundations; no hierarchy for multi-unit; wall heights hard to represent</li>
-                        <li><strong>After:</strong> user-authored boundaries; per-edge wall controls; building-level constraints with unit options</li>
-                    </ul>
+                    <div class="solution-group">
+                        <h4 class="solution-heading">Context</h4>
+                        <ul class="solution-items">
+                            <li>[Modeling Components context - placeholder]</li>
+                        </ul>
+                    </div>
+                    <div class="solution-group">
+                        <h4 class="solution-heading">Problem</h4>
+                        <ul class="solution-items">
+                            <li>Townhomes are often designed as repeatable units that can be swapped in and out. <span class="highlight">Higharc has no way to centrally save chunks of geometry</span> that can be referenced and placed in downstream files.</li>
+                            <li>Users implementing townhomes today on the platform painstakingly model full buildings without methods of centralizing units, or easily repositioning them on a canvas.</li>
+                            <li><span class="highlight">Stepped units are unsupported</span>, and builders painstakingly hack drawings in AutoCAD or Photoshop to workaround the problem.</li>
+                        </ul>
+                    </div>
+                    <div class="solution-group">
+                        <h4 class="solution-heading">Solution</h4>
+                        <ul class="solution-items">
+                            <li>We introduced <span class="highlight">Centralized Modeling Components</span> that allow users to save collections of geometries and deploy them across their portfolio.</li>
+                            <li>Once placed, a model component instance can be effortlessly <span class="highlight">repositioned in x, y, or z directions</span>, accounting for variations in topography and site conditions.</li>
+                            <li>Modeling components can be nested, supporting deep levels of centralization and automation previously unimaginable. For an organized and templated builder, this opens up an entirely different approach to product development.</li>
+                        </ul>
+                    </div>
+                    <p class="demo-link"><a href="https://app.sandbox10.higharc.com/studio?builderId=mAP35WXZ979x2QoK&id=odp7YE5L68wBLVNn#explorer" target="_blank">Model Components Demo</a></p>
                 </div>
                 <div class="visual-column">
-                    <img src="images/townhome-workflow.gif" alt="Townhome workflow animation" class="flat-image">
-                </div>
-            </div>
-        </section>
-
-        <!-- Slide 11: Deep Dive - Showroom and Config for Townhomes -->
-        <section class="slide" id="showroom-config" data-slide="11">
-            <div class="slide-header">
-                <span class="eyebrow">Townhome Initiative Case Study</span>
-                <h2 class="slide-title">Showroom and Config for Townhomes</h2>
-            </div>
-            <div class="slide-content">
-                <div class="text-column">
-                    <ul class="bullets">
-                        <li>Need to present one unit clearly while showing adjacency/shared walls</li>
-                        <li>Filtering modes: highlight current unit, dim others, isolate systems</li>
-                        <li>Critical for demo clarity and customer comprehension</li>
-                    </ul>
-                </div>
-                <div class="visual-column">
-                    <div class="screenshot-frame">
-                        <div class="placeholder-icon">🏠</div>
-                        <span class="placeholder-label">Showroom screenshot + overlay callouts</span>
+                    <div class="image-carousel" id="components-carousel">
+                        <div class="carousel-img active" data-index="0">
+                            <img src="images/Component-hover.png" alt="Component hover interaction" class="flat-image" style="max-height: 70vh;">
+                        </div>
+                        <div class="carousel-img" data-index="1">
+                            <img src="images/modelcomponent-update.gif" alt="Model component update" class="flat-image" style="max-height: 70vh;">
+                        </div>
+                        <div class="carousel-counter"><span id="components-carousel-current">1</span> / 2</div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Slide 12: Current Status -->
-        <section class="slide" id="status" data-slide="14">
+        <!-- Slide 11: Deep Dive - Config for Townhomes -->
+        <section class="slide has-carousel" id="config-townhomes" data-slide="11">
             <div class="slide-header">
                 <span class="eyebrow">Townhome Initiative Case Study</span>
-                <h2 class="slide-title">Next steps for initiative</h2>
+                <h2 class="slide-title">Feature Highlight: Config for Townhomes</h2>
             </div>
-            <div class="slide-content full-width">
-                <div class="text-column" style="max-width: 100%; text-align: left;">
-                    <div class="three-columns" style="margin-top: 20px;">
-                        <div class="column-card working">
-                            <h4>Working Now</h4>
-                            <ul>
-                                <li>Demo-proven capabilities</li>
-                                <li>Core workflows functional</li>
-                                <li>IBS validation complete</li>
-                            </ul>
+            <div class="slide-content">
+                <div class="text-column">
+                    <div class="solution-group">
+                        <h4 class="solution-heading">Context</h4>
+                        <ul class="solution-items">
+                            <li>Config is Higharc's builder-facing community and option configuration product.</li>
+                            <li>Here, builders create and manage locations, and enable options per location hierarchy.</li>
+                        </ul>
+                    </div>
+                    <div class="solution-group">
+                        <h4 class="solution-heading">Problem</h4>
+                        <ul class="solution-items">
+                            <li><span class="highlight">Today, Config only supports SFHs on individual lots.</span></li>
+                            <li>Builders want to centrally manage options and require a dedicated workflow to enable or lock options per building, or per individual unit.</li>
+                            <li>The solution should be as tightly scoped as possible and work with existing patterns and concepts.</li>
+                        </ul>
+                    </div>
+                    <div class="solution-group">
+                        <h4 class="solution-heading">Solution</h4>
+                        <ul class="solution-items">
+                            <li>Introduce a <span class="highlight">new level in the location hierarchy: "Building"</span></li>
+                            <li>Buildings contain individual units/lots and allow builders to manage options at the building or individual unit level.</li>
+                            <li>The feature is light touch, and sets us up for future broader investments in the Config product.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="visual-column">
+                    <div class="image-carousel" id="config-carousel">
+                        <div class="carousel-img active" data-index="0">
+                            <div class="stacked-images">
+                                <div class="stacked-image-item">
+                                    <img src="images/existing-config-workflow.png" alt="Existing config workflow" class="flat-image">
+                                </div>
+                                <div class="stacked-image-item">
+                                    <img src="images/proposed-config-workflow.png" alt="Proposed config workflow" class="flat-image">
+                                </div>
+                            </div>
                         </div>
-                        <div class="column-card in-progress">
-                            <h4>In Progress</h4>
-                            <ul>
-                                <li>Beta hardening</li>
-                                <li>Edge cases</li>
-                                <li>UX polish</li>
-                            </ul>
+                        <div class="carousel-img" data-index="1">
+                            <img src="images/AccountSettingsConfig.png" alt="Account Settings Config" class="flat-image" style="max-height: 70vh;">
                         </div>
-                        <div class="column-card risks">
-                            <h4>Risks + Mitigations</h4>
-                            <ul>
-                                <li>Migration complexity</li>
-                                <li>Regression monitoring</li>
-                                <li>Performance at scale</li>
-                            </ul>
+                        <div class="carousel-img" data-index="2">
+                            <img src="images/addbuildingconfig.png" alt="Add Building Config" class="flat-image" style="max-height: 70vh;">
                         </div>
+                        <div class="carousel-img" data-index="3">
+                            <img src="images/Building%20Level.png" alt="Building Level" class="flat-image" style="max-height: 70vh;">
+                        </div>
+                        <div class="carousel-img" data-index="4">
+                            <img src="images/OptionTemplate.png" alt="Option Template" class="flat-image" style="max-height: 70vh;">
+                        </div>
+                        <div class="carousel-counter"><span id="config-carousel-current">1</span> / 5</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 12: Deep Dive - Showroom and Config for Townhomes -->
+        <section class="slide has-carousel" id="showroom-config" data-slide="12">
+            <div class="slide-header">
+                <span class="eyebrow">Townhome Initiative Case Study</span>
+                <h2 class="slide-title">Feature Highlight: Showroom Updates</h2>
+            </div>
+            <div class="slide-content">
+                <div class="text-column">
+                    <div class="solution-group">
+                        <h4 class="solution-heading">Context</h4>
+                        <ul class="solution-items">
+                            <li>Showroom is Higharc's buyer-facing sales product.</li>
+                            <li>Here, buyers can select from available options, save configurations, and print brochures.</li>
+                        </ul>
+                    </div>
+                    <div class="solution-group">
+                        <h4 class="solution-heading">Problem</h4>
+                        <ul class="solution-items">
+                            <li><span class="highlight">Users want to focus on their unit while understanding the context</span></li>
+                            <li>Higharc doesn't highlight one unit while obscuring neighboring units.</li>
+                        </ul>
+                    </div>
+                    <div class="solution-group">
+                        <h4 class="solution-heading">Solution</h4>
+                        <ul class="solution-items">
+                            <li>We introduced a <span class="highlight">dedicated Unit experience</span> for our Showroom Product.</li>
+                            <li>Buyers can select their unit from a community map, visualize their particular unit, and make appropriate selections to customize their home.</li>
+                            <li>Selections from individual units are rolled up and saved on the building, so builders can create permit drawings and get material takeoffs on a per unit or whole-building level.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="visual-column">
+                    <div class="image-carousel" id="showroom-carousel">
+                        <img src="images/showroom/Townhomes%20in%20Showroom%20%26%20Config%20(1)%20Page%20001.png" alt="Showroom slide 1" class="carousel-img active" data-index="0">
+                        <img src="images/showroom/Townhomes%20in%20Showroom%20%26%20Config%20(1)%20Page%20002.png" alt="Showroom slide 2" class="carousel-img" data-index="1">
+                        <img src="images/showroom/Townhomes%20in%20Showroom%20%26%20Config%20(1)%20Page%20003.png" alt="Showroom slide 3" class="carousel-img" data-index="2">
+                        <img src="images/showroom/Townhomes%20in%20Showroom%20%26%20Config%20(1)%20Page%20004.png" alt="Showroom slide 4" class="carousel-img" data-index="3">
+                        <img src="images/showroom/Townhomes%20in%20Showroom%20%26%20Config%20(1)%20Page%20005.png" alt="Showroom slide 5" class="carousel-img" data-index="4">
+                        <img src="images/showroom/Townhomes%20in%20Showroom%20%26%20Config%20(1)%20Page%20006.png" alt="Showroom slide 6" class="carousel-img" data-index="5">
+                        <img src="images/showroom/Townhomes%20in%20Showroom%20%26%20Config%20(1)%20Page%20007.png" alt="Showroom slide 7" class="carousel-img" data-index="6">
+                        <img src="images/showroom/Townhomes%20in%20Showroom%20%26%20Config%20(1)%20Page%20008.png" alt="Showroom slide 8" class="carousel-img" data-index="7">
+                        <img src="images/showroom/Townhomes%20in%20Showroom%20%26%20Config%20(1)%20Page%20009.png" alt="Showroom slide 9" class="carousel-img" data-index="8">
+                        <img src="images/showroom/Townhomes%20in%20Showroom%20%26%20Config%20(1)%20Page%20010.png" alt="Showroom slide 10" class="carousel-img" data-index="9">
+                        <img src="images/showroom/Townhomes%20in%20Showroom%20%26%20Config%20(1)%20Page%20011.png" alt="Showroom slide 11" class="carousel-img" data-index="10">
+                        <img src="images/showroom/Townhomes%20in%20Showroom%20%26%20Config%20(1)%20Page%20012.png" alt="Showroom slide 12" class="carousel-img" data-index="11">
+                        <img src="images/showroom/Townhomes%20in%20Showroom%20%26%20Config%20(1)%20Page%20013.png" alt="Showroom slide 13" class="carousel-img" data-index="12">
+                        <img src="images/showroom/Townhomes%20in%20Showroom%20%26%20Config%20(1)%20Page%20014.png" alt="Showroom slide 14" class="carousel-img" data-index="13">
+                        <img src="images/showroom/Townhomes%20in%20Showroom%20%26%20Config%20(1)%20Page%20016.png" alt="Showroom slide 15" class="carousel-img" data-index="14">
+                        <img src="images/showroom/Townhomes%20in%20Showroom%20%26%20Config%20(1)%20Page%20017.png" alt="Showroom slide 16" class="carousel-img" data-index="15">
+                        <div class="carousel-counter"><span id="carousel-current">1</span> / 16</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 17: Next Steps -->
+        <section class="slide" id="status" data-slide="17">
+            <div class="slide-header">
+                <span class="eyebrow">Townhome Initiative Case Study</span>
+                <h2 class="slide-title">Next Steps for Townhome Initiative</h2>
+            </div>
+            <div class="slide-content">
+                <div class="text-column">
+                    <div class="solution-group">
+                        <h4 class="solution-heading">Current Focus</h4>
+                        <ul class="solution-items">
+                            <li>Pushing team to deliver exceptional demo experience for 2/17 tradeshow</li>
+                            <li>Content creation and coordination with PMM, Sales and Marketing</li>
+                            <li>Q2 and Q3 roadmapping - anticipating growth and prioritization shifts</li>
+                        </ul>
+                    </div>
+                    <div class="solution-group">
+                        <h4 class="solution-heading">Next Up</h4>
+                        <ul class="solution-items">
+                            <li>Preparing for final big effort before Beta Phase (April)</li>
+                            <li>Design and usability reviews to polish rough workflows</li>
+                            <li>Feedback and progress check-ins with internal users and existing customers</li>
+                            <li>Anticipating Townhome workflow GA for all customers June/July</li>
+                        </ul>
+                    </div>
+                    <div class="solution-group">
+                        <h4 class="solution-heading">Risks</h4>
+                        <ul class="solution-items">
+                            <li>We hit MVP but fail to deliver exceptional working product</li>
+                            <li>Eng Staffing constraints force us to prioritize other initiatives</li>
+                            <li>Fail to provide proper guardrails and training guidance, limiting adoption</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="visual-column">
+                    <div class="screenshot-frame">
+                        <div class="placeholder-icon">📋</div>
+                        <span class="placeholder-label">Next steps visual</span>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- Slide 15: Reflections -->
-        <section class="slide" id="reflections" data-slide="15">
+        <section class="slide" id="reflections" data-slide="18">
             <div class="slide-header">
                 <span class="eyebrow">Townhome Initiative Case Study</span>
                 <h2 class="slide-title">Reflections</h2>
             </div>
-            <div class="slide-content full-width">
-                <div class="text-column" style="max-width: 100%; text-align: left;">
-                    <div class="three-columns" style="margin-top: 20px;">
-                        <div class="column-card" style="border-top: 4px solid #4caf50;">
-                            <h4 style="color: #2e7d32;">Keep</h4>
-                            <ul>
-                                <li>Decomposition approach</li>
-                                <li>Cross-team alignment</li>
-                                <li>Risk burn-down via demos</li>
-                            </ul>
-                        </div>
-                        <div class="column-card" style="border-top: 4px solid var(--accent);">
-                            <h4 style="color: #e65100;">Improve</h4>
-                            <ul>
-                                <li>Earlier migration strategy</li>
-                                <li>Shared visual language</li>
-                            </ul>
-                        </div>
-                        <div class="column-card" style="border-top: 4px solid var(--link);">
-                            <h4 style="color: #1565c0;">Change</h4>
-                            <ul>
-                                <li>Earlier "demo-stable" definition</li>
-                                <li>Clearer sequencing docs</li>
-                            </ul>
-                        </div>
+            <div class="slide-content">
+                <div class="text-column">
+                    <div class="solution-group">
+                        <h4 class="solution-heading">Things That Went Well</h4>
+                        <ul class="solution-items">
+                            <li>One of the largest and most successful cross-squad initiatives in Higharc history.</li>
+                            <li>We've built strategic, sustainable solutions that scale beyond the Townhome use case or workflow.</li>
+                            <li>Personally really enjoyable. The project is the right combination of challenging, complex, exciting, and set up for success.</li>
+                        </ul>
+                    </div>
+                    <div class="solution-group">
+                        <h4 class="solution-heading">Things I'd Do Differently</h4>
+                        <ul class="solution-items">
+                            <li>Anticipate large chunks of scope and weigh pro/cons for greenlighting much earlier</li>
+                            <li>Get ahead of internal communication and marketing. Define the problem we're actually solving and communicate it clearly.</li>
+                            <li>Delegate more across partners. I'm in the middle of everything and often critical path for decisions, but my team is talented and can make great decisions without me.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="visual-column">
+                    <div class="stacked-images" style="flex-direction: column; gap: 0.5em; align-items: flex-end;">
+                        <img src="images/feedback-carissa.png" alt="Feedback from Carissa" class="flat-image" style="width: 80%;">
+                        <img src="images/feedback-jennifer.png" alt="Feedback from Jennifer" class="flat-image" style="width: 80%;">
+                        <img src="images/feedback-kelly.png" alt="Feedback from Kelly" class="flat-image" style="width: 80%;">
+                        <img src="images/feedback-caspar.png" alt="Feedback from Caspar" class="flat-image" style="width: 80%;">
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Slide 16: Q&A -->
-        <section class="slide cover dark" id="qa" data-slide="18">
+        <!-- Slide 19: Why Me -->
+        <section class="slide" id="why-me" data-slide="19">
+            <div class="slide-header">
+                <span class="eyebrow">Townhome Initiative Case Study</span>
+                <h2 class="slide-title">Why Me</h2>
+            </div>
+            <div class="slide-content">
+                <div class="text-column">
+                    <div class="solution-group">
+                        <h4 class="solution-heading">What I Bring</h4>
+                        <ul class="solution-items">
+                            <li>5 years of product experience + 7 years of architecture = a unique lens on AEC technology and the problems worth solving.</li>
+                            <li>Track record of leading complex, cross-functional initiatives from ambiguous vision to shipped product.</li>
+                        </ul>
+                    </div>
+                    <div class="solution-group">
+                        <h4 class="solution-heading">How I'll Enable Success</h4>
+                        <ul class="solution-items">
+                            <li>I thrive in ambiguity. I can take a messy problem space, align stakeholders, and drive toward clear outcomes.</li>
+                            <li>I'm energized by talking to users where they are, understanding their reality, and letting that inform what we build.</li>
+                            <li>I build sustainable solutions — not just MVPs. I care about craft, scalability, and long-term product health.</li>
+                            <li>I elevate teams. I lead with influence, create clarity, and empower talented people to do their best work.</li>
+                        </ul>
+                    </div>
+                    <div class="solution-group">
+                        <h4 class="solution-heading">Why This Role</h4>
+                        <ul class="solution-items">
+                            <li>I'm ready to <span class="highlight">own a platform end-to-end</span> — set the strategic vision, drive execution, and build something exceptional.</li>
+                            <li>Building for one company means I can see the impact of my work directly — the feedback loop is real and immediate.</li>
+                            <li>I want to be somewhere I can lead, grow, and have real impact on both the product and the team.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="visual-column">
+                    <img src="images/construction.jpg" alt="Construction" class="flat-image" style="max-height: 70vh;">
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 20: Q&A -->
+        <section class="slide cover dark" id="qa" data-slide="20">
             <h1 class="hero-title">Q&A</h1>
-            <p class="subtitle">Happy to go deeper on tradeoffs, sequencing, or architecture choices.</p>
+            <p class="subtitle">Thanks for listening!</p>
         </section>
 
     </div>
@@ -595,16 +787,30 @@
         document.addEventListener('keydown', (e) => {
             switch(e.key) {
                 case 'ArrowRight':
-                case 'ArrowDown':
                 case ' ':
                 case 'PageDown':
                     e.preventDefault();
+                    if (isOnCarouselSlide() && carouselNext()) {
+                        return; // Carousel handled it
+                    }
                     goToSlide(currentSlide + 1);
                     break;
                 case 'ArrowLeft':
-                case 'ArrowUp':
                 case 'PageUp':
                     e.preventDefault();
+                    if (isOnCarouselSlide() && carouselPrev()) {
+                        return; // Carousel handled it
+                    }
+                    goToSlide(currentSlide - 1);
+                    break;
+                case 'ArrowDown':
+                    e.preventDefault();
+                    // Always go to next slide, bypassing carousel
+                    goToSlide(currentSlide + 1);
+                    break;
+                case 'ArrowUp':
+                    e.preventDefault();
+                    // Always go to previous slide, bypassing carousel
                     goToSlide(currentSlide - 1);
                     break;
                 case 'Home':
@@ -644,11 +850,19 @@
         // Click zone navigation
         document.getElementById('clickLeft').addEventListener('click', (e) => {
             e.stopPropagation();
+            // Check if on carousel slide
+            if (isOnCarouselSlide() && carouselPrev()) {
+                return; // Carousel handled it
+            }
             goToSlide(currentSlide - 1);
         });
 
         document.getElementById('clickRight').addEventListener('click', (e) => {
             e.stopPropagation();
+            // Check if on carousel slide
+            if (isOnCarouselSlide() && carouselNext()) {
+                return; // Carousel handled it
+            }
             goToSlide(currentSlide + 1);
         });
 
@@ -658,6 +872,95 @@
                 document.body.classList.toggle('show-grid');
             }
         });
+
+        // Multi-Carousel functionality
+        const carousels = {
+            'milestones-scoping': {
+                carousel: document.getElementById('delivery-carousel'),
+                images: [],
+                counterEl: null,
+                currentIndex: 0
+            },
+            'modeling-components': {
+                carousel: document.getElementById('components-carousel'),
+                images: [],
+                counterEl: null,
+                currentIndex: 0
+            },
+            'config-townhomes': {
+                carousel: document.getElementById('config-carousel'),
+                images: [],
+                counterEl: null,
+                currentIndex: 0
+            },
+            'showroom-config': {
+                carousel: document.getElementById('showroom-carousel'),
+                images: [],
+                counterEl: null,
+                currentIndex: 0
+            }
+        };
+
+        // Initialize carousels
+        Object.keys(carousels).forEach(slideId => {
+            const c = carousels[slideId];
+            if (c.carousel) {
+                c.images = c.carousel.querySelectorAll('.carousel-img');
+                c.counterEl = c.carousel.querySelector('[id$="-current"]') || c.carousel.querySelector('#carousel-current');
+            }
+        });
+        
+        // Store original goToSlide and wrap it to reset carousels
+        const originalGoToSlide = goToSlide;
+        goToSlide = function(index) {
+            // Reset current carousel when leaving a carousel slide
+            const currentSlideId = slides[currentSlide] && slides[currentSlide].id;
+            if (currentSlideId && carousels[currentSlideId]) {
+                updateCarouselDisplay(currentSlideId, 0);
+            }
+            originalGoToSlide(index);
+        };
+
+        function updateCarouselDisplay(slideId, newIndex) {
+            const c = carousels[slideId];
+            if (!c || c.images.length === 0) return;
+            c.images[c.currentIndex].classList.remove('active');
+            c.currentIndex = newIndex;
+            c.images[c.currentIndex].classList.add('active');
+            if (c.counterEl) c.counterEl.textContent = c.currentIndex + 1;
+        }
+
+        function getActiveCarousel() {
+            const currentSlideId = slides[currentSlide] && slides[currentSlide].id;
+            if (currentSlideId && carousels[currentSlideId]) {
+                return { slideId: currentSlideId, ...carousels[currentSlideId] };
+            }
+            return null;
+        }
+
+        function isOnCarouselSlide() {
+            return getActiveCarousel() !== null;
+        }
+
+        function carouselNext() {
+            const active = getActiveCarousel();
+            if (!active) return false;
+            if (active.currentIndex < active.images.length - 1) {
+                updateCarouselDisplay(active.slideId, active.currentIndex + 1);
+                return true;
+            }
+            return false;
+        }
+
+        function carouselPrev() {
+            const active = getActiveCarousel();
+            if (!active) return false;
+            if (active.currentIndex > 0) {
+                updateCarouselDisplay(active.slideId, active.currentIndex - 1);
+                return true;
+            }
+            return false;
+        }
     </script>
 </body>
 </html>
