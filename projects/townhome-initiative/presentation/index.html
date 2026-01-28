@@ -5,8 +5,69 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Townhomes at Higharc - Case Study</title>
     <link rel="stylesheet" href="presentation.css">
+    <style>
+        #password-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.95);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 10000;
+        }
+        #password-form {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            min-width: 300px;
+        }
+        #password-input {
+            padding: 10px;
+            margin: 15px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            width: 250px;
+            font-size: 16px;
+        }
+        #submit-password {
+            padding: 10px 20px;
+            background: #007bff;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.2s;
+        }
+        #submit-password:hover {
+            background: #0056b3;
+        }
+        .hidden {
+            display: none !important;
+        }
+        #password-error {
+            color: #dc3545;
+            font-size: 14px;
+            margin-top: 10px;
+            min-height: 20px;
+        }
+    </style>
 </head>
 <body>
+    <div id="password-overlay">
+        <div id="password-form">
+            <h2>Enter Presentation Password</h2>
+            <input type="password" id="password-input" placeholder="Enter password" autofocus>
+            <div id="password-error"></div>
+            <br>
+            <button id="submit-password">Submit</button>
+        </div>
+    </div>
     <div class="stage" id="stage">
         
         <!-- Slide 1: Cover -->
@@ -41,9 +102,6 @@
                             <li>Identifying the most critical problems</li>
                             <li>Team and Role</li>
                             <li>How we worked</li>
-                            <li>Mockups and "drawing to think"</li>
-                            <li>Delivery Process</li>
-                            <li>Defining Success</li>
                         </ul>
                     </div>
                     <div class="agenda-section">
@@ -51,6 +109,7 @@
                         <ul class="agenda-items">
                             <li>High level product solutions</li>
                             <li>Feature Deep Dives (4)</li>
+                            <li>Defining Success</li>
                         </ul>
                     </div>
                     <div class="agenda-section">
@@ -58,7 +117,6 @@
                         <ul class="agenda-items">
                             <li>Next Steps for Townhome Initiative</li>
                             <li>Reflections</li>
-                            <li>Why Me</li>
                         </ul>
                     </div>
                     <div class="agenda-section">
@@ -796,6 +854,44 @@
     <div class="click-zone click-zone-right" id="clickRight"></div>
 
     <script>
+        // Password Authentication for Presentation
+        const PRESENTATION_PASSWORD = 'presentation'; // Change this to your desired password
+        
+        // Check if already authenticated
+        const isAuthenticated = localStorage.getItem('presentation-authenticated') === 'true';
+        if (isAuthenticated) {
+            document.getElementById('password-overlay').classList.add('hidden');
+            // Ensure stage is visible when authenticated
+            document.getElementById('stage').style.display = '';
+        } else {
+            // Hide the stage content until authenticated
+            document.getElementById('stage').style.display = 'none';
+        }
+
+        // Password check
+        document.getElementById('submit-password').addEventListener('click', function() {
+            const password = document.getElementById('password-input').value;
+            const errorDiv = document.getElementById('password-error');
+            
+            if (password === PRESENTATION_PASSWORD) {
+                localStorage.setItem('presentation-authenticated', 'true');
+                document.getElementById('password-overlay').classList.add('hidden');
+                document.getElementById('stage').style.display = 'flex';
+                errorDiv.textContent = '';
+            } else {
+                errorDiv.textContent = 'Incorrect password. Please try again.';
+                document.getElementById('password-input').value = '';
+                document.getElementById('password-input').focus();
+            }
+        });
+
+        // Allow Enter key to submit
+        document.getElementById('password-input').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                document.getElementById('submit-password').click();
+            }
+        });
+
         // Presentation Navigation
         const stage = document.getElementById('stage');
         const slides = document.querySelectorAll('.slide');
