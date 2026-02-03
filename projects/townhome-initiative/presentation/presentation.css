@@ -164,6 +164,15 @@ html, body {
   max-width: 800px;
 }
 
+.slide.cover .subtitle-link {
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+.slide.cover .subtitle-link:hover {
+  opacity: 0.85;
+}
+
 .slide.cover .meta {
   font-size: var(--t-secondary);
   color: var(--text-secondary);
@@ -861,6 +870,7 @@ div.carousel-img > img {
   z-index: 999;
   cursor: pointer;
   background: transparent;
+  pointer-events: none;
 }
 
 .click-zone-left {

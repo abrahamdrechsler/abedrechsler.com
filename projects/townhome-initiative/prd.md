@@ -21,7 +21,7 @@ A **web-based presentation deck**: full-screen “slides” (sections), snap nav
 - Easy iteration and reuse later
 
 ### Audience & context
-Used as a **case study presentation** in a live interview. Content should map cleanly to common PM case-study prompts:
+Used as a **case study presentation** to showcase product work. Content maps to common PM case-study prompts:
 - Problem / opportunity
 - Team + role
 - Goals + success metrics

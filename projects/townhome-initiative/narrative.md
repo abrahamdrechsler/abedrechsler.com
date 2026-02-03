@@ -47,9 +47,6 @@ This doc defines the **slide-by-slide narrative** and the **content you'll place
 **Retrospective:**
 - Next Steps for Townhome Initiative
 - Reflections
-- Why Me
-
-**Q+A**
 
 **Visual:** Single-column agenda layout with section headers
 
@@ -267,36 +264,6 @@ This doc defines the **slide-by-slide narrative** and the **content you'll place
 - Delegate more across partners. I'm in the middle of everything and often critical path for decisions, but my team is talented and can make great decisions without me.
 
 **Visual:** Two feedback screenshots stacked vertically (feedback-carissa.png, feedback-jennifer.png)
-
----
-
-## Slide 19 — Why Me
-**Title:** Why Me
-
-**What I Bring:**
-- 5 years of product experience + 7 years of architecture = unique lens on AEC technology.
-- Track record of leading complex, cross-functional initiatives from ambiguous vision to shipped product.
-
-**How I'll Enable Success:**
-- I thrive in ambiguity. I can take a messy problem space, align stakeholders, and drive toward clear outcomes.
-- I'm energized by talking to users where they are, understanding their reality, and letting that inform what we build.
-- I build sustainable solutions — not just MVPs. I care about craft, scalability, and long-term product health.
-- I elevate teams. I lead with influence, create clarity, and empower talented people to do their best work.
-
-**Why This Role:**
-- Ready to own a platform end-to-end — set the strategic vision, drive execution, and build something exceptional.
-- Building for one company means I can see the impact of my work directly — the feedback loop is real and immediate.
-- Want to be somewhere I can lead, grow, and have real impact on both the product and the team.
-
-**Visual:** Placeholder
-
----
-
-## Slide 20 — Q&A
-**Title:** Q&A
-- Prompt: "Happy to go deeper on tradeoffs, sequencing, or architecture choices."
-
-**Visual:** Dark divider background
 
 ---
 

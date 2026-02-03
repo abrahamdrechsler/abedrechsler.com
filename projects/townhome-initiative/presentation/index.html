@@ -74,17 +74,13 @@
         <section class="slide cover dark" id="cover" data-slide="1">
             <h1 class="hero-title">Townhomes at Higharc</h1>
             <p class="subtitle">Platform expansion from single-family → multi-unit</p>
-            <div class="meta">
-                <p>Abe Drechsler · Product Manager</p>
-                <p>Case Study Presentation</p>
-            </div>
         </section>
 
         <!-- Slide 2: Agenda -->
         <section class="slide" id="agenda" data-slide="2">
             <div class="slide-header">
                 <span class="eyebrow">Townhome Initiative Case Study</span>
-                <h2 class="slide-title">What I'll cover</h2>
+                <h2 class="slide-title">Contents</h2>
             </div>
             <div class="slide-content agenda-content">
                 <div class="agenda-grid">
@@ -118,9 +114,6 @@
                             <li>Next Steps for Townhome Initiative</li>
                             <li>Reflections</li>
                         </ul>
-                    </div>
-                    <div class="agenda-section">
-                        <h4 class="agenda-heading">Q+A</h4>
                     </div>
                 </div>
             </div>
@@ -794,48 +787,10 @@
             </div>
         </section>
 
-        <!-- Slide 19: Why Me -->
-        <section class="slide" id="why-me" data-slide="19">
-            <div class="slide-header">
-                <span class="eyebrow">Townhome Initiative Case Study</span>
-                <h2 class="slide-title">Qualifications</h2>
-            </div>
-            <div class="slide-content">
-                <div class="text-column">
-                    <div class="solution-group">
-                        <h4 class="solution-heading">What I Bring</h4>
-                        <ul class="solution-items">
-                            <li><span class="highlight">5 years of product experience + 7 years of architecture = a unique lens on AEC technology and the problems worth solving</span>.</li>
-                            <li>Track record of leading complex, cross-functional initiatives from ambiguous vision to shipped product.</li>
-                        </ul>
-                    </div>
-                    <div class="solution-group">
-                        <h4 class="solution-heading">How I'll Enable Success</h4>
-                        <ul class="solution-items">
-                            <li>I thrive in ambiguity. I can take a messy problem space, align stakeholders, and drive toward clear outcomes.</li>
-                            <li>I'm energized by <span class="highlight">talking to users where they are</span>, understanding their reality, and letting that inform what we build.</li>
-                            <li>I elevate teams. I lead with influence, create clarity, and empower talented people to do their best work.</li>
-                        </ul>
-                    </div>
-                    <div class="solution-group">
-                        <h4 class="solution-heading">Why This Role</h4>
-                        <ul class="solution-items">
-                            <li>I'm ready to <span class="highlight">own a platform end-to-end</span> — set the strategic vision, drive execution, and build something exceptional.</li>
-                            <li>Building for one company means I can see the impact of my work directly — the feedback loop is real and immediate.</li>
-                            <li>I want to be <span class="highlight">somewhere I can lead, grow, and have real impact</span> on both the product and the team.</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="visual-column">
-                    <img src="images/construction.jpg" alt="Construction" class="flat-image" style="max-height: 70vh;">
-                </div>
-            </div>
-        </section>
-
-        <!-- Slide 20: Q&A -->
-        <section class="slide cover dark" id="qa" data-slide="20">
-            <h1 class="hero-title">Thanks for listening!</h1>
-            <p class="subtitle">Q&A</p>
+        <!-- Slide 19: End -->
+        <section class="slide cover dark" id="qa" data-slide="19">
+            <h1 class="hero-title">Thanks for reading!</h1>
+            <p class="subtitle"><a href="#" class="subtitle-link" id="take-me-to-start">Take me to start</a></p>
         </section>
 
     </div>
@@ -1017,24 +972,30 @@
         handleHash();
         window.addEventListener('hashchange', handleHash);
 
-        // Click zone navigation
-        document.getElementById('clickLeft').addEventListener('click', (e) => {
-            e.stopPropagation();
-            // Check if on carousel slide
-            if (isOnCarouselSlide() && carouselPrev()) {
-                return; // Carousel handled it
+        // Click zone navigation: left/right of viewport, but don't capture clicks on links/buttons
+        document.addEventListener('click', (e) => {
+            const target = e.target;
+            if (target.closest('a, button, [role="button"], input, [contenteditable="true"]')) {
+                return; // Let links and buttons work normally
             }
-            goToSlide(currentSlide - 1);
+            const leftHalf = e.clientX < window.innerWidth / 2;
+            if (leftHalf) {
+                if (isOnCarouselSlide() && carouselPrev()) return;
+                goToSlide(currentSlide - 1);
+            } else {
+                if (isOnCarouselSlide() && carouselNext()) return;
+                goToSlide(currentSlide + 1);
+            }
         });
 
-        document.getElementById('clickRight').addEventListener('click', (e) => {
-            e.stopPropagation();
-            // Check if on carousel slide
-            if (isOnCarouselSlide() && carouselNext()) {
-                return; // Carousel handled it
-            }
-            goToSlide(currentSlide + 1);
-        });
+        // "Take me to start" link goes to first slide
+        const takeMeToStart = document.getElementById('take-me-to-start');
+        if (takeMeToStart) {
+            takeMeToStart.addEventListener('click', (e) => {
+                e.preventDefault();
+                goToSlide(0);
+            });
+        }
 
         // DEV MODE: Toggle grid overlay with 'G' key
         document.addEventListener('keydown', (e) => {
