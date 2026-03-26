@@ -736,7 +736,10 @@
 
         <!-- Dashboard View -->
         <div id="dashboard" class="dashboard">
-            <h1>Content Dashboard</h1>
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
+                <h1>Content Dashboard</h1>
+                <button id="newPostBtn" onclick="createNewPost()" style="background-color: #28a745; color: white; border: none; padding: 10px 20px; border-radius: 6px; font-family: inherit; font-size: 14px; font-weight: 600; cursor: pointer; display: flex; align-items: center; gap: 8px;"><i class="fas fa-plus"></i> New Post</button>
+            </div>
 
             <!-- Status Message -->
             <div id="statusMessage" class="status-message"></div>
@@ -943,6 +946,34 @@ Output: 150–400 words, first person from the child's perspective.`;
         document.getElementById('passwordInput').addEventListener('keypress', (e) => {
             if (e.key === 'Enter') handleAuth();
         });
+
+        // Create new post
+        async function createNewPost() {
+            try {
+                const { data, error } = await db
+                    .from('content')
+                    .insert({
+                        source_type: 'manual',
+                        content_category: 'kids-journal',
+                        title: 'Untitled Post',
+                        pipeline_status: 'draft_ready',
+                        blog_post_status: 'ai_draft',
+                        blog_post_draft: '',
+                        blog_post_edited: '',
+                        recorded_date: new Date().toISOString().split('T')[0],
+                    })
+                    .select()
+                    .single();
+
+                if (error) throw error;
+
+                // Open the new record in detail view
+                showDetailView(data);
+            } catch (err) {
+                console.error('Error creating post:', err);
+                showStatus('Error creating new post', 'error');
+            }
+        }
 
         // Load records
         async function loadRecords() {
