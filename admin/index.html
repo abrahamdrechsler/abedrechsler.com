@@ -486,6 +486,87 @@
             border-color: #007bff;
         }
 
+        /* Prompt Section */
+        .prompt-section {
+            margin-bottom: 30px;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border: 1px solid #f0f0f0;
+            border-radius: 6px;
+        }
+
+        .prompt-label {
+            font-size: 16px;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 15px;
+        }
+
+        .prompt-textarea {
+            width: 100%;
+            min-height: 180px;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            font-size: 14px;
+            font-family: 'Montserrat', sans-serif;
+            resize: vertical;
+            color: #333;
+            margin-bottom: 15px;
+        }
+
+        .prompt-textarea:focus {
+            outline: none;
+            border-color: #007bff;
+        }
+
+        .prompt-note {
+            font-size: 13px;
+            color: #888;
+            margin-bottom: 15px;
+            font-style: italic;
+        }
+
+        .regenerate-btn {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 6px;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            font-family: 'Montserrat', sans-serif;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .regenerate-btn:hover {
+            background-color: #0056b3;
+        }
+
+        .regenerate-btn:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+
+        .spinner {
+            display: inline-block;
+            width: 14px;
+            height: 14px;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            border-top: 2px solid white;
+            border-radius: 50%;
+            animation: spin 0.8s linear infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
         /* Action Buttons */
         .action-buttons {
             display: flex;
@@ -768,6 +849,16 @@
                 </div>
             </div>
 
+            <!-- Prompt Section -->
+            <div class="prompt-section">
+                <label class="prompt-label">AI Prompt</label>
+                <textarea id="promptEditor" class="prompt-textarea" placeholder="Enter the prompt for AI draft generation..."></textarea>
+                <div class="prompt-note">Edit the prompt above and click Regenerate to create a new AI draft. This won't affect any human edits you've already made.</div>
+                <button id="regenerateBtn" class="regenerate-btn">
+                    <i class="fas fa-sync-alt"></i> Regenerate Draft
+                </button>
+            </div>
+
             <!-- Edit Section -->
             <div class="edit-section">
                 <h3>Your Edit</h3>
@@ -797,8 +888,18 @@
 
         const SUPABASE_URL = 'https://swaplrbpwdfvzttxyyht.supabase.co';
         const SUPABASE_KEY = 'sb_publishable_tMlXyklg4sSh7XsaeHdyYA_oXEFgLRz';
+        const EDGE_FUNCTION_URL = 'https://swaplrbpwdfvzttxyyht.supabase.co/functions/v1/regenerate-draft';
 
         const db = window.supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
+
+        const DEFAULT_PROMPT = `You are a ghostwriter for a young child. Below is a raw transcription of a child's spoken monologue. Lightly edit this into a short blog post that:
+- Preserves the child's authentic voice, word choices, and perspective
+- Removes any adult prompting or questions
+- Adds minimal structure (opening line, natural paragraph breaks, closing)
+- Does NOT add interpretation or adult framing not present in the original
+- Reads like a child wrote it, because essentially they did
+
+Output: 150–400 words, first person from the child's perspective.`;
 
         // State
         let allRecords = [];
@@ -936,7 +1037,7 @@
         document.getElementById('childFilter').addEventListener('change', applyFilters);
 
         // Detail view
-        function showDetailView(record) {
+        async function showDetailView(record) {
             currentRecord = record;
             document.getElementById('dashboard').classList.remove('active');
             document.getElementById('detailView').classList.add('active');
@@ -945,10 +1046,17 @@
             document.getElementById('detailChild').textContent = record.child_name || 'Unknown';
             document.getElementById('detailDate').textContent = new Date(record.recorded_date).toLocaleDateString();
             document.getElementById('detailTags').value = Array.isArray(record.tags) ? record.tags.join(', ') : record.tags || '';
-            document.getElementById('detailTranscript').textContent = record.transcript || '';
+
+            // Display raw_transcript, fallback to transcript, show message if both empty
+            const rawTranscriptText = record.raw_transcript || record.transcript || 'No transcript available';
+            document.getElementById('detailTranscript').textContent = rawTranscriptText;
+
             document.getElementById('detailAiDraft').textContent = record.blog_post_draft || '';
             document.getElementById('detailEdit').value = record.blog_post_edited || record.blog_post_draft || '';
             document.getElementById('detailNotes').value = record.notes || '';
+
+            // Set prompt editor with stored prompt or default
+            document.getElementById('promptEditor').value = record.blog_post_prompt || DEFAULT_PROMPT;
 
             // Update button visibility
             const unpublishBtn = document.getElementById('unpublishBtn');
@@ -1087,6 +1195,63 @@
             }
         }
 
+        // Regenerate draft
+        async function regenerateDraft() {
+            if (!currentRecord) return;
+
+            const promptText = document.getElementById('promptEditor').value;
+            const transcript = currentRecord.raw_transcript || currentRecord.transcript;
+
+            if (!transcript) {
+                showDetailStatus('No transcript available to regenerate draft', 'error');
+                return;
+            }
+
+            const regenerateBtn = document.getElementById('regenerateBtn');
+            regenerateBtn.disabled = true;
+            regenerateBtn.innerHTML = '<div class="spinner"></div> Generating...';
+
+            try {
+                const response = await fetch(EDGE_FUNCTION_URL, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Authorization': `Bearer ${SUPABASE_KEY}`,
+                    },
+                    body: JSON.stringify({
+                        record_id: currentRecord.id,
+                        prompt: promptText,
+                        transcript: transcript,
+                    }),
+                });
+
+                if (!response.ok) {
+                    const errorData = await response.json();
+                    throw new Error(errorData.error || 'Failed to regenerate draft');
+                }
+
+                const data = await response.json();
+                const newDraft = data.draft;
+
+                // Update the AI Draft display
+                document.getElementById('detailAiDraft').textContent = newDraft;
+
+                // Update current record
+                currentRecord.blog_post_draft = newDraft;
+                currentRecord.blog_post_prompt = promptText;
+                currentRecord.blog_post_status = 'ai_draft';
+
+                showDetailStatus('Draft regenerated successfully', 'success');
+            } catch (err) {
+                console.error('Error regenerating draft:', err);
+                showDetailStatus(`Error: ${err.message}`, 'error');
+            } finally {
+                regenerateBtn.disabled = false;
+                regenerateBtn.innerHTML = '<i class="fas fa-sync-alt"></i> Regenerate Draft';
+            }
+        }
+
+        document.getElementById('regenerateBtn').addEventListener('click', regenerateDraft);
         document.getElementById('saveDraftBtn').addEventListener('click', saveDraft);
         document.getElementById('approveBtn').addEventListener('click', approveDraft);
         document.getElementById('publishBtn').addEventListener('click', publishPost);
