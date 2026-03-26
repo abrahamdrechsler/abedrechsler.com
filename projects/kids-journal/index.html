@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kids Journal - Abe Drechsler</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Montserrat', 'Futura', sans-serif;
+            color: #333;
+            background-color: #fff;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Navigation */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 30px 0;
+            border-bottom: 1px solid #f0f0f0;
+            margin-bottom: 50px;
+        }
+
+        .nav-logo {
+            font-size: 18px;
+            font-weight: 600;
+            color: #333;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .nav-logo:hover {
+            color: #007bff;
+        }
+
+        .nav-right {
+            display: flex;
+            gap: 25px;
+            align-items: center;
+        }
+
+        .nav-icons {
+            display: flex;
+            gap: 15px;
+        }
+
+        .nav-icons a {
+            color: #555;
+            text-decoration: none;
+            transition: color 0.3s ease;
+            font-size: 18px;
+        }
+
+        .nav-icons a:hover {
+            color: #007bff;
+        }
+
+        .nav-about {
+            color: #555;
+            text-decoration: none;
+            font-size: 14px;
+            transition: color 0.3s ease;
+        }
+
+        .nav-about:hover {
+            color: #007bff;
+        }
+
+        /* Header */
+        .page-header {
+            margin-bottom: 50px;
+        }
+
+        .page-title {
+            font-size: 42px;
+            font-weight: 700;
+            color: #333;
+            margin-bottom: 12px;
+        }
+
+        .page-tagline {
+            font-size: 16px;
+            color: #888;
+            font-weight: 400;
+        }
+
+        /* Loading Spinner */
+        .loading {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 300px;
+        }
+
+        .spinner {
+            border: 3px solid #f0f0f0;
+            border-top: 3px solid #007bff;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            animation: spin 0.8s linear infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        /* Posts */
+        .posts {
+            margin-bottom: 60px;
+        }
+
+        .post {
+            margin-bottom: 50px;
+            padding-bottom: 50px;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .post:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .post-meta {
+            display: flex;
+            gap: 20px;
+            font-size: 14px;
+            color: #888;
+            margin-bottom: 15px;
+        }
+
+        .post-date {
+            font-weight: 500;
+        }
+
+        .post-author {
+            font-weight: 500;
+        }
+
+        .post-title {
+            font-size: 28px;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 20px;
+            line-height: 1.3;
+        }
+
+        .post-body {
+            font-family: 'Georgia', 'Garamond', serif;
+            font-size: 16px;
+            color: #444;
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+
+        .post-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 20px;
+        }
+
+        .tag {
+            display: inline-block;
+            background-color: #f0f0f0;
+            color: #555;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 500;
+        }
+
+        /* Empty State */
+        .empty-state {
+            text-align: center;
+            padding: 60px 20px;
+            color: #888;
+        }
+
+        .empty-state-icon {
+            font-size: 48px;
+            margin-bottom: 20px;
+            color: #ddd;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .page-title {
+                font-size: 32px;
+            }
+
+            nav {
+                flex-direction: column;
+                gap: 20px;
+                text-align: center;
+            }
+
+            .nav-right {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .post-title {
+                font-size: 22px;
+            }
+
+            .post-body {
+                font-size: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Navigation -->
+        <nav>
+            <a href="../../index.html" class="nav-logo">Abe Drechsler</a>
+            <div class="nav-right">
+                <div class="nav-icons">
+                    <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                </div>
+                <a href="../../about.html" class="nav-about">About</a>
+            </div>
+        </nav>
+
+        <!-- Page Header -->
+        <div class="page-header">
+            <h1 class="page-title">Kids Journal</h1>
+            <p class="page-tagline">Thomas and Eloise share their adventures</p>
+        </div>
+
+        <!-- Loading State -->
+        <div id="loading" class="loading">
+            <div class="spinner"></div>
+        </div>
+
+        <!-- Posts Container -->
+        <div id="posts-container" class="posts" style="display: none;"></div>
+
+        <!-- Empty State -->
+        <div id="empty-state" style="display: none;">
+            <div class="empty-state">
+                <div class="empty-state-icon">
+                    <i class="fas fa-book"></i>
+                </div>
+                <p>No posts yet — check back soon!</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script>
+        const SUPABASE_URL = 'https://swaplrbpwdfvzttxyyht.supabase.co';
+        const SUPABASE_ANON_KEY = 'sb_publishable_tMlXyklg4sSh7XsaeHdyYA_oXEFgLRz';
+
+        const supabase = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+
+        async function loadPosts() {
+            try {
+                const { data, error } = await supabase
+                    .from('content')
+                    .select('*')
+                    .eq('blog_post_status', 'published')
+                    .eq('content_category', 'kids-journal')
+                    .order('recorded_date', { ascending: false });
+
+                if (error) {
+                    console.error('Error loading posts:', error);
+                    showEmptyState();
+                    return;
+                }
+
+                if (!data || data.length === 0) {
+                    showEmptyState();
+                    return;
+                }
+
+                renderPosts(data);
+            } catch (err) {
+                console.error('Unexpected error:', err);
+                showEmptyState();
+            }
+        }
+
+        function renderPosts(posts) {
+            const container = document.getElementById('posts-container');
+            const loading = document.getElementById('loading');
+
+            container.innerHTML = '';
+
+            posts.forEach(post => {
+                const postEl = createPostElement(post);
+                container.appendChild(postEl);
+            });
+
+            loading.style.display = 'none';
+            container.style.display = 'block';
+        }
+
+        function createPostElement(post) {
+            const article = document.createElement('article');
+            article.className = 'post';
+
+            const formattedDate = formatDate(post.recorded_date);
+            const author = post.child_name || 'Anonymous';
+            const bodyText = post.blog_post_edited || post.blog_post_draft || '';
+            const tags = post.tags || [];
+
+            let tagsHTML = '';
+            if (Array.isArray(tags) && tags.length > 0) {
+                tagsHTML = tags.map(tag => `<span class="tag">${escapeHtml(tag)}</span>`).join('');
+            } else if (typeof tags === 'string' && tags.trim()) {
+                tagsHTML = tags.split(',').map(tag =>
+                    `<span class="tag">${escapeHtml(tag.trim())}</span>`
+                ).join('');
+            }
+
+            article.innerHTML = `
+                <div class="post-meta">
+                    <span class="post-date">${formattedDate}</span>
+                    <span class="post-author">by ${escapeHtml(author)}</span>
+                </div>
+                <h2 class="post-title">${escapeHtml(post.title || 'Untitled')}</h2>
+                <div class="post-body">${escapeHtml(bodyText)}</div>
+                ${tagsHTML ? `<div class="post-tags">${tagsHTML}</div>` : ''}
+            `;
+
+            return article;
+        }
+
+        function formatDate(dateString) {
+            if (!dateString) return 'Unknown Date';
+            const date = new Date(dateString);
+            return date.toLocaleDateString('en-US', {
+                year: 'numeric',
+                month: 'long',
+                day: 'numeric'
+            });
+        }
+
+        function escapeHtml(text) {
+            const div = document.createElement('div');
+            div.textContent = text;
+            return div.innerHTML;
+        }
+
+        function showEmptyState() {
+            document.getElementById('loading').style.display = 'none';
+            document.getElementById('empty-state').style.display = 'block';
+        }
+
+        // Load posts on page load
+        loadPosts();
+    </script>
+</body>
+</html>

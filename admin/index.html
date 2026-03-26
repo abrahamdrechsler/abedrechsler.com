@@ -1,0 +1,1124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin - Abe Drechsler</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Montserrat', 'Futura', sans-serif;
+            color: #333;
+            background-color: #fff;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Navigation */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 30px 0;
+            border-bottom: 1px solid #f0f0f0;
+            margin-bottom: 50px;
+        }
+
+        .nav-logo {
+            font-size: 18px;
+            font-weight: 600;
+            color: #333;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .nav-logo:hover {
+            color: #007bff;
+        }
+
+        .nav-right {
+            display: flex;
+            gap: 25px;
+            align-items: center;
+        }
+
+        .nav-icons {
+            display: flex;
+            gap: 15px;
+        }
+
+        .nav-icons a {
+            color: #555;
+            text-decoration: none;
+            transition: color 0.3s ease;
+            font-size: 18px;
+        }
+
+        .nav-icons a:hover {
+            color: #007bff;
+        }
+
+        .nav-about {
+            color: #555;
+            text-decoration: none;
+            font-size: 14px;
+            transition: color 0.3s ease;
+        }
+
+        .nav-about:hover {
+            color: #007bff;
+        }
+
+        /* Page Title */
+        h1 {
+            font-size: 36px;
+            font-weight: 700;
+            color: #333;
+            margin-bottom: 30px;
+        }
+
+        /* Password Modal */
+        .auth-modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(255, 255, 255, 0.95);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .auth-modal.hidden {
+            display: none;
+        }
+
+        .auth-box {
+            background: white;
+            border: 1px solid #f0f0f0;
+            border-radius: 8px;
+            padding: 40px;
+            width: 100%;
+            max-width: 400px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        }
+
+        .auth-box h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .auth-box p {
+            color: #888;
+            margin-bottom: 25px;
+            font-size: 14px;
+        }
+
+        .auth-box input {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            font-size: 14px;
+            margin-bottom: 20px;
+            font-family: 'Montserrat', sans-serif;
+            transition: border-color 0.3s ease;
+        }
+
+        .auth-box input:focus {
+            outline: none;
+            border-color: #007bff;
+        }
+
+        .auth-box button {
+            width: 100%;
+            padding: 12px 15px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .auth-box button:hover {
+            background-color: #0056b3;
+        }
+
+        .auth-error {
+            color: #d9534f;
+            font-size: 12px;
+            margin-bottom: 15px;
+            display: none;
+        }
+
+        /* Dashboard */
+        .dashboard {
+            display: none;
+        }
+
+        .dashboard.active {
+            display: block;
+        }
+
+        /* Filters */
+        .filters {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+        }
+
+        .filter-group {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .filter-group label {
+            font-size: 12px;
+            font-weight: 600;
+            color: #888;
+            margin-bottom: 6px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .filter-group select {
+            padding: 10px 12px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            font-size: 14px;
+            background-color: white;
+            color: #333;
+            font-family: 'Montserrat', sans-serif;
+            cursor: pointer;
+            transition: border-color 0.3s ease;
+            min-width: 180px;
+        }
+
+        .filter-group select:focus {
+            outline: none;
+            border-color: #007bff;
+        }
+
+        /* Table */
+        .table-wrapper {
+            overflow-x: auto;
+            margin-bottom: 40px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th {
+            text-align: left;
+            padding: 15px;
+            font-weight: 600;
+            color: #555;
+            border-bottom: 2px solid #f0f0f0;
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        td {
+            padding: 15px;
+            border-bottom: 1px solid #f0f0f0;
+            font-size: 14px;
+            color: #333;
+        }
+
+        tr:hover {
+            background-color: #fafafa;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+        }
+
+        .badge-pending {
+            background-color: #e9ecef;
+            color: #555;
+        }
+
+        .badge-transcribed {
+            background-color: #ffeaa7;
+            color: #333;
+        }
+
+        .badge-draft-ready {
+            background-color: #81c784;
+            color: white;
+        }
+
+        .badge-error {
+            background-color: #f8706a;
+            color: white;
+        }
+
+        .badge-not-generated {
+            background-color: #e9ecef;
+            color: #555;
+        }
+
+        .badge-ai-draft {
+            background-color: #64b5f6;
+            color: white;
+        }
+
+        .badge-human-approved {
+            background-color: #ffeaa7;
+            color: #333;
+        }
+
+        .badge-published {
+            background-color: #81c784;
+            color: white;
+        }
+
+        .review-btn {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 13px;
+            font-weight: 600;
+            transition: background-color 0.3s ease;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .review-btn:hover {
+            background-color: #0056b3;
+        }
+
+        /* Detail View */
+        .detail-view {
+            display: none;
+        }
+
+        .detail-view.active {
+            display: block;
+        }
+
+        .back-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: #007bff;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 30px;
+            cursor: pointer;
+            border: none;
+            background: none;
+            transition: color 0.3s ease;
+        }
+
+        .back-btn:hover {
+            color: #0056b3;
+        }
+
+        .detail-header {
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .detail-header-row {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 15px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .detail-title-input {
+            flex: 1;
+            min-width: 200px;
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            font-size: 24px;
+            font-weight: 600;
+            font-family: 'Montserrat', sans-serif;
+            color: #333;
+        }
+
+        .detail-meta {
+            display: flex;
+            gap: 20px;
+            font-size: 14px;
+            color: #888;
+            flex-wrap: wrap;
+        }
+
+        .detail-meta span {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .detail-meta label {
+            font-size: 12px;
+            color: #aaa;
+            text-transform: uppercase;
+            font-weight: 600;
+            margin-bottom: 4px;
+        }
+
+        .detail-tags-input {
+            width: 100%;
+            padding: 10px 12px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            font-size: 14px;
+            font-family: 'Montserrat', sans-serif;
+            margin-top: 10px;
+        }
+
+        /* Two Column Layout */
+        .detail-columns {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+
+        .detail-column h3 {
+            font-size: 16px;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 15px;
+        }
+
+        .detail-box {
+            background-color: #f9f9f9;
+            border: 1px solid #f0f0f0;
+            border-radius: 6px;
+            padding: 15px;
+            min-height: 300px;
+            overflow-y: auto;
+            font-family: 'Georgia', 'Garamond', serif;
+            font-size: 14px;
+            color: #444;
+            line-height: 1.6;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+        }
+
+        .edit-section h3 {
+            font-size: 16px;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 15px;
+        }
+
+        .edit-textarea {
+            width: 100%;
+            min-height: 350px;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            font-size: 14px;
+            font-family: 'Montserrat', sans-serif;
+            resize: vertical;
+            color: #333;
+        }
+
+        .edit-textarea:focus {
+            outline: none;
+            border-color: #007bff;
+        }
+
+        .notes-section {
+            margin-top: 30px;
+            padding-top: 30px;
+            border-top: 1px solid #f0f0f0;
+        }
+
+        .notes-label {
+            font-size: 16px;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 15px;
+        }
+
+        .notes-textarea {
+            width: 100%;
+            min-height: 120px;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            font-size: 14px;
+            font-family: 'Montserrat', sans-serif;
+            resize: vertical;
+            color: #333;
+        }
+
+        .notes-textarea:focus {
+            outline: none;
+            border-color: #007bff;
+        }
+
+        /* Action Buttons */
+        .action-buttons {
+            display: flex;
+            gap: 12px;
+            margin-top: 30px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 12px 24px;
+            border: none;
+            border-radius: 6px;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            font-family: 'Montserrat', sans-serif;
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary {
+            background-color: #007bff;
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background-color: #0056b3;
+        }
+
+        .btn-success {
+            background-color: #28a745;
+            color: white;
+        }
+
+        .btn-success:hover {
+            background-color: #218838;
+        }
+
+        .btn-warning {
+            background-color: #ffc107;
+            color: #333;
+        }
+
+        .btn-warning:hover {
+            background-color: #e0a800;
+        }
+
+        .btn-secondary {
+            background-color: #6c757d;
+            color: white;
+        }
+
+        .btn-secondary:hover {
+            background-color: #5a6268;
+        }
+
+        .btn:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+
+        /* Status Messages */
+        .status-message {
+            padding: 12px 15px;
+            border-radius: 6px;
+            margin-bottom: 20px;
+            font-size: 14px;
+            display: none;
+        }
+
+        .status-message.show {
+            display: block;
+        }
+
+        .status-success {
+            background-color: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+
+        .status-error {
+            background-color: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .filters {
+                flex-direction: column;
+            }
+
+            .filter-group select {
+                min-width: auto;
+            }
+
+            .detail-columns {
+                grid-template-columns: 1fr;
+            }
+
+            nav {
+                flex-direction: column;
+                gap: 20px;
+                text-align: center;
+            }
+
+            .nav-right {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            th, td {
+                padding: 10px 12px;
+                font-size: 13px;
+            }
+
+            .detail-header-row {
+                flex-direction: column;
+            }
+
+            .detail-title-input {
+                min-width: auto;
+            }
+
+            .action-buttons {
+                flex-direction: column;
+            }
+
+            .btn {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Auth Modal -->
+    <div id="authModal" class="auth-modal">
+        <div class="auth-box">
+            <h2>Admin Access</h2>
+            <p>Enter password to continue</p>
+            <div id="authError" class="auth-error"></div>
+            <input
+                type="password"
+                id="passwordInput"
+                placeholder="Password"
+                autocomplete="off"
+            >
+            <button id="authBtn">Sign In</button>
+        </div>
+    </div>
+
+    <div class="container">
+        <!-- Navigation -->
+        <nav>
+            <a href="../index.html" class="nav-logo">Abe Drechsler</a>
+            <div class="nav-right">
+                <div class="nav-icons">
+                    <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                </div>
+                <a href="../about.html" class="nav-about">About</a>
+            </div>
+        </nav>
+
+        <!-- Dashboard View -->
+        <div id="dashboard" class="dashboard">
+            <h1>Content Dashboard</h1>
+
+            <!-- Status Message -->
+            <div id="statusMessage" class="status-message"></div>
+
+            <!-- Filters -->
+            <div class="filters">
+                <div class="filter-group">
+                    <label>Pipeline Status</label>
+                    <select id="pipelineFilter">
+                        <option value="">All</option>
+                        <option value="pending">Pending</option>
+                        <option value="transcribed">Transcribed</option>
+                        <option value="draft_ready">Draft Ready</option>
+                        <option value="error">Error</option>
+                    </select>
+                </div>
+
+                <div class="filter-group">
+                    <label>Blog Status</label>
+                    <select id="blogFilter">
+                        <option value="">All</option>
+                        <option value="not_generated">Not Generated</option>
+                        <option value="ai_draft">AI Draft</option>
+                        <option value="human_approved">Human Approved</option>
+                        <option value="published">Published</option>
+                    </select>
+                </div>
+
+                <div class="filter-group">
+                    <label>Child Name</label>
+                    <select id="childFilter">
+                        <option value="">All</option>
+                        <option value="Thomas">Thomas</option>
+                        <option value="Eloise">Eloise</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Table -->
+            <div class="table-wrapper">
+                <table id="contentTable">
+                    <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>Child</th>
+                            <th>Title</th>
+                            <th>Pipeline</th>
+                            <th>Blog Status</th>
+                            <th>Tags</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tableBody">
+                        <tr>
+                            <td colspan="7" style="text-align: center; color: #888; padding: 40px;">
+                                Loading...
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Detail View -->
+        <div id="detailView" class="detail-view">
+            <button id="backBtn" class="back-btn">
+                <i class="fas fa-chevron-left"></i> Back to Dashboard
+            </button>
+
+            <div class="detail-header">
+                <div class="detail-header-row">
+                    <input
+                        type="text"
+                        id="detailTitle"
+                        class="detail-title-input"
+                        placeholder="Post Title"
+                    >
+                </div>
+                <div class="detail-meta">
+                    <span>
+                        <label>Child</label>
+                        <span id="detailChild"></span>
+                    </span>
+                    <span>
+                        <label>Date</label>
+                        <span id="detailDate"></span>
+                    </span>
+                </div>
+                <label style="display: block; margin-top: 15px; font-size: 12px; color: #aaa; text-transform: uppercase; font-weight: 600;">Tags (comma-separated)</label>
+                <input
+                    type="text"
+                    id="detailTags"
+                    class="detail-tags-input"
+                    placeholder="e.g., adventure, nature, learning"
+                >
+            </div>
+
+            <!-- Status Message -->
+            <div id="detailStatusMessage" class="status-message"></div>
+
+            <!-- Two Column Content -->
+            <div class="detail-columns">
+                <div class="detail-column">
+                    <h3>Raw Transcript</h3>
+                    <div id="detailTranscript" class="detail-box"></div>
+                </div>
+                <div class="detail-column">
+                    <h3>AI Draft</h3>
+                    <div id="detailAiDraft" class="detail-box"></div>
+                </div>
+            </div>
+
+            <!-- Edit Section -->
+            <div class="edit-section">
+                <h3>Your Edit</h3>
+                <textarea id="detailEdit" class="edit-textarea" placeholder="Edit the blog post here..."></textarea>
+            </div>
+
+            <!-- Notes Section -->
+            <div class="notes-section">
+                <label class="notes-label">Notes</label>
+                <textarea id="detailNotes" class="notes-textarea" placeholder="Internal notes about this post..."></textarea>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="action-buttons">
+                <button id="saveDraftBtn" class="btn btn-primary">Save Draft</button>
+                <button id="approveBtn" class="btn btn-warning">Approve</button>
+                <button id="publishBtn" class="btn btn-success">Publish</button>
+                <button id="unpublishBtn" class="btn btn-secondary" style="display: none;">Unpublish</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script>
+        // TODO: Set your admin password
+        const ADMIN_PASSWORD = 'abe';
+
+        const SUPABASE_URL = 'https://swaplrbpwdfvzttxyyht.supabase.co';
+        const SUPABASE_KEY = 'sb_publishable_tMlXyklg4sSh7XsaeHdyYA_oXEFgLRz';
+
+        const supabase = window.supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
+
+        // State
+        let allRecords = [];
+        let currentRecord = null;
+
+        // Auth
+        function initAuth() {
+            const password = sessionStorage.getItem('adminAuth');
+            if (password === ADMIN_PASSWORD) {
+                showDashboard();
+            } else {
+                showAuthModal();
+            }
+        }
+
+        function showAuthModal() {
+            document.getElementById('authModal').classList.remove('hidden');
+            document.getElementById('passwordInput').focus();
+        }
+
+        function showDashboard() {
+            document.getElementById('authModal').classList.add('hidden');
+            document.getElementById('dashboard').classList.add('active');
+            loadRecords();
+        }
+
+        function handleAuth() {
+            const password = document.getElementById('passwordInput').value;
+            if (password === ADMIN_PASSWORD) {
+                sessionStorage.setItem('adminAuth', password);
+                showDashboard();
+            } else {
+                const errorDiv = document.getElementById('authError');
+                errorDiv.textContent = 'Incorrect password';
+                errorDiv.style.display = 'block';
+                document.getElementById('passwordInput').value = '';
+            }
+        }
+
+        document.getElementById('authBtn').addEventListener('click', handleAuth);
+        document.getElementById('passwordInput').addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') handleAuth();
+        });
+
+        // Load records
+        async function loadRecords() {
+            try {
+                const { data, error } = await supabase
+                    .from('content')
+                    .select('*')
+                    .order('recorded_date', { ascending: false });
+
+                if (error) {
+                    console.error('Error loading records:', error);
+                    showStatus('Error loading records', 'error');
+                    return;
+                }
+
+                allRecords = data || [];
+                renderTable(allRecords);
+            } catch (err) {
+                console.error('Unexpected error:', err);
+                showStatus('Unexpected error', 'error');
+            }
+        }
+
+        // Render table
+        function renderTable(records) {
+            const tbody = document.getElementById('tableBody');
+            tbody.innerHTML = '';
+
+            if (records.length === 0) {
+                tbody.innerHTML = `
+                    <tr>
+                        <td colspan="7" style="text-align: center; color: #888; padding: 40px;">
+                            No records found
+                        </td>
+                    </tr>
+                `;
+                return;
+            }
+
+            records.forEach(record => {
+                const row = createTableRow(record);
+                tbody.appendChild(row);
+            });
+        }
+
+        function createTableRow(record) {
+            const tr = document.createElement('tr');
+            const date = new Date(record.recorded_date).toLocaleDateString();
+            const child = record.child_name || 'Unknown';
+            const title = record.title || 'Untitled';
+            const pipelineStatus = record.pipeline_status || 'pending';
+            const blogStatus = record.blog_post_status || 'not_generated';
+            const tags = Array.isArray(record.tags) ? record.tags.join(', ') : record.tags || '';
+
+            tr.innerHTML = `
+                <td>${date}</td>
+                <td>${escapeHtml(child)}</td>
+                <td>${escapeHtml(title)}</td>
+                <td><span class="badge badge-${pipelineStatus.replace('_', '-')}">${pipelineStatus}</span></td>
+                <td><span class="badge badge-${blogStatus.replace('_', '-')}">${blogStatus}</span></td>
+                <td><small>${escapeHtml(tags)}</small></td>
+                <td>
+                    <button class="review-btn" data-id="${record.id}">Review</button>
+                </td>
+            `;
+
+            tr.querySelector('.review-btn').addEventListener('click', () => {
+                showDetailView(record);
+            });
+
+            return tr;
+        }
+
+        // Filter table
+        function applyFilters() {
+            const pipelineValue = document.getElementById('pipelineFilter').value;
+            const blogValue = document.getElementById('blogFilter').value;
+            const childValue = document.getElementById('childFilter').value;
+
+            const filtered = allRecords.filter(record => {
+                const matchPipeline = !pipelineValue || record.pipeline_status === pipelineValue;
+                const matchBlog = !blogValue || record.blog_post_status === blogValue;
+                const matchChild = !childValue || record.child_name === childValue;
+                return matchPipeline && matchBlog && matchChild;
+            });
+
+            renderTable(filtered);
+        }
+
+        document.getElementById('pipelineFilter').addEventListener('change', applyFilters);
+        document.getElementById('blogFilter').addEventListener('change', applyFilters);
+        document.getElementById('childFilter').addEventListener('change', applyFilters);
+
+        // Detail view
+        function showDetailView(record) {
+            currentRecord = record;
+            document.getElementById('dashboard').classList.remove('active');
+            document.getElementById('detailView').classList.add('active');
+
+            document.getElementById('detailTitle').value = record.title || '';
+            document.getElementById('detailChild').textContent = record.child_name || 'Unknown';
+            document.getElementById('detailDate').textContent = new Date(record.recorded_date).toLocaleDateString();
+            document.getElementById('detailTags').value = Array.isArray(record.tags) ? record.tags.join(', ') : record.tags || '';
+            document.getElementById('detailTranscript').textContent = record.transcript || '';
+            document.getElementById('detailAiDraft').textContent = record.blog_post_draft || '';
+            document.getElementById('detailEdit').value = record.blog_post_edited || record.blog_post_draft || '';
+            document.getElementById('detailNotes').value = record.notes || '';
+
+            // Update button visibility
+            const unpublishBtn = document.getElementById('unpublishBtn');
+            if (record.blog_post_status === 'published') {
+                unpublishBtn.style.display = 'inline-block';
+            } else {
+                unpublishBtn.style.display = 'none';
+            }
+
+            window.scrollTo(0, 0);
+        }
+
+        document.getElementById('backBtn').addEventListener('click', () => {
+            document.getElementById('detailView').classList.remove('active');
+            document.getElementById('dashboard').classList.add('active');
+            currentRecord = null;
+        });
+
+        // Save actions
+        async function saveDraft() {
+            if (!currentRecord) return;
+            const edited = document.getElementById('detailEdit').value;
+            const title = document.getElementById('detailTitle').value;
+            const tags = document.getElementById('detailTags').value.split(',').map(t => t.trim()).filter(t => t);
+            const notes = document.getElementById('detailNotes').value;
+
+            try {
+                const { error } = await supabase
+                    .from('content')
+                    .update({
+                        blog_post_edited: edited,
+                        title: title,
+                        tags: tags,
+                        notes: notes
+                    })
+                    .eq('id', currentRecord.id);
+
+                if (error) throw error;
+
+                showDetailStatus('Draft saved successfully', 'success');
+                currentRecord.blog_post_edited = edited;
+                currentRecord.title = title;
+                currentRecord.tags = tags;
+                currentRecord.notes = notes;
+            } catch (err) {
+                console.error('Error:', err);
+                showDetailStatus('Error saving draft', 'error');
+            }
+        }
+
+        async function approveDraft() {
+            if (!currentRecord) return;
+            const edited = document.getElementById('detailEdit').value;
+            const title = document.getElementById('detailTitle').value;
+            const tags = document.getElementById('detailTags').value.split(',').map(t => t.trim()).filter(t => t);
+            const notes = document.getElementById('detailNotes').value;
+
+            try {
+                const { error } = await supabase
+                    .from('content')
+                    .update({
+                        blog_post_edited: edited,
+                        blog_post_status: 'human_approved',
+                        title: title,
+                        tags: tags,
+                        notes: notes
+                    })
+                    .eq('id', currentRecord.id);
+
+                if (error) throw error;
+
+                showDetailStatus('Post approved successfully', 'success');
+                currentRecord.blog_post_status = 'human_approved';
+                document.getElementById('unpublishBtn').style.display = 'none';
+                loadRecords();
+            } catch (err) {
+                console.error('Error:', err);
+                showDetailStatus('Error approving post', 'error');
+            }
+        }
+
+        async function publishPost() {
+            if (!currentRecord) return;
+            const edited = document.getElementById('detailEdit').value;
+            const title = document.getElementById('detailTitle').value;
+            const tags = document.getElementById('detailTags').value.split(',').map(t => t.trim()).filter(t => t);
+            const notes = document.getElementById('detailNotes').value;
+
+            try {
+                const { error } = await supabase
+                    .from('content')
+                    .update({
+                        blog_post_edited: edited,
+                        blog_post_status: 'published',
+                        published_at: new Date().toISOString(),
+                        title: title,
+                        tags: tags,
+                        notes: notes
+                    })
+                    .eq('id', currentRecord.id);
+
+                if (error) throw error;
+
+                showDetailStatus('Post published successfully', 'success');
+                currentRecord.blog_post_status = 'published';
+                document.getElementById('unpublishBtn').style.display = 'inline-block';
+                loadRecords();
+            } catch (err) {
+                console.error('Error:', err);
+                showDetailStatus('Error publishing post', 'error');
+            }
+        }
+
+        async function unpublishPost() {
+            if (!currentRecord) return;
+            const notes = document.getElementById('detailNotes').value;
+
+            try {
+                const { error } = await supabase
+                    .from('content')
+                    .update({
+                        blog_post_status: 'human_approved',
+                        notes: notes
+                    })
+                    .eq('id', currentRecord.id);
+
+                if (error) throw error;
+
+                showDetailStatus('Post unpublished successfully', 'success');
+                currentRecord.blog_post_status = 'human_approved';
+                document.getElementById('unpublishBtn').style.display = 'none';
+                loadRecords();
+            } catch (err) {
+                console.error('Error:', err);
+                showDetailStatus('Error unpublishing post', 'error');
+            }
+        }
+
+        document.getElementById('saveDraftBtn').addEventListener('click', saveDraft);
+        document.getElementById('approveBtn').addEventListener('click', approveDraft);
+        document.getElementById('publishBtn').addEventListener('click', publishPost);
+        document.getElementById('unpublishBtn').addEventListener('click', unpublishPost);
+
+        // Status messages
+        function showStatus(message, type) {
+            const el = document.getElementById('statusMessage');
+            el.textContent = message;
+            el.className = `status-message show status-${type}`;
+            setTimeout(() => {
+                el.classList.remove('show');
+            }, 4000);
+        }
+
+        function showDetailStatus(message, type) {
+            const el = document.getElementById('detailStatusMessage');
+            el.textContent = message;
+            el.className = `status-message show status-${type}`;
+            setTimeout(() => {
+                el.classList.remove('show');
+            }, 4000);
+        }
+
+        function escapeHtml(text) {
+            const div = document.createElement('div');
+            div.textContent = text;
+            return div.innerHTML;
+        }
+
+        // Initialize
+        initAuth();
+    </script>
+</body>
+</html>
