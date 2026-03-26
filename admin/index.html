@@ -1089,7 +1089,7 @@ Output: 150–400 words, first person from the child's perspective.`;
                     .update({
                         blog_post_edited: edited,
                         title: title,
-                        tags: tags,
+                        content_tags: tags,
                         notes: notes
                     })
                     .eq('id', currentRecord.id);
@@ -1121,7 +1121,7 @@ Output: 150–400 words, first person from the child's perspective.`;
                         blog_post_edited: edited,
                         blog_post_status: 'human_approved',
                         title: title,
-                        tags: tags,
+                        content_tags: tags,
                         notes: notes
                     })
                     .eq('id', currentRecord.id);
@@ -1153,7 +1153,7 @@ Output: 150–400 words, first person from the child's perspective.`;
                         blog_post_status: 'published',
                         published_at: new Date().toISOString(),
                         title: title,
-                        tags: tags,
+                        content_tags: tags,
                         notes: notes
                     })
                     .eq('id', currentRecord.id);
