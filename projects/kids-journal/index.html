@@ -275,11 +275,11 @@
         const SUPABASE_URL = 'https://swaplrbpwdfvzttxyyht.supabase.co';
         const SUPABASE_ANON_KEY = 'sb_publishable_tMlXyklg4sSh7XsaeHdyYA_oXEFgLRz';
 
-        const supabase = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+        const db = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
 
         async function loadPosts() {
             try {
-                const { data, error } = await supabase
+                const { data, error } = await db
                     .from('content')
                     .select('*')
                     .eq('blog_post_status', 'published')

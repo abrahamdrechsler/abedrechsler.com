@@ -798,7 +798,7 @@
         const SUPABASE_URL = 'https://swaplrbpwdfvzttxyyht.supabase.co';
         const SUPABASE_KEY = 'sb_publishable_tMlXyklg4sSh7XsaeHdyYA_oXEFgLRz';
 
-        const supabase = window.supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
+        const db = window.supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
 
         // State
         let allRecords = [];
@@ -846,7 +846,7 @@
         // Load records
         async function loadRecords() {
             try {
-                const { data, error } = await supabase
+                const { data, error } = await db
                     .from('content')
                     .select('*')
                     .order('recorded_date', { ascending: false });
@@ -976,7 +976,7 @@
             const notes = document.getElementById('detailNotes').value;
 
             try {
-                const { error } = await supabase
+                const { error } = await db
                     .from('content')
                     .update({
                         blog_post_edited: edited,
@@ -1007,7 +1007,7 @@
             const notes = document.getElementById('detailNotes').value;
 
             try {
-                const { error } = await supabase
+                const { error } = await db
                     .from('content')
                     .update({
                         blog_post_edited: edited,
@@ -1038,7 +1038,7 @@
             const notes = document.getElementById('detailNotes').value;
 
             try {
-                const { error } = await supabase
+                const { error } = await db
                     .from('content')
                     .update({
                         blog_post_edited: edited,
@@ -1067,7 +1067,7 @@
             const notes = document.getElementById('detailNotes').value;
 
             try {
-                const { error } = await supabase
+                const { error } = await db
                     .from('content')
                     .update({
                         blog_post_status: 'human_approved',
