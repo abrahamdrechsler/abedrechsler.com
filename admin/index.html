@@ -1236,6 +1236,16 @@ Output: 150–400 words, first person from the child's perspective.`;
                 // Update the AI Draft display
                 document.getElementById('detailAiDraft').textContent = newDraft;
 
+                // If user hasn't manually edited, sync "Your Edit" with the new draft
+                const editBox = document.getElementById('detailEdit');
+                const currentEdit = editBox.value;
+                const oldDraft = currentRecord.blog_post_draft || '';
+                const hadNoEdits = !currentRecord.blog_post_edited || currentRecord.blog_post_edited === oldDraft;
+                if (hadNoEdits || currentEdit === oldDraft) {
+                    editBox.value = newDraft;
+                    currentRecord.blog_post_edited = null;
+                }
+
                 // Update current record
                 currentRecord.blog_post_draft = newDraft;
                 currentRecord.blog_post_prompt = promptText;
